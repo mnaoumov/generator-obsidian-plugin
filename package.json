@@ -27,7 +27,10 @@
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-modules-newlines": "latest",
-    "globals": "latest",
+    "globals": "latest"
+  },
+  "dependencies": {
+    "chalk": "latest",
     "yeoman-generator": "latest",
     "yosay": "latest"
   },
