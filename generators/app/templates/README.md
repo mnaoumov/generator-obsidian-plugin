@@ -1,6 +1,6 @@
 # <%= pluginName %>
 
-This is a plugin for [Obsidian](https://obsidian.md/) that <%= pluginPurpose %>.
+This is a plugin for [Obsidian](https://obsidian.md/) that <%= pluginDescription %>.
 
 ## Installation
 
