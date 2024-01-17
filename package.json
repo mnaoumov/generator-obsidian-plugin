@@ -29,37 +29,12 @@
     "eslint-plugin-modules-newlines": "latest",
     "eslint-plugin-prettier": "latest",
     "globals": "latest",
-    "husky": "latest",
-    "jest": "latest",
-    "lint-staged": "latest",
     "prettier": "latest",
     "yeoman-generator": "latest",
     "yosay": "latest"
   },
-  "engines": {
-    "npm": ">= 4.0.0"
-  },
-  "jest": {
-    "testEnvironment": "node"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "scripts": {
-    "pretest": "eslint .",
-    "test": "jest"
+    "build": "tsc --build"
   },
   "repository": "mnaoumov/generator-obsidian-plugin",
   "license": "MIT",
