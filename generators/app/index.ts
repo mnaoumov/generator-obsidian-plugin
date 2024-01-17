@@ -45,7 +45,7 @@ export default class extends Generator {
       ),
     );
 
-    const prompts: PromptQuestions<Answers> = [
+    const questions: PromptQuestions<Answers> = [
       {
         type: "input",
         name: nameof<Answers>("pluginId"),
@@ -113,7 +113,7 @@ export default class extends Generator {
       },
     ];
 
-    this.answers = <Answers>await this.prompt(prompts);
+    this.answers = <Answers>await this.prompt(questions);
     this.answers.currentYear = new Date().getFullYear();
     this.answers.pluginClassName = makePluginClassName(this.answers.pluginId);
   }
