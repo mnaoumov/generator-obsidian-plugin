@@ -7,12 +7,11 @@ import globals from "globals";
 import "eslint-import-resolver-typescript";
 import eslintPluginPrettier from "eslint-plugin-prettier";
 
-
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
   {
     files: ["**/*.ts", "**/*.js"],
-    ignores: ["dist/**", "**/templates"],
+    ignores: ["dist/**", "**/templates/**"],
     languageOptions: {
       parser: typescriptEslintParser,
       sourceType: "module",
@@ -26,10 +25,11 @@ export default [
       import: eslintPluginImport,
       "modules-newlines": eslintPluginModulesNewlines,
       "@stylistic": stylisticEslintPlugin,
-      "prettier": eslintPluginPrettier
+      prettier: eslintPluginPrettier
     },
     rules: {
-      ...typescriptEslintPlugin.configs["eslint-recommended"].overrides[0].rules,
+      ...typescriptEslintPlugin.configs["eslint-recommended"].overrides[0]
+        .rules,
       ...typescriptEslintPlugin.configs.recommended.rules,
       "import/no-unresolved": "error",
       "import/no-namespace": "error",
