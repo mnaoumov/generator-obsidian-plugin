@@ -35,7 +35,10 @@
     "build": "tsc --build",
     "lint": "eslint . --fix"
   },
-  "repository": "mnaoumov/generator-obsidian-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnaoumov/generator-obsidian-plugin.git"
+  },
   "license": "MIT",
   "type": "module"
 }
