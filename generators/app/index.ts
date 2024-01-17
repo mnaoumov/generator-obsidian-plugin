@@ -1,40 +1,57 @@
-"use strict";
 import Generator from "yeoman-generator";
+import type GeneratorNS from "yeoman-generator";
 import chalk from "chalk";
 import yosay from "yosay";
 
-function makePluginName(pluginId) {
+function makePluginName(pluginId: string): string {
   return extractWords(pluginId).join(" ");
 }
 
-function extractWords(pluginId) {
+function extractWords(pluginId: string): string[] {
   return pluginId.split("-").map(toPascalCase);
 }
 
-function toPascalCase(word) {
+function toPascalCase(word: string): string {
   return word[0].toUpperCase() + word.substring(1);
 }
 
-function makePluginClassName(pluginId) {
-  return extractWords(pluginId)
-    .concat("Plugin")
-    .join("");
+function makePluginClassName(pluginId: string): string {
+  return extractWords(pluginId).concat("Plugin").join("");
+}
+
+function nameof<T>(name: Extract<keyof T, string>): string {
+  return name;
+}
+
+interface Answers {
+  pluginId: string;
+  pluginName: string;
+  pluginDescription: string;
+  pluginClassName: string;
+  currentYear: number;
+  authorName: string;
+  authorGitHubName: string;
+  isDesktopOnly: boolean;
+  hasStyles: boolean;
 }
 
 export default class extends Generator {
-  async prompting() {
+  private answers!: Answers;
+
+  public async prompting(): Promise<void> {
     this.log(
-      yosay(`Welcome to the ${chalk.red("generator-obsidian-plugin")} generator!`)
+      yosay(
+        `Welcome to the ${chalk.red("generator-obsidian-plugin")} generator!`,
+      ),
     );
 
-    /** @type {Generator.Question[]} */
-    const prompts = [
+    const prompts: GeneratorNS.Question[] = [
       {
         type: "input",
-        name: "pluginId",
+        name: nameof<Answers>("pluginId"),
         message: "Your plugin's id?",
         default: this.appname.replace(/^obsidian-/, ""),
-        validate: async pluginId => {
+        validate: async (pluginId): Promise<boolean | string> => {
           if (!pluginId) {
             return "Should not be empty";
           }
@@ -56,52 +73,52 @@ export default class extends Generator {
           }
 
           return true;
-        }
+        },
       },
       {
         type: "input",
-        name: "pluginName",
+        name: nameof<Answers>("pluginName"),
         message: "Your plugin's name?",
-        default: answers => makePluginName(answers.pluginId)
+        default: (answers: Answers) => makePluginName(answers.pluginId),
       },
       {
         type: "input",
-        name: "pluginDescription",
+        name: nameof<Answers>("pluginDescription"),
         message: "Your plugin's description?",
-        default: "Does something awesome"
+        default: "Does something awesome",
       },
       {
         type: "input",
-        name: "authorName",
+        name: nameof<Answers>("authorName"),
         message: "Your full name?",
-        default: "John Doe"
+        default: "John Doe",
       },
       {
         type: "input",
-        name: "authorGitHubName",
+        name: nameof<Answers>("authorGitHubName"),
         message: "Your GitHub name?",
-        default: "johndoe"
+        default: "johndoe",
       },
       {
         type: "confirm",
-        name: "isDesktopOnly",
+        name: nameof<Answers>("isDesktopOnly"),
         message: "Is your plugin for Desktop only?",
-        default: true
+        default: true,
       },
       {
         type: "confirm",
-        name: "hasStyles",
+        name: nameof<Answers>("hasStyles"),
         message: "Does your plugin need CSS styles?",
-        default: false
-      }
+        default: false,
+      },
     ];
 
-    this.answers = await this.prompt(prompts);
+    this.answers = <Answers>await this.prompt(prompts);
     this.answers.currentYear = new Date().getFullYear();
     this.answers.pluginClassName = makePluginClassName(this.answers.pluginId);
   }
 
-  writing() {
+  public writing(): void {
     const map = new Map([
       ["src/main.ts", ""],
       ["src/pluginClassName.ts", `src/${this.answers.pluginClassName}.ts`],
@@ -119,7 +136,7 @@ export default class extends Generator {
       ["styles.css", this.answers.hasStyles ? "" : null],
       ["tsconfig.json", ""],
       ["version-bump.ts", ""],
-      ["versions.json", ""]
+      ["versions.json", ""],
     ]);
 
     for (const [templatePath, mappedDestinationPath] of map) {
@@ -133,7 +150,7 @@ export default class extends Generator {
       this.fs.copyTpl(
         this.templatePath(templatePath),
         this.destinationPath(destinationPath),
-        this.answers
+        this.answers,
       );
     }
   }
