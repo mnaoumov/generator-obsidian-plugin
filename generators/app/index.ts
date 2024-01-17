@@ -124,7 +124,7 @@ export default class extends Generator {
       ["src/pluginClassName.ts", `src/${this.answers.pluginClassName}.ts`],
       [".editorconfig", ""],
       [".gitattributes", ""],
-      [".gitignore", ""],
+      [".gitignore.template", ".gitignore"],
       [".hotreload", ""],
       [".npmrc", ""],
       ["esbuild.config.ts", ""],
