@@ -2,7 +2,6 @@
 const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
-const rename = require("gulp-rename");
 
 function makePluginName(pluginId) {
   return extractWords(pluginId).join(" ");
