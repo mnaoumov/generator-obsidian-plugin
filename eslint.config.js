@@ -40,9 +40,6 @@ export default [
       "@typescript-eslint/explicit-member-accessibility": "error"
     },
     settings: {
-      "import/parsers": {
-        "@typescript-eslint/parser": [".ts", ".tsx"]
-      },
       "import/resolver": {
         typescript: {
           alwaysTryTypes: true
