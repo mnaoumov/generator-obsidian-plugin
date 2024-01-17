@@ -1,6 +1,6 @@
 {
   "name": "generator-obsidian-plugin",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Obsidian Plugin Bootstrap",
   "homepage": "https://github.com/mnaoumov/obsidian-plugin-bootstrap/",
   "author": {
