@@ -19,16 +19,11 @@
   ],
   "devDependencies": {
     "@stylistic/eslint-plugin": "latest",
-    "@types/node": "latest",
     "@types/yeoman-generator": "latest",
     "@types/yosay": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "builtin-modules": "latest",
-    "esbuild": "latest",
     "eslint": "latest",
-    "eslint-config-prettier": "latest",
-    "eslint-config-xo": "latest",
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-modules-newlines": "latest",
@@ -38,17 +33,11 @@
     "jest": "latest",
     "lint-staged": "latest",
     "prettier": "latest",
-    "tsx": "latest",
-    "yeoman-assert": "latest",
-    "yeoman-test": "latest"
+    "yeoman-generator": "latest",
+    "yosay": "latest"
   },
   "engines": {
     "npm": ">= 4.0.0"
-  },
-  "dependencies": {
-    "chalk": "latest",
-    "yeoman-generator": "latest",
-    "yosay": "latest"
   },
   "jest": {
     "testEnvironment": "node"

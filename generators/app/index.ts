@@ -1,7 +1,7 @@
 import Generator from "yeoman-generator";
-import type GeneratorNS from "yeoman-generator";
 import chalk from "chalk";
 import yosay from "yosay";
+import { PromptQuestions } from "node_modules/yeoman-generator/dist/questions";
 
 function makePluginName(pluginId: string): string {
   return extractWords(pluginId).join(" ");
@@ -45,13 +45,13 @@ export default class extends Generator {
       ),
     );
 
-    const prompts: GeneratorNS.Question[] = [
+    const prompts: PromptQuestions<Answers> = [
       {
         type: "input",
         name: nameof<Answers>("pluginId"),
         message: "Your plugin's id?",
         default: this.appname.replace(/^obsidian-/, ""),
-        validate: async (pluginId): Promise<boolean | string> => {
+        validate: async (pluginId: string): Promise<boolean | string> => {
           if (!pluginId) {
             return "Should not be empty";
           }
@@ -64,7 +64,7 @@ export default class extends Generator {
             return "Should start with the letter";
           }
 
-          if (!/^[a-z0-9]+/.test(pluginId.at(-1))) {
+          if (!/^[a-z0-9]+/.test(pluginId.at(-1)!)) {
             return "Should end with the letter or digit";
           }
 
