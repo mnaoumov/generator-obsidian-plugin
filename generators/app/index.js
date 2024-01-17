@@ -90,6 +90,12 @@ module.exports = class extends Generator {
         name: "isDesktopOnly",
         message: "Is your plugin for Desktop only?",
         default: true
+      },
+      {
+        type: "confirm",
+        name: "hasStyles",
+        message: "Does your plugin need CSS styles?",
+        default: false
       }
     ];
 
