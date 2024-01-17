@@ -126,7 +126,7 @@ export default class extends Generator {
       [".gitattributes", ""],
       [".gitignore.template", ".gitignore"],
       [".hotreload", ""],
-      [".npmrc", ""],
+      [".npmrc.template", ".npmrc"],
       ["esbuild.config.ts", ""],
       ["eslint.config.js", ""],
       ["LICENSE", ""],
