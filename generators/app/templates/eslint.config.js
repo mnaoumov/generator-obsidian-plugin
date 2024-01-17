@@ -1,6 +1,5 @@
 import typescriptEslintParser from "@typescript-eslint/parser";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
-import eslintConfigPrettier from "eslint-config-prettier";
 import stylisticEslintPlugin from "@stylistic/eslint-plugin";
 import eslintPluginImport from "eslint-plugin-import";
 import eslintPluginModulesNewlines from "eslint-plugin-modules-newlines";
@@ -29,7 +28,6 @@ export default [
     rules: {
       ...typescriptEslintPlugin.configs["eslint-recommended"].overrides[0].rules,
       ...typescriptEslintPlugin.configs["recommended"].rules,
-      ...eslintConfigPrettier.rules,
       "import/no-unresolved": "error",
       "import/no-namespace": "error",
       "modules-newlines/import-declaration-newline": "error",
@@ -43,7 +41,9 @@ export default [
     },
     settings: {
       "import/resolver": {
-        typescript: {}
+        typescript: {
+          alwaysTryTypes: true
+        }
       }
     }
   }
