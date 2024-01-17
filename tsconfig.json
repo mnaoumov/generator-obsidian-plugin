@@ -15,8 +15,8 @@
       "ES7"
     ],
     "module": "ESNext",
-    "moduleResolution": "node",
-    "noEmit": true,
+    "moduleResolution": "Bundler",
+    "noEmit": false,
     "noImplicitAny": true,
     "skipLibCheck": true,
     "strict": true,
@@ -24,6 +24,6 @@
     "target": "ESNext",
   },
   "include": [
-    "**/*.ts"
+    "generators/app/index.ts"
   ]
 }
