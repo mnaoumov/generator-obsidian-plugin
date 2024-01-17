@@ -1,7 +1,7 @@
 import Generator from "yeoman-generator";
 import chalk from "chalk";
 import yosay from "yosay";
-import { PromptQuestions } from "node_modules/yeoman-generator/dist/questions";
+import { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions";
 
 function makePluginName(pluginId: string): string {
   return extractWords(pluginId).join(" ");

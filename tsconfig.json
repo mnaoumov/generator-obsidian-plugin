@@ -15,7 +15,7 @@
       "ES7"
     ],
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "node",
     "noEmit": false,
     "noImplicitAny": true,
     "skipLibCheck": true,

@@ -27,14 +27,13 @@
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-modules-newlines": "latest",
-    "eslint-plugin-prettier": "latest",
     "globals": "latest",
-    "prettier": "latest",
     "yeoman-generator": "latest",
     "yosay": "latest"
   },
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "lint": "eslint . --fix"
   },
   "repository": "mnaoumov/generator-obsidian-plugin",
   "license": "MIT",

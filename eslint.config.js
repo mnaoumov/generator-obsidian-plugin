@@ -5,32 +5,29 @@ import eslintPluginImport from "eslint-plugin-import";
 import eslintPluginModulesNewlines from "eslint-plugin-modules-newlines";
 import globals from "globals";
 import "eslint-import-resolver-typescript";
-import eslintPluginPrettier from "eslint-plugin-prettier";
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
   {
     files: ["**/*.ts", "**/*.js"],
-    ignores: ["dist/**", "**/templates/**"],
+    ignores: ["**/templates/**", "generators/app/index.js"],
     languageOptions: {
       parser: typescriptEslintParser,
       sourceType: "module",
       globals: {
         ...globals.browser,
-        ...globals.node,
-      },
+        ...globals.node
+      }
     },
     plugins: {
       "@typescript-eslint": typescriptEslintPlugin,
-      import: eslintPluginImport,
+      "import": eslintPluginImport,
       "modules-newlines": eslintPluginModulesNewlines,
-      "@stylistic": stylisticEslintPlugin,
-      prettier: eslintPluginPrettier,
+      "@stylistic": stylisticEslintPlugin
     },
     rules: {
-      ...typescriptEslintPlugin.configs["eslint-recommended"].overrides[0]
-        .rules,
-      ...typescriptEslintPlugin.configs.recommended.rules,
+      ...typescriptEslintPlugin.configs["eslint-recommended"].overrides[0].rules,
+      ...typescriptEslintPlugin.configs["recommended"].rules,
       "import/no-unresolved": "error",
       "import/no-namespace": "error",
       "modules-newlines/import-declaration-newline": "error",
@@ -40,13 +37,17 @@ export default [
       "@stylistic/quotes": ["error", "double"],
       semi: "error",
       "no-extra-semi": "error",
-      "@typescript-eslint/explicit-member-accessibility": "error",
-      "prettier/prettier": "error",
+      "@typescript-eslint/explicit-member-accessibility": "error"
     },
     settings: {
-      "import/resolver": {
-        typescript: {},
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
       },
-    },
-  },
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true
+        }
+      }
+    }
+  }
 ];
