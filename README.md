@@ -1,4 +1,5 @@
-# generator-obsidian-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-obsidian-plugin [![NPM version][npm-image]][npm-url]
+
 > Obsidian Plugin Bootstrap
 
 ## Installation
@@ -22,7 +23,3 @@ yo obsidian-plugin
 
 [npm-image]: https://badge.fury.io/js/generator-obsidian-plugin.svg
 [npm-url]: https://npmjs.org/package/generator-obsidian-plugin
-[travis-image]: https://travis-ci.com/mnaoumov/generator-obsidian-plugin.svg?branch=master
-[travis-url]: https://travis-ci.com/mnaoumov/generator-obsidian-plugin
-[daviddm-image]: https://david-dm.org/mnaoumov/generator-obsidian-plugin.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/mnaoumov/generator-obsidian-plugin
