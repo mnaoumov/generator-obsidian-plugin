@@ -17,15 +17,15 @@ export default [
       sourceType: "module",
       globals: {
         ...globals.browser,
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
     plugins: {
       "@typescript-eslint": typescriptEslintPlugin,
       import: eslintPluginImport,
       "modules-newlines": eslintPluginModulesNewlines,
       "@stylistic": stylisticEslintPlugin,
-      prettier: eslintPluginPrettier
+      prettier: eslintPluginPrettier,
     },
     rules: {
       ...typescriptEslintPlugin.configs["eslint-recommended"].overrides[0]
@@ -41,12 +41,12 @@ export default [
       semi: "error",
       "no-extra-semi": "error",
       "@typescript-eslint/explicit-member-accessibility": "error",
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
     },
     settings: {
       "import/resolver": {
-        typescript: {}
-      }
-    }
-  }
+        typescript: {},
+      },
+    },
+  },
 ];

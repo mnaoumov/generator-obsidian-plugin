@@ -20,34 +20,35 @@
   "devDependencies": {
     "@stylistic/eslint-plugin": "latest",
     "@types/node": "latest",
-    "@types/obsidian-typings": "github:Fevol/obsidian-typings",
+    "@types/yeoman-generator": "latest",
+    "@types/yosay": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "builtin-modules": "latest",
     "esbuild": "latest",
     "eslint": "latest",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-xo": "^0.27.2",
+    "eslint-config-prettier": "latest",
+    "eslint-config-xo": "latest",
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-modules-newlines": "latest",
-    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-prettier": "latest",
     "globals": "latest",
-    "husky": "^3.0.9",
-    "jest": "^26.1.0",
-    "lint-staged": "^9.4.3",
-    "prettier": "^1.19.1",
+    "husky": "latest",
+    "jest": "latest",
+    "lint-staged": "latest",
+    "prettier": "latest",
     "tsx": "latest",
-    "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^1.7.0"
+    "yeoman-assert": "latest",
+    "yeoman-test": "latest"
   },
   "engines": {
     "npm": ">= 4.0.0"
   },
   "dependencies": {
-    "chalk": "^2.1.0",
-    "yeoman-generator": "^3.1.1",
-    "yosay": "^2.0.2"
+    "chalk": "latest",
+    "yeoman-generator": "latest",
+    "yosay": "latest"
   },
   "jest": {
     "testEnvironment": "node"
