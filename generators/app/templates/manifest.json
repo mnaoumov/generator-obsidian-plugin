@@ -1,0 +1,10 @@
+{
+  "id": "<%= pluginId %>",
+  "name": "<%= pluginName %>",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "<%= pluginDescription %>",
+  "author": "<%= authorGitHubName %>",
+  "authorUrl": "https://github.com/<%= authorGitHubName %>/",
+  "isDesktopOnly": <%= isDesktopOnly %>
+}

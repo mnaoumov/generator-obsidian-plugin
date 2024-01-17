@@ -5,10 +5,9 @@ const yosay = require('yosay');
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
     this.log(
       yosay(
-        `Welcome to the groundbreaking ${chalk.red('generator-obsidian-plugin')} generator!`
+        `Welcome to the ${chalk.red('generator-obsidian-plugin')} generator!`
       )
     );
 
@@ -28,13 +27,24 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+    this.fs.copyTpl(
+      this.templatePath('.'),
+      this.destinationPath('.'), {
+      currentYear: 1,
+      authorName: "TODO authorName",
+      pluginId: "TODO pluginId",
+      pluginName: "TODO pluginName",
+      pluginDescription: "TODO pluginDescription",
+      authorGitHubName: "TODO authorGitHubName",
+      isDesktopOnly: true,
+      pluginPurpose: "TODO pluginPurpose",
+      pluginClassName: "TODO"
+    }, null, {
+      globOptions: { dot: true }
+    }
     );
   }
 
   install() {
-    this.installDependencies();
   }
 };
