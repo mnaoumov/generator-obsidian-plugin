@@ -1,1 +1,1 @@
-export {default} from "./<%= pluginClassName %>";
+export { default } from "./<%= pluginClassName %>";
