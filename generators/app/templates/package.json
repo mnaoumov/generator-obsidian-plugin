@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc --build && tsx esbuild.config.ts production",
     "dev": "tsc --build && tsx esbuild.config.ts",
-    "lint": "eslint . --fix",
+    "lint": "eslint-ts . --fix",
     "version": "tsx version-bump.ts && git add manifest.json package.json versions.json"
   },
   "keywords": [],
