@@ -1,7 +1,9 @@
 import Generator from "yeoman-generator";
-import chalk from "chalk";
+import chalkModule from "chalk";
 import yosay from "yosay";
-import { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions";
+import type { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions.d.ts";
+
+const chalk = chalkModule.default;
 
 function makePluginName(pluginId: string): string {
   return extractWords(pluginId).join(" ");
@@ -12,7 +14,7 @@ function extractWords(pluginId: string): string[] {
 }
 
 function toPascalCase(word: string): string {
-  return word[0].toUpperCase() + word.substring(1);
+  return (word[0] ?? "").toUpperCase() + word.substring(1);
 }
 
 function makePluginClassName(pluginId: string): string {
@@ -60,7 +62,7 @@ export default class extends Generator {
             return "Should contain only lowercase English letters, digits and hyphens";
           }
 
-          if (!/^[a-z]+/.test(pluginId[0])) {
+          if (!/^[a-z]+/.test(pluginId[0]!)) {
             return "Should start with the letter";
           }
 

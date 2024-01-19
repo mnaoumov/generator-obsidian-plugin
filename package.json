@@ -1,6 +1,6 @@
 {
   "name": "generator-obsidian-plugin",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Obsidian Plugin Bootstrap",
   "homepage": "https://github.com/mnaoumov/obsidian-plugin-bootstrap/",
   "author": {
@@ -19,15 +19,23 @@
   ],
   "devDependencies": {
     "@stylistic/eslint-plugin": "latest",
+    "@tsconfig/strictest": "latest",
+    "@types/eslint": "latest",
+    "@types/node": "latest",
+    "@types/obsidian-typings": "github:Fevol/obsidian-typings",
     "@types/yeoman-generator": "latest",
     "@types/yosay": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
-    "eslint": "latest",
+    "builtin-modules": "latest",
+    "esbuild": "latest",
     "eslint-import-resolver-typescript": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-modules-newlines": "latest",
-    "globals": "latest"
+    "eslint-ts-patch": "latest",
+    "eslint": "latest",
+    "globals": "latest",
+    "tsx": "latest"
   },
   "dependencies": {
     "chalk": "latest",
@@ -36,7 +44,7 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "lint": "eslint . --fix"
+    "lint": "eslint-ts . --fix"
   },
   "repository": {
     "type": "git",
