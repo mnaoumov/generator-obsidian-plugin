@@ -2,7 +2,7 @@
   "name": "generator-obsidian-plugin",
   "version": "1.5.1",
   "description": "Obsidian Plugin Bootstrap",
-  "homepage": "https://github.com/mnaoumov/obsidian-plugin-bootstrap/",
+  "homepage": "https://github.com/mnaoumov/generator-obsidian-plugin/",
   "author": {
     "name": "Michael Naumov",
     "email": "mnaoumov@gmail.com",
