@@ -53,7 +53,7 @@ export default class extends Generator {
         name: nameof<Answers>("pluginId"),
         message: "Your plugin's id?",
         default: this.appname.replace(/^obsidian-/, ""),
-        validate: (pluginId: string): boolean | string => {
+        validate(pluginId: string): boolean | string {
           if (!pluginId) {
             return "Should not be empty";
           }
