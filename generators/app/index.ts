@@ -1,9 +1,10 @@
 import Generator from "yeoman-generator";
 import chalkModule from "chalk";
+import type { Chalk } from "chalk";
 import yosay from "yosay";
 import type { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions.d.ts";
 
-const chalk = chalkModule.default;
+const chalk = chalkModule as unknown as Chalk;
 
 function makePluginName(pluginId: string): string {
   return extractWords(pluginId).join(" ");
