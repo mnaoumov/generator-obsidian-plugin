@@ -53,7 +53,7 @@ export default class extends Generator {
         name: nameof<Answers>("pluginId"),
         message: "Your plugin's id?",
         default: this.appname.replace(/^obsidian-/, ""),
-        validate: async (pluginId: string): Promise<boolean | string> => {
+        validate: (pluginId: string): boolean | string => {
           if (!pluginId) {
             return "Should not be empty";
           }
@@ -115,7 +115,7 @@ export default class extends Generator {
       },
     ];
 
-    this.answers = <Answers>await this.prompt(questions);
+    this.answers = await this.prompt(questions);
     this.answers.currentYear = new Date().getFullYear();
     this.answers.pluginClassName = makePluginClassName(this.answers.pluginId);
   }
