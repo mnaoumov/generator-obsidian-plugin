@@ -131,7 +131,7 @@ export default class extends Generator {
       [".npmrc.template", ".npmrc"],
       ["esbuild.config.ts", ""],
       ["eslint.config.ts", ""],
-      ["eslint.config.fix.ts", ""],
+      ["eslint.config.fix.d.ts", ""],
       ["LICENSE", ""],
       ["manifest.json", ""],
       ["package.json", ""],
