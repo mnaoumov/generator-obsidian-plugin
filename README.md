@@ -4,6 +4,8 @@
 
 ## Installation
 
+For template generator to be fully working it requires [Node.js](https://nodejs.org/) v18 or higher.
+
 First, install [Yeoman](http://yeoman.io) and generator-obsidian-plugin using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
