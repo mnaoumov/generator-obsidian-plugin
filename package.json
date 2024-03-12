@@ -51,5 +51,8 @@
     "url": "git+https://github.com/mnaoumov/generator-obsidian-plugin.git"
   },
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
