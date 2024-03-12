@@ -3,6 +3,13 @@ import chalkModule from "chalk";
 import type { Chalk } from "chalk";
 import yosay from "yosay";
 import type { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions.d.ts";
+import semver from "semver";
+
+const minimumNodeVersion = "18.0.0"
+if (!semver.satisfies(process.version, `>=${minimumNodeVersion}`)) {
+  console.error(`You need Node.js version ${minimumNodeVersion} or higher to use this generator.`);
+  process.exit(1);
+}
 
 const chalk = chalkModule as unknown as Chalk;
 

@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "chalk": "latest",
+    "semver": "latest",
     "yeoman-generator": "latest",
     "yosay": "latest"
   },
