@@ -44,7 +44,10 @@
   },
   "scripts": {
     "build": "tsx scripts/npmScriptExecutor.ts build",
-    "lint": "tsx scripts/npmScriptExecutor.ts lint"
+    "lint": "tsx scripts/npmScriptExecutor.ts lint",
+    "postversion": "tsx scripts/npmScriptExecutor.ts postversion",
+    "preversion": "tsx scripts/npmScriptExecutor.ts preversion",
+    "version": "tsx scripts/npmScriptExecutor.ts version"
   },
   "repository": {
     "type": "git",
