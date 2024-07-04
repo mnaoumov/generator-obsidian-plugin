@@ -1,9 +1,9 @@
 {
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "inlineSourceMap": true,
@@ -15,7 +15,12 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noEmit": false,
+    "skipLibCheck": false,
     "target": "ESNext",
+    "types": [
+      "node"
+    ],
+    "verbatimModuleSyntax": true
   },
   "include": [
     "generators/app/index.ts"

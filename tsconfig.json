@@ -4,7 +4,6 @@
     "allowImportingTsExtensions": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "inlineSourceMap": true,
@@ -16,7 +15,12 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noEmit": true,
+    "skipLibCheck": false,
     "target": "ESNext",
+    "types": [
+      "node"
+    ],
+    "verbatimModuleSyntax": true
   },
   "include": [
     "**/*.ts"
