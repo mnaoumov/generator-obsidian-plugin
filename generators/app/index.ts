@@ -1,9 +1,9 @@
 import Generator from "yeoman-generator";
-import chalkModule from "chalk";
-import type { Chalk } from "chalk";
 import yosay from "yosay";
 import type { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions.d.ts";
 import semver from "semver";
+import _chalk from "chalk";
+const chalk = _chalk as unknown as typeof _chalk.default;
 
 const minimumNodeVersion = "18.0.0"
 if (!semver.satisfies(process.version, `>=${minimumNodeVersion}`)) {
@@ -11,7 +11,6 @@ if (!semver.satisfies(process.version, `>=${minimumNodeVersion}`)) {
   process.exit(1);
 }
 
-const chalk = chalkModule as unknown as Chalk;
 
 function makePluginName(pluginId: string): string {
   return extractWords(pluginId).join(" ");
