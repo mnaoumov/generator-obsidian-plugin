@@ -18,34 +18,31 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "@stylistic/eslint-plugin": "latest",
-    "@tsconfig/strictest": "latest",
-    "@types/eslint": "latest",
-    "@types/node": "latest",
-    "@types/obsidian-typings": "github:Fevol/obsidian-typings",
-    "@types/yeoman-generator": "latest",
-    "@types/yosay": "latest",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
-    "builtin-modules": "latest",
-    "esbuild": "latest",
-    "eslint-import-resolver-typescript": "latest",
-    "eslint-plugin-import": "latest",
-    "eslint-plugin-modules-newlines": "latest",
-    "eslint-ts-patch": "latest",
-    "eslint": "latest",
-    "globals": "latest",
-    "tsx": "latest"
+    "@stylistic/eslint-plugin": "^2.3.0",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^20.14.9",
+    "@types/yeoman-generator": "^5.2.14",
+    "@types/yosay": "^2.0.3",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "builtin-modules": "^4.0.0",
+    "eslint": "^8.57.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-modules-newlines": "^0.0.7",
+    "globals": "^15.8.0",
+    "tsx": "^4.16.2"
   },
   "dependencies": {
-    "chalk": "latest",
-    "semver": "latest",
-    "yeoman-generator": "latest",
-    "yosay": "latest"
+    "chalk": "^2.4.2",
+    "semver": "^6.3.1",
+    "yeoman-generator": "^7.1.1",
+    "yosay": "^3.0.0"
   },
   "scripts": {
-    "build": "tsc --build tsconfig.build.json",
-    "lint": "eslint-ts . --fix"
+    "build": "tsx scripts/npmScriptExecutor.ts build",
+    "lint": "tsx scripts/npmScriptExecutor.ts lint"
   },
   "repository": {
     "type": "git",
