@@ -1,7 +1,7 @@
 import { execFromRoot } from "../tools/root.ts";
 
-export default async function postversion(): Promise<void> {
+export default function postversion(): void {
   execFromRoot("git push");
   execFromRoot("git push --tags");
-  execFromRoot(`npm publish`);
+  execFromRoot("npm publish");
 }

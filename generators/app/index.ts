@@ -7,7 +7,7 @@ import {
   dirname,
   join
 } from "path";
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 
 import _chalk from "chalk";
 const chalk = _chalk as unknown as typeof _chalk.default;
