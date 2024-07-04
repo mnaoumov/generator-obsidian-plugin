@@ -3,7 +3,12 @@ import yosay from "yosay";
 import type { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions.d.ts";
 import semver from "semver";
 import { readdir } from "fs/promises";
-import { join } from "path";
+import {
+  dirname,
+  join
+} from "path";
+import { fileURLToPath } from 'url';
+
 import _chalk from "chalk";
 const chalk = _chalk as unknown as typeof _chalk.default;
 
@@ -109,6 +114,9 @@ export default class extends Generator {
   }
 
   public async writing(): Promise<void> {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+
     const templatesDir = join(__dirname, "templates");
 
     for await (const filePath of getAllFiles(templatesDir)) {
