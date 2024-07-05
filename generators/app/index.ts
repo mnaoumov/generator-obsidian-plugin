@@ -135,7 +135,7 @@ export default class extends Generator {
 
     const packageJson = {
       "name": this.answers.pluginId,
-      "version": "1.0.0",
+      "version": "0.0.0",
       "description": this.answers.pluginDescription,
       "scripts": {
         "build": "tsx scripts/npmScriptExecutor.ts build",
