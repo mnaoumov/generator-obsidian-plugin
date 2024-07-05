@@ -140,7 +140,7 @@ export default class extends Generator {
           this.answers,
         );
 
-        this.fs.extendJSON(this.destinationPath(destinationPath), this.fs.readJSON(tempJsonPath));
+        this.fs.extendJSON(this.destinationPath(destinationPath), this.fs.readJSON(tempJsonPath) as Record<string, unknown>);
         this.fs.delete(tempJsonPath);
       } else {
         this.fs.copyTpl(
