@@ -126,50 +126,24 @@ export default class extends Generator {
         continue;
       }
 
-      this.fs.copyTpl(
-        this.templatePath(templatePath),
-        this.destinationPath(destinationPath),
-        this.answers,
-      );
+      if (destinationPath.endsWith(".json")) {
+        const tempJsonPath = this.destinationPath(destinationPath + ".temp");
+        this.fs.copyTpl(
+          this.templatePath(templatePath),
+          tempJsonPath,
+          this.answers,
+        );
+
+        this.fs.extendJSON(this.destinationPath(destinationPath), this.fs.readJSON(tempJsonPath));
+        this.fs.delete(tempJsonPath);
+      } else {
+        this.fs.copyTpl(
+          this.templatePath(templatePath),
+          this.destinationPath(destinationPath),
+          this.answers,
+        );
+      }
     }
-
-    const packageJson = {
-      "name": this.answers.pluginId,
-      "version": "0.0.0",
-      "description": this.answers.pluginDescription,
-      "scripts": {
-        "build": "tsx scripts/npmScriptExecutor.ts build",
-        "dev": "tsx scripts/npmScriptExecutor.ts dev",
-        "lint": "tsx scripts/npmScriptExecutor.ts lint",
-        "postversion": "tsx scripts/npmScriptExecutor.ts postversion",
-        "preversion": "tsx scripts/npmScriptExecutor.ts preversion",
-        "version": "tsx scripts/npmScriptExecutor.ts version"
-      },
-      "keywords": [],
-      "author": this.answers.authorGitHubName,
-      "license": "MIT",
-      "devDependencies": {
-        "@stylistic/eslint-plugin": "^2.3.0",
-        "@tsconfig/strictest": "^2.0.5",
-        "@types/eslint": "^8.56.10",
-        "@types/node": "^20.14.9",
-        "@typescript-eslint/eslint-plugin": "^7.15.0",
-        "@typescript-eslint/parser": "^7.15.0",
-        "builtin-modules": "^4.0.0",
-        "esbuild": "^0.23.0",
-        "eslint": "^8.57.0",
-        "eslint-import-resolver-typescript": "^3.6.1",
-        "eslint-plugin-import": "^2.29.1",
-        "eslint-plugin-modules-newlines": "^0.0.7",
-        "globals": "^15.8.0",
-        "obsidian": "^1.5.7-1",
-        "obsidian-typings": "mnaoumov/obsidian-typings#main",
-        "tsx": "^4.16.2"
-      },
-      "type": "module"
-    };
-
-    this.fs.extendJSON(this.destinationPath("package.json"), packageJson);
   }
 }
 
