@@ -2,13 +2,13 @@ import Generator from "yeoman-generator";
 import yosay from "yosay";
 import type { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions.d.ts";
 import semver from "semver";
-import { readdir } from "fs/promises";
+import { readdir } from "node:fs/promises";
 import {
+  basename,
   dirname,
   join
-} from "path";
-import { fileURLToPath } from "url";
-import { basename } from "node:path";
+} from "node:path";
+import { fileURLToPath } from "node:url";
 
 import _chalk from "chalk";
 const chalk = _chalk as unknown as typeof _chalk.default;
