@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "appname",
+    "collab",
+    "hotreload",
+    "johndoe",
+    "lezer",
+    "mnaoumov",
+    "Naumov",
+    "nameof",
+    "noext",
+    "postversion",
+    "preversion",
+    "yosay"
+  ],
+  "ignoreWords": [],
+  "import": [],
+  "enabled": true
+}

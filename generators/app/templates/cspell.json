@@ -1,0 +1,16 @@
+{
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [
+    "collab",
+    "hotreload",
+    "lezer",
+    "postversion",
+    "preversion"
+  ],
+  "ignoreWords": [],
+  "import": [],
+  "enabled": true
+}
