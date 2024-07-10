@@ -2,7 +2,6 @@
   "id": "<%= pluginId %>",
   "name": "<%= pluginName %>",
   "version": "0.0.0",
-  "minAppVersion": "<%= latestObsidianVersion %>",
   "description": "<%= pluginDescription %>",
   "author": "<%= authorGitHubName %>",
   "authorUrl": "https://github.com/<%= authorGitHubName %>/",

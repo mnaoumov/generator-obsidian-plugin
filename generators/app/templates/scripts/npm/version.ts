@@ -10,12 +10,16 @@ import {
 
 import process from "node:process";
 
-interface Manifest {
+type ObsidianReleasesJson = {
+  name: string;
+};
+
+type Manifest = {
   minAppVersion: string;
   version: string;
-}
+};
 
-interface Versions extends Record<string, string> { }
+type Versions = Record<string, string>;
 
 export default async function version(): Promise<void> {
   const targetVersion = process.env["npm_package_version"];
@@ -30,6 +34,7 @@ export default async function version(): Promise<void> {
   const versionsJsonPath = resolvePathFromRoot("versions.json");
 
   const manifest = JSON.parse(await readFile(manifestJsonPath, "utf8")) as Manifest;
+  manifest.minAppVersion = await getLatestObsidianVersion();
   manifest.version = targetVersion;
   await writeFile(manifestJsonPath, JSON.stringify(manifest, null, indentSize) + "\n");
 
@@ -38,4 +43,10 @@ export default async function version(): Promise<void> {
   await writeFile(versionsJsonPath, JSON.stringify(versions, null, indentSize) + "\n");
 
   execFromRoot("git add manifest.json package.json versions.json");
+}
+
+async function getLatestObsidianVersion(): Promise<string> {
+  const response = await fetch("https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest");
+  const obsidianReleasesJson = await response.json() as ObsidianReleasesJson;
+  return obsidianReleasesJson.name;
 }

@@ -32,7 +32,7 @@ yo obsidian-plugin
 
   - `npm run lint`: verifies the code style and automatically fixes some of the issues.
 
-  - `npm version <1.2.3|patch|minor|major>`: updates the plugin version, ensures it is ready for release, and publishes it. Requires [GitHub CLI](https://cli.github.com/) to be installed.
+  - `npm version <1.2.3|patch|minor|major>`: updates the plugin version, sets `manifest.minAppVersion` to the latest `Obsidian` version, ensures it is ready for release, and publishes it. Requires [GitHub CLI](https://cli.github.com/) to be installed.
 
 ## License
 

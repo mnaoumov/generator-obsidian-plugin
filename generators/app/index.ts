@@ -28,11 +28,6 @@ type Answers = {
   authorGitHubName: string;
   isDesktopOnly: boolean;
   hasStyles: boolean;
-  latestObsidianVersion: string;
-};
-
-type ObsidianReleasesJson = {
-  name: string;
 };
 
 export default class extends Generator {
@@ -116,7 +111,6 @@ export default class extends Generator {
     this.answers = await this.prompt(questions);
     this.answers.currentYear = new Date().getFullYear();
     this.answers.pluginShortName = extractWords(this.answers.pluginId).join("");
-    this.answers.latestObsidianVersion = await getLatestObsidianVersion();
   }
 
   public async writing(): Promise<void> {
@@ -194,10 +188,4 @@ function getDestinationPath(templatePath: string, answers: Answers): string | nu
   }
 
   return templatePath;
-}
-
-async function getLatestObsidianVersion(): Promise<string> {
-  const response = await fetch("https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest");
-  const obsidianReleasesJson = await response.json() as ObsidianReleasesJson;
-  return obsidianReleasesJson.name;
 }
