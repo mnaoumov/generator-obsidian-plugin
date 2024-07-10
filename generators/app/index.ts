@@ -8,6 +8,7 @@ import {
   join
 } from "path";
 import { fileURLToPath } from "url";
+import { basename } from "node:path";
 
 import _chalk from "chalk";
 const chalk = _chalk as unknown as typeof _chalk.default;
@@ -45,7 +46,7 @@ export default class extends Generator {
         type: "input",
         name: nameof<Answers>("pluginId"),
         message: "Your plugin's id?",
-        default: this.appname.replace(/^obsidian-/, ""),
+        default: basename(this._destinationRoot).replace(/^obsidian-/, ""),
         validate(pluginId: string): boolean | string {
           if (!pluginId) {
             return "Should not be empty";
