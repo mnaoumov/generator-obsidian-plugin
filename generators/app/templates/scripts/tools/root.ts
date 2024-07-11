@@ -8,11 +8,17 @@ import { fileURLToPath } from "node:url";
 export const rootUrl = new URL("../../", import.meta.url).href;
 export const rootDir = fileURLToPath(rootUrl);
 
-export function execFromRoot(command: string): void {
-  execSync(command, {
-    stdio: "inherit",
-    cwd: rootDir
-  });
+export function execFromRoot(command: string, ignoreExitCode?: boolean): void {
+  try {
+    execSync(command, {
+      stdio: "inherit",
+      cwd: rootDir
+    });
+  } catch (e) {
+    if (!ignoreExitCode) {
+      throw e;
+    }
+  }
 }
 
 export async function tsImportFromRoot<T>(specifier: string): Promise<T> {
