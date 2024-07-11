@@ -23,6 +23,7 @@ yo obsidian-plugin
 
 - Enables [unofficial](https://github.com/Fevol/obsidian-typings/) TypeScript typings to the internal [Obsidian](https://obsidian.md/) API.
 - Code style is forced via [`ESLint`](https://eslint.org/).
+- Spell checking is forced via [`CSpell`](https://cspell.org/).
 - Available commands:
   - `npm run build`: builds the production version of `main.js` ready for publishing the release.
 

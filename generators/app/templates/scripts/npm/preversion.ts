@@ -10,4 +10,5 @@ export default async function preversion(): Promise<void> {
 
   await runNpmScript("build");
   await runNpmScript("lint");
+  await runNpmScript("spellcheck");
 }
