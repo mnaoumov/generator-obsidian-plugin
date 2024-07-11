@@ -1,4 +1,7 @@
-import { PluginSettingTab } from "obsidian";
+import {
+  PluginSettingTab,
+  Setting
+} from "obsidian";
 import type <%= pluginShortName %>Plugin from "./<%= pluginShortName %>Plugin.ts";
 
 export default class <%= pluginShortName %>PluginSettingsTab extends PluginSettingTab {
@@ -11,8 +14,19 @@ export default class <%= pluginShortName %>PluginSettingsTab extends PluginSetti
 
   public override display(): void {
     this.containerEl.empty();
-    this.containerEl.createEl("h2", { text: "<%= pluginName %>" });
 
     const settings = this.plugin.settings;
+
+    new Setting(this.containerEl)
+      .setName("Test setting name")
+      .setDesc("Test setting description")
+      .addText((text) =>
+        text
+          .setValue(settings.testSetting)
+          .onChange(async (value) => {
+            settings.testSetting = value;
+            await this.plugin.saveSettings(settings);
+          })
+      );
   }
 }

@@ -1,4 +1,6 @@
 export default class <%= pluginShortName %>PluginSettings {
+  public testSetting: string = "defaultValue";
+
   public static load(value: unknown): <%= pluginShortName %>PluginSettings {
     if (!value) {
       return new <%= pluginShortName %>PluginSettings();
