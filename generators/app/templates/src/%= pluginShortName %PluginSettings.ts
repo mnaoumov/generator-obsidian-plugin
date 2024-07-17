@@ -1,15 +1,20 @@
 export default class <%= pluginShortName %>PluginSettings {
   public testSetting: string = "defaultValue";
 
-  public static load(value: unknown): <%= pluginShortName %>PluginSettings {
-    if (!value) {
-      return new <%= pluginShortName %>PluginSettings();
-    }
-
-    return value as <%= pluginShortName %>PluginSettings;
+  public static load(data: unknown): <%= pluginShortName %>PluginSettings {
+    return <%= pluginShortName %>PluginSettings.clone(data as <%= pluginShortName %>PluginSettings);
   }
 
   public static clone(settings?: <%= pluginShortName %>PluginSettings): <%= pluginShortName %>PluginSettings {
-    return Object.assign(new <%= pluginShortName %>PluginSettings(), settings);
+    const target = new <%= pluginShortName %>PluginSettings();
+    if (settings) {
+      for (const key of Object.keys(target) as Array<keyof <%= pluginShortName %>PluginSettings>) {
+        if (key in settings && typeof settings[key] === typeof target[key]) {
+          target[key] = settings[key];
+        }
+      }
+    }
+
+    return target;
   }
 }
