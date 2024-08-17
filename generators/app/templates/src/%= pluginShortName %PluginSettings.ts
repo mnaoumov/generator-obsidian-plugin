@@ -1,5 +1,3 @@
-import { PluginSettingsBase } from "obsidian-dev-utils/obsidian/Plugin/PluginSettingsBase";
-
-export default class <%= pluginShortName %>PluginSettings extends PluginSettingsBase {
+export default class <%= pluginShortName %>PluginSettings {
   public testSetting: string = "defaultValue";
 }
