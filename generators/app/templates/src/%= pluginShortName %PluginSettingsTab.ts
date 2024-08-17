@@ -1,32 +1,20 @@
-import {
-  PluginSettingTab,
-  Setting
-} from "obsidian";
 import type <%= pluginShortName %>Plugin from "./<%= pluginShortName %>Plugin.ts";
+import { PluginSettingsTabBase } from "obsidian-dev-utils/obsidian/Plugin/PluginSettingsTabBase";
+import type <%= pluginShortName %>PluginSettings from "./<%= pluginShortName %>PluginSettings.ts";
+import { Setting } from "obsidian";
 
-export default class <%= pluginShortName %>PluginSettingsTab extends PluginSettingTab {
-  public override plugin: <%= pluginShortName %>Plugin;
-
-  public constructor(plugin: <%= pluginShortName %>Plugin) {
-    super(plugin.app, plugin);
-    this.plugin = plugin;
-  }
-
+export default class <%= pluginShortName %>PluginSettingsTab extends PluginSettingsTabBase<<%= pluginShortName %>Plugin, <%= pluginShortName %>PluginSettings> {
   public override display(): void {
     this.containerEl.empty();
 
-    const settings = this.plugin.settings;
+    const pluginSettings = this.plugin.settings;
 
     new Setting(this.containerEl)
-      .setName("Test setting name")
-      .setDesc("Test setting description")
-      .addText((text) =>
-        text
-          .setValue(settings.testSetting)
-          .onChange(async (value) => {
-            settings.testSetting = value;
-            await this.plugin.saveSettings(settings);
-          })
-      );
+      .setName("Test Setting")
+      .setDesc("This is a test setting.")
+      .addText((text) => {
+        text.setPlaceholder("Enter a value");
+        this.bindValueComponent(text, pluginSettings, "testSetting");
+      });
   }
 }
