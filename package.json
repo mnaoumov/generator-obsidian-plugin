@@ -20,12 +20,12 @@
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.5",
     "obsidian-dev-utils": "^1.0.2",
-    "tsx": "^4.16.2"
+    "tsx": "^4.17.0"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
-    "semver": "^6.3.1",
-    "yeoman-generator": "^7.1.1",
+    "chalk": "^5.3.0",
+    "semver": "^7.6.3",
+    "yeoman-generator": "^7.3.2",
     "yosay": "^3.0.0"
   },
   "scripts": {
