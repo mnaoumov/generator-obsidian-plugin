@@ -19,7 +19,7 @@
   ],
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.5",
-    "obsidian-dev-utils": "^1.0.2",
+    "obsidian-dev-utils": "^1.1.1",
     "tsx": "^4.17.0"
   },
   "dependencies": {
@@ -29,12 +29,10 @@
     "yosay": "^3.0.0"
   },
   "scripts": {
-    "build": "tsx scripts/npmScriptExecutor.ts build",
-    "lint": "tsx scripts/npmScriptExecutor.ts lint",
-    "postversion": "tsx scripts/npmScriptExecutor.ts postversion",
-    "preversion": "tsx scripts/npmScriptExecutor.ts preversion",
-    "spellcheck": "tsx scripts/npmScriptExecutor.ts spellcheck",
-    "version": "tsx scripts/npmScriptExecutor.ts version"
+    "build": "tsc --build tsconfig.build.json --force",
+    "lint": "obsidian-dev-utils lint",
+    "spellcheck": "obsidian-dev-utils spellcheck",
+    "version": "obsidian-dev-utils version"
   },
   "repository": {
     "type": "git",
