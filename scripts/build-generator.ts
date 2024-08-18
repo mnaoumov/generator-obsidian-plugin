@@ -14,7 +14,7 @@ await wrapCliTask(async () => {
     entryPoints: ["src/generator.ts"],
     format: "cjs",
     logLevel: "info",
-    outfile: "dist/index.cjs",
+    outfile: "dist/app/index.cjs",
     platform: "node",
     sourcemap: "inline",
     target: "ESNext",
