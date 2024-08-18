@@ -113,9 +113,6 @@ export default class extends Generator {
   }
 
   public async writing(): Promise<void> {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = dirname(__filename);
-
     const templatesDir = join(__dirname, "templates");
 
     for await (const filePath of getAllFiles(templatesDir)) {
