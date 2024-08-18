@@ -1,17 +1,13 @@
 import Generator from "yeoman-generator";
 import yosay from "yosay";
-import type { PromptQuestions } from "../../node_modules/yeoman-generator/dist/questions.d.ts";
+import type { PromptQuestions } from "../node_modules/yeoman-generator/dist/questions.d.ts";
 import semver from "semver";
 import { readdir } from "node:fs/promises";
 import {
   basename,
-  dirname,
   join
 } from "node:path";
-import { fileURLToPath } from "node:url";
-
-import _chalk from "chalk";
-const chalk = _chalk as unknown as typeof _chalk.default;
+import chalk from "chalk";
 
 const minimumNodeVersion = "18.0.0";
 if (!semver.satisfies(process.version, `>=${minimumNodeVersion}`)) {
@@ -115,9 +111,6 @@ export default class extends Generator {
   }
 
   public async writing(): Promise<void> {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = dirname(__filename);
-
     const templatesDir = join(__dirname, "templates");
 
     for await (const filePath of getAllFiles(templatesDir)) {

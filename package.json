@@ -9,7 +9,11 @@
     "url": "https://github.com/mnaoumov/"
   },
   "files": [
-    "generators"
+    "generators/",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "package.json"
   ],
   "main": "generators/index.js",
   "keywords": [
@@ -19,6 +23,8 @@
   ],
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.5",
+    "@types/debug": "^4.1.12",
+    "@types/json-schema": "^7.0.15",
     "@types/semver": "^7.5.8",
     "@types/yosay": "^2.0.3",
     "esbuild": "^0.23.1",
@@ -33,7 +39,7 @@
     "yosay": "^3.0.0"
   },
   "scripts": {
-    "build": "tsx scripts/build.ts",
+    "build": "tsc --project tsconfig.build.json",
     "lint": "obsidian-dev-utils lint",
     "lint:fix": "obsidian-dev-utils lint:fix",
     "spellcheck": "obsidian-dev-utils spellcheck",

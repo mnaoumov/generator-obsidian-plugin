@@ -1,28 +1,11 @@
 {
-  "extends": "@tsconfig/strictest/tsconfig.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "allowImportingTsExtensions": false,
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
     "noEmit": false,
-    "skipLibCheck": false,
-    "target": "ESNext",
-    "types": [
-      "node"
-    ],
-    "verbatimModuleSyntax": true
+    "outDir": "./generators/app/",
   },
   "include": [
-    "generators/app/index.ts"
+    "./src/index.ts"
   ]
 }
