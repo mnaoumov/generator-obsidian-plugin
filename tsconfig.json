@@ -15,6 +15,12 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noEmit": true,
+    "paths": {
+      "yeoman-generator": [
+        "./node_modules/yeoman-generator/dist/index.d.ts",
+        "./node_modules/yeoman-generator/dist/index.js"
+      ]
+    },
     "skipLibCheck": false,
     "target": "ESNext",
     "types": [
