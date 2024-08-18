@@ -22,5 +22,3 @@ data.json
 .DS_Store
 
 dist
-
-/generators/app/index.js

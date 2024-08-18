@@ -9,9 +9,9 @@
     "url": "https://github.com/mnaoumov/"
   },
   "files": [
-    "generators"
+    "dist/"
   ],
-  "main": "generators/index.js",
+  "main": "dist/index.cjs",
   "keywords": [
     "obsidian",
     "plugin",
@@ -19,18 +19,22 @@
   ],
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.5",
-    "obsidian-dev-utils": "^1.1.1",
+    "@types/semver": "^7.5.8",
+    "@types/yosay": "^2.0.3",
     "tsx": "^4.17.0"
   },
   "dependencies": {
     "chalk": "^5.3.0",
+    "obsidian-dev-utils": "^1.4.0",
     "semver": "^7.6.3",
     "yeoman-generator": "^7.3.2",
     "yosay": "^3.0.0"
   },
   "scripts": {
-    "build": "tsc --build tsconfig.build.json --force",
+    "build:generator": "tsx scripts/build-generator.ts",
+    "build:static": "tsx scripts/build-static.ts",
     "lint": "obsidian-dev-utils lint",
+    "lint:fix": "obsidian-dev-utils lint:fix",
     "spellcheck": "obsidian-dev-utils spellcheck",
     "version": "obsidian-dev-utils version"
   },
