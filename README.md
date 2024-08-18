@@ -1,4 +1,4 @@
-# generator-obsidian-plugin [![NPM version][npm-image]][npm-url]
+# generator-obsidian-plugin [![](https://badge.fury.io/js/generator-obsidian-plugin.svg)](https://npmjs.org/package/generator-obsidian-plugin)
 
 > Obsidian Plugin Bootstrap
 
@@ -80,7 +80,4 @@ Runs build checks before updating the version and releases if all checks pass. T
 
 ## License
 
- © [Michael Naumov](https://github.com/mnaoumov/)
-
-[npm-image]: https://badge.fury.io/js/generator-obsidian-plugin.svg
-[npm-url]: https://npmjs.org/package/generator-obsidian-plugin
+© [Michael Naumov](https://github.com/mnaoumov/)
