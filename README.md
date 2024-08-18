@@ -24,16 +24,59 @@ yo obsidian-plugin
 - Enables [unofficial](https://github.com/Fevol/obsidian-typings/) TypeScript typings to the internal [Obsidian](https://obsidian.md/) API.
 - Code style is forced via [`ESLint`](https://eslint.org/).
 - Spell checking is forced via [`CSpell`](https://cspell.org/).
-- Available commands:
-  - `npm run build`: builds the production version of `main.js` ready for publishing the release.
+- Uses CLI commands and code helpers from [Obsidian Dev Utils](https://github.com/mnaoumov/obsidian-dev-utils).
 
-  - `npm run dev`: builds the development version of `main.js`.
+### NPM Commands
 
-    - If the environment variable `OBSIDIAN_CONFIG_DIR` is set to something like `path/to/my/vault/.obsidian`, the command automatically copies the compiled version of the plugin there and triggers the [Hot Reload](https://github.com/pjeby/hot-reload) plugin if it is installed.
+The package offers several NPM commands to facilitate common development tasks:
 
-  - `npm run lint`: verifies the code style and automatically fixes some of the issues.
+#### Build Production Version
 
-  - `npm version <1.2.3|patch|minor|major>`: updates the plugin version, sets `manifest.minAppVersion` to the latest `Obsidian` version, ensures it is ready for release, and publishes it. Requires [GitHub CLI](https://cli.github.com/) to be installed.
+```bash
+npm run build
+```
+
+Compiles the production version of your plugin into the `dist/build` folder.
+
+#### Build Development Version
+
+```bash
+npm run dev
+```
+
+Compiles the development version of your plugin into the `dist/dev` folder. If the environment variable `OBSIDIAN_CONFIG_DIR` is set (e.g., `path/to/my/vault/.obsidian`), the command automatically copies the compiled plugin to the specified Obsidian configuration directory and triggers the [Hot Reload](https://github.com/pjeby/hot-reload) plugin, if installed.
+
+#### Lint Code
+
+```bash
+npm run lint
+```
+
+Lints your code, enforcing a code convention to minimize common errors.
+
+#### Lint and Fix Code
+
+```bash
+npm run lint:fix
+```
+
+Lints your code and automatically applies fixes where possible.
+
+#### Spellcheck Code
+
+```bash
+npm run spellcheck
+```
+
+Checks your code for spelling errors.
+
+#### Version Management
+
+```bash
+npm run version <versionUpdateType>
+```
+
+Runs build checks before updating the version and releases if all checks pass. The `<versionUpdateType>` can be `major`, `minor`, `patch`, `beta`, or a specific version like `x.y.z[-suffix]`.
 
 ## License
 
