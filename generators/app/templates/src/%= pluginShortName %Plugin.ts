@@ -1,29 +1,17 @@
-import { Plugin } from "obsidian";
+import { PluginSettingTab } from "obsidian";
 import <%= pluginShortName %>PluginSettings from "./<%= pluginShortName %>PluginSettings.ts";
+import { PluginBase } from "obsidian-dev-utils/obsidian/Plugin/PluginBase";
 import <%= pluginShortName %>PluginSettingsTab from "./<%= pluginShortName %>PluginSettingsTab.ts";
 
-export default class <%= pluginShortName %>Plugin extends Plugin {
-  private _settings!: <%= pluginShortName %>PluginSettings;
-
-  public get settings(): <%= pluginShortName %>PluginSettings {
-    return <%= pluginShortName %>PluginSettings.clone(this._settings);
+export default class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName %>PluginSettings> {
+  protected override createDefaultPluginSettings(this: void): <%= pluginShortName %>PluginSettings {
+    return new <%= pluginShortName %>PluginSettings();
   }
 
-  public override async onload(): Promise<void> {
-    await this.loadSettings();
-    this.addSettingTab(new <%= pluginShortName %>PluginSettingsTab(this));
-    this.app.workspace.onLayoutReady(this.onLayoutReady.bind(this));
+  protected override createPluginSettingsTab(): PluginSettingTab | null {
+    return new <%= pluginShortName %>PluginSettingsTab(this);
   }
 
-  public async saveSettings(newSettings: <%= pluginShortName %>PluginSettings): Promise<void> {
-    this._settings = <%= pluginShortName %>PluginSettings.clone(newSettings);
-    await this.saveData(this._settings);
-  }
-
-  private async onLayoutReady(): Promise<void> {
-  }
-
-  private async loadSettings(): Promise<void> {
-    this._settings = <%= pluginShortName %>PluginSettings.load(await this.loadData());
+  protected override async onloadComplete(): Promise<void> {
   }
 }
