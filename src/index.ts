@@ -5,9 +5,11 @@ import semver from "semver";
 import { readdir } from "node:fs/promises";
 import {
   basename,
+  dirname,
   join
 } from "node:path";
 import chalk from "chalk";
+import { fileURLToPath } from "node:url";
 
 const minimumNodeVersion = "18.0.0";
 if (!semver.satisfies(process.version, `>=${minimumNodeVersion}`)) {
@@ -111,6 +113,8 @@ export default class extends Generator {
   }
 
   public async writing(): Promise<void> {
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
     const templatesDir = join(__dirname, "templates");
 
     for await (const filePath of getAllFiles(templatesDir)) {
