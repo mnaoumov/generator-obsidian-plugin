@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.1.3
+
+- Update obsidian-dev-utils to 1.7.4
+
 ## 4.1.2
 
 - Update obsidian-dev-utils to 1.7.2
