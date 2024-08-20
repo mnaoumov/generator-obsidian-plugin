@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.1.1
+
+- Update obsidian-dev-utils to 1.7.1
+
 ## 4.1.0
 
 - Update template to latest settings
