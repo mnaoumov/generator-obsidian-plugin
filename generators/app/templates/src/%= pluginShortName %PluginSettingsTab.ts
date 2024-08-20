@@ -7,14 +7,12 @@ export default class <%= pluginShortName %>PluginSettingsTab extends PluginSetti
   public override display(): void {
     this.containerEl.empty();
 
-    const pluginSettings = this.plugin.settings;
-
     new Setting(this.containerEl)
       .setName("Test Setting")
       .setDesc("This is a test setting.")
       .addText((text) => {
         text.setPlaceholder("Enter a value");
-        this.bindValueComponent(text, pluginSettings, "testSetting");
+        this.bindValueComponent(text, "testSetting");
       });
   }
 }
