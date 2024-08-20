@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.1.0
+
+- Update template to latest settings
+
 ## 4.0.0
 
 - Rewrite template with obsidian-dev-utils
