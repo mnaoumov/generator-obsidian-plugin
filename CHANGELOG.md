@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.21.2
+
+- Update obsidian-dev-utils to 2.21.2
+
 ## 4.3.0
 
 - Update obsidian-dev-utils to 2.3.0
