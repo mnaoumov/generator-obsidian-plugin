@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 4.25.1
+
+- Update obsidian-dev-utils to 2.25.1
+- Ignore dist from spellchecker
+
 ## 4.23.3
 
 - Update obsidian-dev-utils to 2.23.3
