@@ -1,19 +1,19 @@
-import { readdir } from 'node:fs/promises';
+import chalk from 'chalk';
 import {
   basename,
-  dirname,
   join
-} from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import chalk from 'chalk';
-import semver from 'semver';
+} from 'obsidian-dev-utils/Path';
+import { readdirPosix } from 'obsidian-dev-utils/scripts/Fs';
+import { resolvePathFromRoot } from 'obsidian-dev-utils/scripts/Root';
+import { satisfies } from 'semver';
 import Generator from 'yeoman-generator';
-import type { PromptQuestions } from 'yeoman-generator/dist/questions.d.ts';
 import yosay from 'yosay';
 
+// eslint-disable-next-line import-x/no-relative-packages
+import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
+
 const minimumNodeVersion = '18.0.0';
-if (!semver.satisfies(process.version, `>=${minimumNodeVersion}`)) {
+if (!satisfies(process.version, `>=${minimumNodeVersion}`)) {
   console.error(`You need Node.js version ${minimumNodeVersion} or higher to use this generator.`);
   process.exit(1);
 }
@@ -30,7 +30,7 @@ interface Answers {
   hasStyles: boolean;
 }
 
-export default class extends Generator {
+export default class ObsidianPluginGenerator extends Generator {
   private answers!: Answers;
 
   public async prompting(): Promise<void> {
@@ -55,11 +55,11 @@ export default class extends Generator {
             return 'Should contain only lowercase English letters, digits and hyphens';
           }
 
-          if (!/^[a-z]+/.test(pluginId[0]!)) {
+          if (!/^[a-z]+/.test(pluginId[0] ?? '')) {
             return 'Should start with the letter';
           }
 
-          if (!/^[a-z0-9]+/.test(pluginId.at(-1)!)) {
+          if (!/^[a-z0-9]+/.test(pluginId.at(-1) ?? '')) {
             return 'Should end with the letter or digit';
           }
 
@@ -114,9 +114,7 @@ export default class extends Generator {
   }
 
   public async writing(): Promise<void> {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = dirname(__filename);
-    const templatesDir = join(__dirname, 'templates');
+    const templatesDir = resolvePathFromRoot('generators/app/templates');
 
     for await (const filePath of getAllFiles(templatesDir)) {
       const templatePath = filePath.substring(templatesDir.length + 1);
@@ -163,7 +161,7 @@ function nameof<T>(name: Extract<keyof T, string>): string {
 }
 
 async function* getAllFiles(dirPath: string): AsyncGenerator<string> {
-  const files = await readdir(dirPath, { withFileTypes: true });
+  const files = await readdirPosix(dirPath, { withFileTypes: true });
 
   for (const file of files) {
     const filePath = join(dirPath, file.name);
