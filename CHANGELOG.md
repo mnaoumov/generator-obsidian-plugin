@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 5.0.4
+
+- Update obsidian-dev-utils to 3.0.4
+- Update template
+
 ## 4.25.1
 
 - Update obsidian-dev-utils to 2.25.1
