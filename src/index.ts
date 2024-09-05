@@ -1,11 +1,11 @@
 import chalk from 'chalk';
 import {
   basename,
+  getDirname,
   join,
   toPosixPath
 } from 'obsidian-dev-utils/Path';
 import { readdirPosix } from 'obsidian-dev-utils/scripts/Fs';
-import { resolvePathFromRoot } from 'obsidian-dev-utils/scripts/Root';
 import { satisfies } from 'semver';
 import Generator from 'yeoman-generator';
 import yosay from 'yosay';
@@ -115,7 +115,8 @@ export default class ObsidianPluginGenerator extends Generator {
   }
 
   public async writing(): Promise<void> {
-    const templatesDir = resolvePathFromRoot('generators/app/templates');
+    const __dirname = getDirname(import.meta.url);
+    const templatesDir = join(__dirname, 'templates');
 
     for await (const filePath of getAllFiles(templatesDir)) {
       const templatePath = filePath.substring(templatesDir.length + 1);
