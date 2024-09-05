@@ -1,1 +1,1 @@
-export { default } from "./<%= pluginShortName %>Plugin.ts";
+export { default } from './<%= pluginShortName %>Plugin.ts';

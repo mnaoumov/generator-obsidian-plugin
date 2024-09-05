@@ -1,10 +1,11 @@
-import { PluginSettingTab } from "obsidian";
-import <%= pluginShortName %>PluginSettings from "./<%= pluginShortName %>PluginSettings.ts";
-import { PluginBase } from "obsidian-dev-utils/obsidian/Plugin/PluginBase";
-import <%= pluginShortName %>PluginSettingsTab from "./<%= pluginShortName %>PluginSettingsTab.ts";
+import { PluginSettingTab } from 'obsidian';
+import { PluginBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginBase';
+
+import <%= pluginShortName %>PluginSettings from './<%= pluginShortName %>PluginSettings.ts';
+import <%= pluginShortName %>PluginSettingsTab from './<%= pluginShortName %>PluginSettingsTab.ts';
 
 export default class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName %>PluginSettings> {
-  protected override createDefaultPluginSettings(this: void): <%= pluginShortName %>PluginSettings {
+  protected override createDefaultPluginSettings(): <%= pluginShortName %>PluginSettings {
     return new <%= pluginShortName %>PluginSettings();
   }
 
@@ -13,5 +14,6 @@ export default class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginS
   }
 
   protected override async onloadComplete(): Promise<void> {
+    // TODO: Implement onloadComplete
   }
 }
