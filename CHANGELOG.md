@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.0.5
+
+- Fix generator
+
 ## 5.0.4
 
 - Update obsidian-dev-utils to 3.0.4
