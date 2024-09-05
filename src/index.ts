@@ -1,7 +1,8 @@
 import chalk from 'chalk';
 import {
   basename,
-  join
+  join,
+  toPosixPath
 } from 'obsidian-dev-utils/Path';
 import { readdirPosix } from 'obsidian-dev-utils/scripts/Fs';
 import { resolvePathFromRoot } from 'obsidian-dev-utils/scripts/Root';
@@ -45,7 +46,7 @@ export default class ObsidianPluginGenerator extends Generator {
         type: 'input',
         name: nameof<Answers>('pluginId'),
         message: 'Your plugin\'s id?',
-        default: basename(this._destinationRoot).replace(/^obsidian-/, ''),
+        default: basename(toPosixPath(this._destinationRoot)).replace(/^obsidian-/, ''),
         validate(pluginId: string): boolean | string {
           if (!pluginId) {
             return 'Should not be empty';
