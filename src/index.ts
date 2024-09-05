@@ -1,23 +1,24 @@
-import Generator from "yeoman-generator";
-import yosay from "yosay";
-import type { PromptQuestions } from "../node_modules/yeoman-generator/dist/questions.d.ts";
-import semver from "semver";
-import { readdir } from "node:fs/promises";
+import { readdir } from 'node:fs/promises';
 import {
   basename,
   dirname,
   join
-} from "node:path";
-import chalk from "chalk";
-import { fileURLToPath } from "node:url";
+} from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const minimumNodeVersion = "18.0.0";
+import chalk from 'chalk';
+import semver from 'semver';
+import Generator from 'yeoman-generator';
+import type { PromptQuestions } from 'yeoman-generator/dist/questions.d.ts';
+import yosay from 'yosay';
+
+const minimumNodeVersion = '18.0.0';
 if (!semver.satisfies(process.version, `>=${minimumNodeVersion}`)) {
   console.error(`You need Node.js version ${minimumNodeVersion} or higher to use this generator.`);
   process.exit(1);
 }
 
-type Answers = {
+interface Answers {
   pluginId: string;
   pluginName: string;
   pluginShortName: string;
@@ -27,7 +28,7 @@ type Answers = {
   authorGitHubName: string;
   isDesktopOnly: boolean;
   hasStyles: boolean;
-};
+}
 
 export default class extends Generator {
   private answers!: Answers;
@@ -35,87 +36,87 @@ export default class extends Generator {
   public async prompting(): Promise<void> {
     this.log(
       yosay(
-        `Welcome to the ${chalk.red("generator-obsidian-plugin")} generator!`,
-      ),
+        `Welcome to the ${chalk.red('generator-obsidian-plugin')} generator!`
+      )
     );
 
     const questions: PromptQuestions<Answers> = [
       {
-        type: "input",
-        name: nameof<Answers>("pluginId"),
-        message: "Your plugin's id?",
-        default: basename(this._destinationRoot).replace(/^obsidian-/, ""),
+        type: 'input',
+        name: nameof<Answers>('pluginId'),
+        message: 'Your plugin\'s id?',
+        default: basename(this._destinationRoot).replace(/^obsidian-/, ''),
         validate(pluginId: string): boolean | string {
           if (!pluginId) {
-            return "Should not be empty";
+            return 'Should not be empty';
           }
 
           if (!/^[a-z0-9-]+$/.test(pluginId)) {
-            return "Should contain only lowercase English letters, digits and hyphens";
+            return 'Should contain only lowercase English letters, digits and hyphens';
           }
 
           if (!/^[a-z]+/.test(pluginId[0]!)) {
-            return "Should start with the letter";
+            return 'Should start with the letter';
           }
 
           if (!/^[a-z0-9]+/.test(pluginId.at(-1)!)) {
-            return "Should end with the letter or digit";
+            return 'Should end with the letter or digit';
           }
 
-          if (pluginId.startsWith("obsidian-")) {
-            return "Should not start with `obsidian-`";
+          if (pluginId.startsWith('obsidian-')) {
+            return 'Should not start with `obsidian-`';
           }
 
           return true;
-        },
+        }
       },
       {
-        type: "input",
-        name: nameof<Answers>("pluginName"),
-        message: "Your plugin's name?",
-        default: (answers: Answers) => makePluginName(answers.pluginId),
+        type: 'input',
+        name: nameof<Answers>('pluginName'),
+        message: 'Your plugin\'s name?',
+        default: (answers: Answers) => makePluginName(answers.pluginId)
       },
       {
-        type: "input",
-        name: nameof<Answers>("pluginDescription"),
-        message: "Your plugin's description?",
-        default: "Does something awesome",
+        type: 'input',
+        name: nameof<Answers>('pluginDescription'),
+        message: 'Your plugin\'s description?',
+        default: 'Does something awesome'
       },
       {
-        type: "input",
-        name: nameof<Answers>("authorName"),
-        message: "Your full name?",
-        default: "John Doe",
+        type: 'input',
+        name: nameof<Answers>('authorName'),
+        message: 'Your full name?',
+        default: 'John Doe'
       },
       {
-        type: "input",
-        name: nameof<Answers>("authorGitHubName"),
-        message: "Your GitHub name?",
-        default: "johndoe",
+        type: 'input',
+        name: nameof<Answers>('authorGitHubName'),
+        message: 'Your GitHub name?',
+        default: 'johndoe'
       },
       {
-        type: "confirm",
-        name: nameof<Answers>("isDesktopOnly"),
-        message: "Is your plugin for Desktop only?",
-        default: true,
+        type: 'confirm',
+        name: nameof<Answers>('isDesktopOnly'),
+        message: 'Is your plugin for Desktop only?',
+        default: true
       },
       {
-        type: "confirm",
-        name: nameof<Answers>("hasStyles"),
-        message: "Does your plugin need CSS styles?",
-        default: false,
-      },
+        type: 'confirm',
+        name: nameof<Answers>('hasStyles'),
+        message: 'Does your plugin need CSS styles?',
+        default: false
+      }
     ];
 
     this.answers = await this.prompt(questions);
     this.answers.currentYear = new Date().getFullYear();
-    this.answers.pluginShortName = extractWords(this.answers.pluginId).join("");
+    this.answers.pluginShortName = extractWords(this.answers.pluginId).join('');
   }
 
   public async writing(): Promise<void> {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
-    const templatesDir = join(__dirname, "templates");
+    const templatesDir = join(__dirname, 'templates');
 
     for await (const filePath of getAllFiles(templatesDir)) {
       const templatePath = filePath.substring(templatesDir.length + 1);
@@ -124,12 +125,12 @@ export default class extends Generator {
         continue;
       }
 
-      if (destinationPath.endsWith(".json")) {
-        const tempJsonPath = this.destinationPath(destinationPath + ".temp");
+      if (destinationPath.endsWith('.json')) {
+        const tempJsonPath = this.destinationPath(destinationPath + '.temp');
         this.fs.copyTpl(
           this.templatePath(templatePath),
           tempJsonPath,
-          this.answers,
+          this.answers
         );
 
         this.fs.extendJSON(this.destinationPath(destinationPath), this.fs.readJSON(tempJsonPath) as Record<string, unknown>);
@@ -138,7 +139,7 @@ export default class extends Generator {
         this.fs.copyTpl(
           this.templatePath(templatePath),
           this.destinationPath(destinationPath),
-          this.answers,
+          this.answers
         );
       }
     }
@@ -146,15 +147,15 @@ export default class extends Generator {
 }
 
 function makePluginName(pluginId: string): string {
-  return extractWords(pluginId).join(" ");
+  return extractWords(pluginId).join(' ');
 }
 
 function extractWords(pluginId: string): string[] {
-  return pluginId.split("-").map(toPascalCase);
+  return pluginId.split('-').map(toPascalCase);
 }
 
 function toPascalCase(word: string): string {
-  return (word[0] ?? "").toUpperCase() + word.substring(1);
+  return (word[0] ?? '').toUpperCase() + word.substring(1);
 }
 
 function nameof<T>(name: Extract<keyof T, string>): string {
@@ -167,7 +168,7 @@ async function* getAllFiles(dirPath: string): AsyncGenerator<string> {
   for (const file of files) {
     const filePath = join(dirPath, file.name);
     if (file.isDirectory()) {
-      yield* getAllFiles(filePath);
+      yield * getAllFiles(filePath);
     } else {
       yield filePath;
     }
@@ -177,11 +178,11 @@ async function* getAllFiles(dirPath: string): AsyncGenerator<string> {
 function getDestinationPath(templatePath: string, answers: Answers): string | null {
   templatePath = templatePath.replace(/%= (.+?) %/g, (_: string, answerKey: keyof Answers) => String(answers[answerKey]));
 
-  if (templatePath.endsWith(".noext")) {
-    return templatePath.slice(0, -".noext".length);
+  if (templatePath.endsWith('.noext')) {
+    return templatePath.slice(0, -'.noext'.length);
   }
 
-  if (templatePath === "styles.css" && !answers.hasStyles) {
+  if (templatePath === 'styles.css' && !answers.hasStyles) {
     return null;
   }
 
