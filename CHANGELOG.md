@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 5.25.0
+
+- Update obsidian-dev-utils to 3.25.0
+- Add `.env` support
+
 ## 5.24.1
 
 - Update obsidian-dev-utils to 3.24.1
