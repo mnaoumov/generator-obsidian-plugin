@@ -44,7 +44,7 @@ Compiles the production version of your plugin into the `dist/build` folder.
 npm run dev
 ```
 
-Compiles the development version of your plugin into the `dist/dev` folder. If the environment variable `OBSIDIAN_CONFIG_DIR` is set (e.g., `path/to/my/vault/.obsidian`), the command automatically copies the compiled plugin to the specified Obsidian configuration directory and triggers the [Hot Reload](https://github.com/pjeby/hot-reload) plugin, if installed. Also `.env` supported.
+Compiles the development version of your plugin into the `dist/dev` folder. The `OBSIDIAN_CONFIG_DIR` can be set either as an environment variable or specified in a `.env` file (e.g., `path/to/my/vault/.obsidian`). The command automatically copies the compiled plugin to the specified Obsidian configuration directory and triggers the [Hot Reload] plugin, if it is enabled. If the [Hot Reload] plugin is not installed, it will be installed automatically, and you will need to enable it manually.
 
 #### Lint Code
 

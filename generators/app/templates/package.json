@@ -16,8 +16,8 @@
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.5",
     "obsidian": "^1.6.6",
-    "obsidian-dev-utils": "^3.24.1",
-    "obsidian-typings": "^2.2.1-beta.10"
+    "obsidian-dev-utils": "^3.25.0",
+    "obsidian-typings": "^2.2.1-beta.15"
   },
   "type": "module"
 }
