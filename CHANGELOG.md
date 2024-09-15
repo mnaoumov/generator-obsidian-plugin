@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.24.1
+
+- Update obsidian-dev-utils to 3.24.1
+
 ## 5.2.0
 
 - Update obsidian-dev-utils to 3.2.0
