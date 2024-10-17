@@ -1,9 +1,9 @@
+import type { BuildOptions } from 'esbuild';
+import { context } from 'esbuild';
 import {
   CliTaskResult,
   wrapCliTask
 } from 'obsidian-dev-utils/scripts/CliUtils';
-import type { BuildOptions } from 'esbuild';
-import { context } from 'esbuild';
 
 await wrapCliTask(async () => {
   const buildOptions: BuildOptions = {
@@ -30,5 +30,5 @@ await wrapCliTask(async () => {
   const buildContext = await context(buildOptions);
   const result = await buildContext.rebuild();
   const isSuccess = result.errors.length == 0 && result.warnings.length == 0;
-  return CliTaskResult.Success(isSuccess)
+  return CliTaskResult.Success(isSuccess);
 });
