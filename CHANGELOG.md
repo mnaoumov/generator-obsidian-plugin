@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.36.4
+
+- Update lib
+
 ## 5.36.3
 
 - Add build script
