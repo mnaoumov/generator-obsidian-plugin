@@ -16,9 +16,9 @@
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.5",
-    "obsidian": "^1.6.6",
-    "obsidian-dev-utils": "^3.29.0",
-    "obsidian-typings": "^2.2.1-beta.18"
+    "obsidian": "^1.7.2",
+    "obsidian-dev-utils": "^3.36.2",
+    "obsidian-typings": "^2.2.1-beta.32"
   },
   "type": "module"
 }
