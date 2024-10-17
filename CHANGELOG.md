@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.36.3
+
+- Add build script
+
 ## 5.29.0
 
 - Update obsidian-dev-utils to 3.29.0
