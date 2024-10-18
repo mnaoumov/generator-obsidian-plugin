@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.37.0
+
+- Add @types/node
+
 ## 5.36.5
 
 - Update lib
