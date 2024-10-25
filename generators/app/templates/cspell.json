@@ -1,11 +1,15 @@
 {
   "version": "0.2",
   "ignorePaths": [
-    "dist"
+    "dist",
+    "node_modules",
+    "tsconfig.tsbuildinfo"
   ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
-  "words": [],
+  "words": [
+    "tsbuildinfo"
+  ],
   "ignoreWords": [],
   "import": [],
   "enabled": true
