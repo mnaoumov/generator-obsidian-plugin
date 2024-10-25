@@ -19,6 +19,7 @@
     "outfile",
     "postversion",
     "preversion",
+    "tsbuildinfo",
     "tsconfigs",
     "yosay"
   ],

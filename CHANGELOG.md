@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 5.39.0
+
+- Update libs
+- Add tsbuildinfo to ignores
+
 ## 5.37.0
 
 - Add @types/node
