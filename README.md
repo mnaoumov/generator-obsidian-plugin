@@ -1,6 +1,6 @@
 # generator-obsidian-plugin [![](https://badge.fury.io/js/generator-obsidian-plugin.svg)](https://npmjs.org/package/generator-obsidian-plugin)
 
-> Obsidian Plugin Bootstrap
+> Obsidian Plugin Yeoman Generator
 
 ## Installation
 
