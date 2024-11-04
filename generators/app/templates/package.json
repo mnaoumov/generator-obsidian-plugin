@@ -15,11 +15,11 @@
   "author": "<%= authorGitHubName %>",
   "license": "MIT",
   "devDependencies": {
-    "@tsconfig/strictest": "^2.0.5",
-    "@types/node": "^22.8.7",
-    "obsidian": "^1.7.2",
-    "obsidian-dev-utils": "^4.0.0",
-    "obsidian-typings": "^2.2.1-beta.34"
+    "@tsconfig/strictest": "latest",
+    "@types/node": "latest",
+    "obsidian": "latest",
+    "obsidian-dev-utils": "latest",
+    "obsidian-typings": "latest"
   },
   "type": "module"
 }

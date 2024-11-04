@@ -13,6 +13,8 @@ import yosay from 'yosay';
 // eslint-disable-next-line import-x/no-relative-packages
 import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
 
+import latestVersion from 'latest-version';
+
 const minimumNodeVersion = '18.0.0';
 if (!satisfies(process.version, `>=${minimumNodeVersion}`)) {
   console.error(`You need Node.js version ${minimumNodeVersion} or higher to use this generator.`);
@@ -133,7 +135,20 @@ export default class ObsidianPluginGenerator extends Generator {
           this.answers
         );
 
-        this.fs.extendJSON(this.destinationPath(destinationPath), this.fs.readJSON(tempJsonPath) as Record<string, unknown>);
+        const json = this.fs.readJSON(tempJsonPath) as Record<string, unknown>;
+        if (destinationPath.endsWith('package.json')) {
+          const devDependencies = json['devDependencies'] as Record<string, string>;
+          if (devDependencies) {
+            for (const [packageName, version] of Object.entries(devDependencies)) {
+              if (version !== 'latest') {
+                continue;
+              }
+
+              devDependencies[packageName] = '^' + await latestVersion(packageName);
+            }
+          }
+        }
+        this.fs.extendJSON(this.destinationPath(destinationPath), json);
         this.fs.delete(tempJsonPath);
       } else {
         this.fs.copyTpl(
