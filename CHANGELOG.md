@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 6.0.0
+
+- Update libs and template
+
 ## 5.39.0
 
 - Update libs
