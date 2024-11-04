@@ -1,6 +1,6 @@
 import { Setting } from 'obsidian';
 import { PluginSettingsTabBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginSettingsTabBase';
-import { bindUiComponent } from 'obsidian-dev-utils/obsidian/Plugin/UIComponent';
+import { bindValueComponent } from 'obsidian-dev-utils/obsidian/Plugin/ValueComponent';
 
 import type <%= pluginShortName %>Plugin from './<%= pluginShortName %>Plugin.ts';
 
@@ -11,7 +11,7 @@ export default class <%= pluginShortName %>PluginSettingsTab extends PluginSetti
     new Setting(this.containerEl)
       .setName('Test Setting')
       .setDesc('This is a test setting.')
-      .addText((text) => bindUiComponent(this.plugin, text, 'testSetting')
+      .addText((text) => bindValueComponent(this.plugin, text, 'testSetting')
         .setPlaceholder('Enter a value')
       );
   }
