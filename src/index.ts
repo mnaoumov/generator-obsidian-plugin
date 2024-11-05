@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import latestVersion from 'latest-version';
 import {
   basename,
   getDirname,
@@ -12,8 +13,6 @@ import yosay from 'yosay';
 
 // eslint-disable-next-line import-x/no-relative-packages
 import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
-
-import latestVersion from 'latest-version';
 
 const minimumNodeVersion = '18.0.0';
 if (!satisfies(process.version, `>=${minimumNodeVersion}`)) {
@@ -137,7 +136,7 @@ export default class ObsidianPluginGenerator extends Generator {
 
         const json = this.fs.readJSON(tempJsonPath) as Record<string, unknown>;
         if (destinationPath.endsWith('package.json')) {
-          const devDependencies = json['devDependencies'] as Record<string, string>;
+          const devDependencies = json['devDependencies'] as Record<string, string> | undefined;
           if (devDependencies) {
             for (const [packageName, version] of Object.entries(devDependencies)) {
               if (version !== 'latest') {
