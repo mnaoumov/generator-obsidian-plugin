@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 6.1.0
+
+- Update settings tab template
+
 ## 6.0.0
 
 - Update libs and template
