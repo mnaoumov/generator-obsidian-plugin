@@ -1,6 +1,8 @@
 {
   "version": "0.2",
-  "ignorePaths": [],
+  "ignorePaths": [
+    "generators/app/index.js"
+  ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
