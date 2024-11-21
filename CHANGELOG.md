@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 6.2.0
+
+- Lint template
+- Update libs
+
 ## 6.1.0
 
 - Update settings tab template
