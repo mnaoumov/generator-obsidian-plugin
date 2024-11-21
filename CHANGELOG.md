@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 6.3.0
+
+- Update libs
+- Lint to allow default export once
+
 ## 6.2.0
 
 - Lint template
