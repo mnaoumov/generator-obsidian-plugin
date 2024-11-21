@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import latestVersion from 'latest-version';
+import { nameof } from 'obsidian-dev-utils/Object';
 import {
   basename,
   getDirname,
@@ -21,15 +22,15 @@ if (!satisfies(process.version, `>=${minimumNodeVersion}`)) {
 }
 
 interface Answers {
+  authorGitHubName: string;
+  authorName: string;
+  currentYear: number;
+  hasStyles: boolean;
+  isDesktopOnly: boolean;
+  pluginDescription: string;
   pluginId: string;
   pluginName: string;
   pluginShortName: string;
-  pluginDescription: string;
-  currentYear: number;
-  authorName: string;
-  authorGitHubName: string;
-  isDesktopOnly: boolean;
-  hasStyles: boolean;
 }
 
 export default class ObsidianPluginGenerator extends Generator {
@@ -44,10 +45,10 @@ export default class ObsidianPluginGenerator extends Generator {
 
     const questions: PromptQuestions<Answers> = [
       {
-        type: 'input',
-        name: nameof<Answers>('pluginId'),
-        message: 'Your plugin\'s id?',
         default: basename(toPosixPath(this._destinationRoot)).replace(/^obsidian-/, ''),
+        message: 'Your plugin\'s id?',
+        name: nameof<Answers>('pluginId'),
+        type: 'input',
         validate(pluginId: string): boolean | string {
           if (!pluginId) {
             return 'Should not be empty';
@@ -73,40 +74,40 @@ export default class ObsidianPluginGenerator extends Generator {
         }
       },
       {
-        type: 'input',
-        name: nameof<Answers>('pluginName'),
+        default: (answers: Answers) => makePluginName(answers.pluginId),
         message: 'Your plugin\'s name?',
-        default: (answers: Answers) => makePluginName(answers.pluginId)
+        name: nameof<Answers>('pluginName'),
+        type: 'input'
       },
       {
-        type: 'input',
-        name: nameof<Answers>('pluginDescription'),
+        default: 'Does something awesome',
         message: 'Your plugin\'s description?',
-        default: 'Does something awesome'
+        name: nameof<Answers>('pluginDescription'),
+        type: 'input'
       },
       {
-        type: 'input',
-        name: nameof<Answers>('authorName'),
+        default: 'John Doe',
         message: 'Your full name?',
-        default: 'John Doe'
+        name: nameof<Answers>('authorName'),
+        type: 'input'
       },
       {
-        type: 'input',
-        name: nameof<Answers>('authorGitHubName'),
+        default: 'johndoe',
         message: 'Your GitHub name?',
-        default: 'johndoe'
+        name: nameof<Answers>('authorGitHubName'),
+        type: 'input'
       },
       {
-        type: 'confirm',
-        name: nameof<Answers>('isDesktopOnly'),
+        default: true,
         message: 'Is your plugin for Desktop only?',
-        default: true
+        name: nameof<Answers>('isDesktopOnly'),
+        type: 'confirm'
       },
       {
-        type: 'confirm',
-        name: nameof<Answers>('hasStyles'),
+        default: false,
         message: 'Does your plugin need CSS styles?',
-        default: false
+        name: nameof<Answers>('hasStyles'),
+        type: 'confirm'
       }
     ];
 
@@ -160,20 +161,8 @@ export default class ObsidianPluginGenerator extends Generator {
   }
 }
 
-function makePluginName(pluginId: string): string {
-  return extractWords(pluginId).join(' ');
-}
-
 function extractWords(pluginId: string): string[] {
   return pluginId.split('-').map(toPascalCase);
-}
-
-function toPascalCase(word: string): string {
-  return (word[0] ?? '').toUpperCase() + word.slice(1);
-}
-
-function nameof<T>(name: Extract<keyof T, string>): string {
-  return name;
 }
 
 async function* getAllFiles(dirPath: string): AsyncGenerator<string> {
@@ -189,7 +178,7 @@ async function* getAllFiles(dirPath: string): AsyncGenerator<string> {
   }
 }
 
-function getDestinationPath(templatePath: string, answers: Answers): string | null {
+function getDestinationPath(templatePath: string, answers: Answers): null | string {
   templatePath = templatePath.replace(/%= (.+?) %/g, (_: string, answerKey: keyof Answers) => String(answers[answerKey]));
 
   if (templatePath.endsWith('.noext')) {
@@ -201,4 +190,12 @@ function getDestinationPath(templatePath: string, answers: Answers): string | nu
   }
 
   return templatePath;
+}
+
+function makePluginName(pluginId: string): string {
+  return extractWords(pluginId).join(' ');
+}
+
+function toPascalCase(word: string): string {
+  return (word[0] ?? '').toUpperCase() + word.slice(1);
 }
