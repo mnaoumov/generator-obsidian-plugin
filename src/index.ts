@@ -120,7 +120,7 @@ export default class ObsidianPluginGenerator extends Generator {
     const templatesDir = join(__dirname, 'templates');
 
     for await (const filePath of getAllFiles(templatesDir)) {
-      const templatePath = filePath.substring(templatesDir.length + 1);
+      const templatePath = filePath.slice(templatesDir.length + 1);
       const destinationPath = getDestinationPath(templatePath, this.answers);
       if (!destinationPath) {
         continue;
@@ -169,7 +169,7 @@ function extractWords(pluginId: string): string[] {
 }
 
 function toPascalCase(word: string): string {
-  return (word[0] ?? '').toUpperCase() + word.substring(1);
+  return (word[0] ?? '').toUpperCase() + word.slice(1);
 }
 
 function nameof<T>(name: Extract<keyof T, string>): string {
