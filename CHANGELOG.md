@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 6.4.0
+
+- Update libs
+- Update template
+
 ## 6.3.0
 
 - Update libs
