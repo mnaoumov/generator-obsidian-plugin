@@ -5,8 +5,8 @@ import { <%= pluginShortName %>PluginSettings } from './<%= pluginShortName %>Pl
 import { <%= pluginShortName %>PluginSettingsTab } from './<%= pluginShortName %>PluginSettingsTab.ts';
 
 export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName %>PluginSettings> {
-  protected override createDefaultPluginSettings(): <%= pluginShortName %>PluginSettings {
-    return new <%= pluginShortName %>PluginSettings();
+  protected override createPluginSettings(data: unknown): <%= pluginShortName %>PluginSettings {
+    return new <%= pluginShortName %>PluginSettings(data);
   }
 
   protected override createPluginSettingsTab(): null | PluginSettingTab {
