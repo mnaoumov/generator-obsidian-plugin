@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 6.6.0
+
+- Ignore .env
+
 ## 6.5.0
 
 - Add publish
