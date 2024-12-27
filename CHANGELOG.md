@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 6.5.0
+
+- Add publish
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/11.0.0
+
 ## 6.4.0
 
 - Update template
