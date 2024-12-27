@@ -2,35 +2,38 @@
 
 ## 6.4.0
 
-- Update libs
 - Update template
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/8.0.0
 
 ## 6.3.0
 
-- Update libs
 - Lint to allow default export once
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.12.0
 
 ## 6.2.0
 
 - Lint template
-- Update libs
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.11.0
 
 ## 6.1.0
 
 - Update settings tab template
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.3.0
 
 ## 6.0.0
 
 - Update libs and template
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.0.0
 
 ## 5.39.0
 
-- Update libs
 - Add tsbuildinfo to ignores
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.39.0
 
 ## 5.37.0
 
 - Add @types/node
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.36.4
 
 ## 5.36.5
 
@@ -43,27 +46,28 @@
 ## 5.36.3
 
 - Add build script
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.36.3
 
 ## 5.29.0
 
-- Update obsidian-dev-utils to 3.29.0
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.29.0
 
 ## 5.25.0
 
-- Update obsidian-dev-utils to 3.25.0
 - Add `.env` support
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.25.0
 
 ## 5.24.1
 
-- Update obsidian-dev-utils to 3.24.1
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.24.1
 
 ## 5.2.0
 
-- Update obsidian-dev-utils to 3.2.0
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.2.0
 
 ## 5.1.0
 
-- Update obsidian-dev-utils to 3.1.0
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.1.0
 
 ## 5.0.5
 
@@ -71,41 +75,44 @@
 
 ## 5.0.4
 
-- Update obsidian-dev-utils to 3.0.4
 - Update template
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.0.4
 
 ## 4.25.1
 
-- Update obsidian-dev-utils to 2.25.1
 - Ignore dist from spellchecker
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.25.1
 
 ## 4.23.3
 
-- Update obsidian-dev-utils to 2.23.3
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.23.3
+
 
 ## 4.21.2
 
-- Update obsidian-dev-utils to 2.21.2
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.21.2
+
 
 ## 4.3.0
 
-- Update obsidian-dev-utils to 2.3.0
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.3.0
 
 ## 4.2.0
 
-- Update obsidian-dev-utils to 1.8.0
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.8.0
+
 
 ## 4.1.3
 
-- Update obsidian-dev-utils to 1.7.4
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.4
 
 ## 4.1.2
 
-- Update obsidian-dev-utils to 1.7.2
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.2
 
 ## 4.1.1
 
-- Update obsidian-dev-utils to 1.7.1
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.1
 
 ## 4.1.0
 
