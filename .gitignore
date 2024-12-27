@@ -25,3 +25,5 @@ dist
 
 /generators/app/index.js
 /tsconfig.tsbuildinfo
+
+/.env
