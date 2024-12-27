@@ -44,7 +44,7 @@
     "lint": "obsidian-dev-utils lint",
     "lint:fix": "obsidian-dev-utils lint:fix",
     "spellcheck": "obsidian-dev-utils spellcheck",
-    "version": "obsidian-dev-utils version"
+    "version": "tsx scripts/version.ts"
   },
   "repository": {
     "type": "git",
