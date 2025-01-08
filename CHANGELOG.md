@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 6.6.1
+
+- Update BRAT link
+
 ## 6.6.0
 
 - Ignore .env
