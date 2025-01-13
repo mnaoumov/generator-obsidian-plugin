@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 6.7.0
+
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/13.3.0
+- Fix ES2024 Update templates
+
 ## 6.6.1
 
 - Update BRAT link
