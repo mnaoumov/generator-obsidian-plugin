@@ -10,7 +10,7 @@
     "inlineSources": true,
     "lib": [
       "DOM",
-      "ESNext"
+      "ES2024"
     ],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
@@ -22,7 +22,7 @@
       ]
     },
     "skipLibCheck": false,
-    "target": "ESNext",
+    "target": "ES2024",
     "types": [
       "node"
     ],
