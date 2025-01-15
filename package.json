@@ -47,7 +47,7 @@
     "yeoman-generator": "^7.4.0",
     "yosay": "^3.0.0"
   },
-  "overrides": {
+  "peerDependencies": {
     "clone-stats": "npm:clone-stats-node22",
     "whatwg-url": "^14.1.0"
   },
