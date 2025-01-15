@@ -8,6 +8,7 @@ import {
   toPosixPath
 } from 'obsidian-dev-utils/Path';
 import { readdirPosix } from 'obsidian-dev-utils/scripts/Fs';
+import { replaceAll } from 'obsidian-dev-utils/String';
 import { satisfies } from 'semver';
 import Generator from 'yeoman-generator';
 import yosay from 'yosay';
@@ -166,7 +167,7 @@ function extractWords(pluginId: string): string[] {
   return pluginId.split('-').map(toPascalCase);
 }
 
-async function* getAllFiles(dirPath: string): AsyncGenerator<string> {
+async function* getAllFiles(dirPath: string): AsyncGenerator<string, void> {
   const files = await readdirPosix(dirPath, { withFileTypes: true });
 
   for (const file of files) {
@@ -180,7 +181,7 @@ async function* getAllFiles(dirPath: string): AsyncGenerator<string> {
 }
 
 function getDestinationPath(templatePath: string, answers: Answers): null | string {
-  templatePath = templatePath.replace(/%= (.+?) %/g, (_: string, answerKey: keyof Answers) => String(answers[answerKey]));
+  templatePath = replaceAll(templatePath, /%= (.+?) %/g, (_, answerKey: string) => String(answers[answerKey as keyof Answers]));
 
   if (templatePath.endsWith('.noext')) {
     return templatePath.slice(0, -'.noext'.length);
