@@ -31,8 +31,7 @@
     "esbuild": "^0.24.2",
     "npm-run-all": "^4.1.5",
     "obsidian-dev-utils": "^13.15.0",
-    "tsx": "^4.19.2",
-    "whatwg-url": "^14.1.0"
+    "tsx": "^4.19.2"
   },
   "dependencies": {
     "chalk": "^5.4.1",
@@ -41,7 +40,8 @@
     "module-alias": "^2.2.3",
     "semver": "^7.6.3",
     "yeoman-generator": "^7.4.0",
-    "yosay": "^3.0.0"
+    "yosay": "^3.0.0",
+    "whatwg-url": "^14.1.0"
   },
   "scripts": {
     "build": "tsx scripts/build.ts",
