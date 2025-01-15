@@ -22,6 +22,8 @@ import yosay from 'yosay';
 // eslint-disable-next-line import-x/no-relative-packages
 import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
 
+addAlias('clone-stats', 'clone-stats-node22');
+
 const minimumNodeVersion = '18.0.0';
 if (!satisfies(process.version, `>=${minimumNodeVersion}`)) {
   console.error(`You need Node.js version ${minimumNodeVersion} or higher to use this generator.`);
@@ -139,7 +141,6 @@ export default class ObsidianPluginGenerator extends Generator {
   }
 
   public async writing(): Promise<void> {
-    addAlias('clone-stats', 'clone-stats-node22');
     this.env.options.nodePackageManager = 'npm';
 
     const __dirname = getDirname(import.meta.url);
