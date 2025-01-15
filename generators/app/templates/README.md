@@ -24,7 +24,7 @@ For more details, refer to the [documentation](https://github.com/mnaoumov/obsid
 
 <a href="<%= fundingUrl %>" target="_blank">Support this plugin</a>
 
-<% } %>
+<% } -%>
 ## License
 
 © [<%= authorName %>](https://github.com/<%= authorGitHubName %>/)
