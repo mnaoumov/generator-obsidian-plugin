@@ -44,9 +44,12 @@
     "module-alias": "^2.2.3",
     "node-fetch": "^3.3.2",
     "semver": "^7.6.3",
-    "whatwg-url": "^14.1.0",
     "yeoman-generator": "^7.4.0",
     "yosay": "^3.0.0"
+  },
+  "overrides": {
+    "clone-stats": "npm:clone-stats-node22",
+    "whatwg-url": "^14.1.0"
   },
   "scripts": {
     "build": "tsx scripts/build.ts",
