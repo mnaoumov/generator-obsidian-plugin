@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import latestVersion from 'latest-version';
+import { addAlias } from 'module-alias';
 import { nameof } from 'obsidian-dev-utils/Object';
 import {
   basename,
@@ -12,6 +13,10 @@ import { replaceAll } from 'obsidian-dev-utils/String';
 import { satisfies } from 'semver';
 import Generator from 'yeoman-generator';
 import yosay from 'yosay';
+import type {
+  BaseEnvironment,
+  QueuedAdapter
+} from '@yeoman/types';
 
 // eslint-disable-next-line import-x/no-relative-packages
 import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
@@ -35,9 +40,16 @@ interface Answers {
   pluginShortName: string;
 }
 
+interface Environment extends BaseEnvironment<QueuedAdapter> {
+  options: {
+    nodePackageManager: string;
+  };
+}
+
 // eslint-disable-next-line import-x/no-default-export
 export default class ObsidianPluginGenerator extends Generator {
   private answers!: Answers;
+  declare env: Environment;
 
   public async prompting(): Promise<void> {
     this.log(
@@ -126,6 +138,9 @@ export default class ObsidianPluginGenerator extends Generator {
   }
 
   public async writing(): Promise<void> {
+    addAlias('clone-stats', 'clone-stats-node22');
+    this.env.options.nodePackageManager = 'npm';
+
     const __dirname = getDirname(import.meta.url);
     const templatesDir = join(__dirname, 'templates');
 
@@ -180,7 +195,7 @@ async function* getAllFiles(dirPath: string): AsyncGenerator<string, void> {
   for (const file of files) {
     const filePath = join(dirPath, file.name);
     if (file.isDirectory()) {
-      yield * getAllFiles(filePath);
+      yield* getAllFiles(filePath);
     } else {
       yield filePath;
     }
