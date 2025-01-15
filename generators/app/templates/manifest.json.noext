@@ -5,5 +5,7 @@
   "description": "<%= pluginDescription %>",
   "author": "<%= authorGitHubName %>",
   "authorUrl": "https://github.com/<%= authorGitHubName %>/",
-  "isDesktopOnly": <%= isDesktopOnly %>
+  "isDesktopOnly": <%= isDesktopOnly %><% if (fundingUrl) { %>,
+  "fundingUrl": "<%= fundingUrl %>"
+<%_ } %>
 }
