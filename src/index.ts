@@ -1,3 +1,8 @@
+import type {
+  BaseEnvironment,
+  QueuedAdapter
+} from '@yeoman/types';
+
 import chalk from 'chalk';
 import latestVersion from 'latest-version';
 import { addAlias } from 'module-alias';
@@ -13,10 +18,6 @@ import { replaceAll } from 'obsidian-dev-utils/String';
 import { satisfies } from 'semver';
 import Generator from 'yeoman-generator';
 import yosay from 'yosay';
-import type {
-  BaseEnvironment,
-  QueuedAdapter
-} from '@yeoman/types';
 
 // eslint-disable-next-line import-x/no-relative-packages
 import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
@@ -48,8 +49,8 @@ interface Environment extends BaseEnvironment<QueuedAdapter> {
 
 // eslint-disable-next-line import-x/no-default-export
 export default class ObsidianPluginGenerator extends Generator {
+  public declare env: Environment;
   private answers!: Answers;
-  declare env: Environment;
 
   public async prompting(): Promise<void> {
     this.log(
@@ -195,7 +196,7 @@ async function* getAllFiles(dirPath: string): AsyncGenerator<string, void> {
   for (const file of files) {
     const filePath = join(dirPath, file.name);
     if (file.isDirectory()) {
-      yield* getAllFiles(filePath);
+      yield * getAllFiles(filePath);
     } else {
       yield filePath;
     }
