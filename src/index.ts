@@ -26,6 +26,7 @@ interface Answers {
   authorGitHubName: string;
   authorName: string;
   currentYear: number;
+  fundingUrl: string;
   hasStyles: boolean;
   isDesktopOnly: boolean;
   pluginDescription: string;
@@ -110,6 +111,12 @@ export default class ObsidianPluginGenerator extends Generator {
         message: 'Does your plugin need CSS styles?',
         name: nameof<Answers>('hasStyles'),
         type: 'confirm'
+      },
+      {
+        default: '',
+        message: 'Funding URL (leave empty if not needed)',
+        name: nameof<Answers>('fundingUrl'),
+        type: 'input'
       }
     ];
 
