@@ -2,6 +2,10 @@
   "name": "<%= pluginId %>",
   "version": "0.0.0",
   "description": "<%= pluginDescription %>",
+  "keywords": [],
+  "license": "MIT",
+  "author": "<%= authorGitHubName %>",
+  "type": "module",
   "scripts": {
     "build": "obsidian-dev-utils build",
     "build:validate": "obsidian-dev-utils build:validate",
@@ -11,9 +15,6 @@
     "spellcheck": "obsidian-dev-utils spellcheck",
     "version": "obsidian-dev-utils version"
   },
-  "keywords": [],
-  "author": "<%= authorGitHubName %>",
-  "license": "MIT",
   "devDependencies": {
     "@tsconfig/strictest": "latest",
     "@types/node": "latest",
@@ -23,6 +24,5 @@
   },
   "overrides": {
     "boolean": "npm:dry-uninstall"
-  },
-  "type": "module"
+  }
 }
