@@ -25,31 +25,19 @@
     "@tsconfig/strictest": "^2.0.5",
     "@types/debug": "^4.1.12",
     "@types/json-schema": "^7.0.15",
-    "@types/module-alias": "^2.0.4",
     "@types/semver": "^7.5.8",
     "@types/yosay": "^2.0.3",
     "esbuild": "^0.24.2",
     "npm-run-all": "^4.1.5",
-    "obsidian-dev-utils": "^13.15.0",
+    "obsidian-dev-utils": "^13.3.0",
     "tsx": "^4.19.2"
   },
   "dependencies": {
-    "@octokit/core": "^6.1.3",
-    "@octokit/request": "^9.1.4",
-    "@octokit/rest": "^21.1.0",
     "chalk": "^5.4.1",
-    "clone-stats-node22": "^1.0.1",
-    "github-username": "^8.0.0",
     "latest-version": "^9.0.0",
-    "module-alias": "^2.2.3",
-    "node-fetch": "^3.3.2",
     "semver": "^7.6.3",
     "yeoman-generator": "^7.4.0",
     "yosay": "^3.0.0"
-  },
-  "peerDependencies": {
-    "clone-stats": "npm:clone-stats-node22",
-    "whatwg-url": "^14.1.0"
   },
   "scripts": {
     "build": "tsx scripts/build.ts",

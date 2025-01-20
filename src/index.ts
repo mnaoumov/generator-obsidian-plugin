@@ -5,7 +5,6 @@ import type {
 
 import chalk from 'chalk';
 import latestVersion from 'latest-version';
-import { addAlias } from 'module-alias';
 import { nameof } from 'obsidian-dev-utils/Object';
 import {
   basename,
@@ -16,15 +15,11 @@ import {
 import { readdirPosix } from 'obsidian-dev-utils/scripts/Fs';
 import { replaceAll } from 'obsidian-dev-utils/String';
 import { satisfies } from 'semver';
+import Generator from 'yeoman-generator';
 import yosay from 'yosay';
 
 // eslint-disable-next-line import-x/no-relative-packages
 import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
-
-addAlias('clone-stats', 'clone-stats-node22');
-
-// eslint-disable-next-line import-x/imports-first, import-x/first
-import Generator from 'yeoman-generator';
 
 const minimumNodeVersion = '18.0.0';
 if (!satisfies(process.version, `>=${minimumNodeVersion}`)) {
