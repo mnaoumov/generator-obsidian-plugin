@@ -2,12 +2,24 @@
   "name": "generator-obsidian-plugin",
   "version": "7.0.0",
   "description": "Obsidian Plugin Bootstrap",
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "yeoman-generator"
+  ],
   "homepage": "https://github.com/mnaoumov/generator-obsidian-plugin/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnaoumov/generator-obsidian-plugin.git"
+  },
+  "license": "MIT",
   "author": {
     "name": "Michael Naumov",
     "email": "mnaoumov@gmail.com",
     "url": "https://github.com/mnaoumov/"
   },
+  "type": "module",
+  "main": "generators/index.js",
   "files": [
     "generators/",
     "CHANGELOG.md",
@@ -15,12 +27,20 @@
     "README.md",
     "package.json"
   ],
-  "main": "generators/index.js",
-  "keywords": [
-    "obsidian",
-    "plugin",
-    "yeoman-generator"
-  ],
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "lint": "obsidian-dev-utils lint",
+    "lint:fix": "obsidian-dev-utils lint:fix",
+    "spellcheck": "obsidian-dev-utils spellcheck",
+    "version": "tsx scripts/version.ts"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "latest-version": "^9.0.0",
+    "semver": "^7.6.3",
+    "yeoman-generator": "^7.4.0",
+    "yosay": "^3.0.0"
+  },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.5",
     "@types/debug": "^4.1.12",
@@ -32,30 +52,10 @@
     "obsidian-dev-utils": "^14.4.0",
     "tsx": "^4.19.2"
   },
-  "dependencies": {
-    "chalk": "^5.4.1",
-    "latest-version": "^9.0.0",
-    "semver": "^7.6.3",
-    "yeoman-generator": "^7.4.0",
-    "yosay": "^3.0.0"
+  "engines": {
+    "node": ">=18.0.0"
   },
   "overrides": {
     "whatwg-url": "^14.1.0"
-  },
-  "scripts": {
-    "build": "tsx scripts/build.ts",
-    "lint": "obsidian-dev-utils lint",
-    "lint:fix": "obsidian-dev-utils lint:fix",
-    "spellcheck": "obsidian-dev-utils spellcheck",
-    "version": "tsx scripts/version.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mnaoumov/generator-obsidian-plugin.git"
-  },
-  "license": "MIT",
-  "type": "module",
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
