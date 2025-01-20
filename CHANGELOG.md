@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 7.0.0
+
+- Always add styles.css
+- Fix boolean warning
+- Add debugging in README
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/14.3.0
+
 ## 6.7.0
 
 - https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/13.3.0
