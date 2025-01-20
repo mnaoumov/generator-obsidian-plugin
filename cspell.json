@@ -23,6 +23,7 @@
     "preversion",
     "tsbuildinfo",
     "tsconfigs",
+    "whatwg",
     "yosay"
   ],
   "ignoreWords": [],
