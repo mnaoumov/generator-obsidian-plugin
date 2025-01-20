@@ -1,7 +1,8 @@
 {
   "version": "0.2",
   "ignorePaths": [
-    "generators/app/index.js"
+    "generators/app/index.js",
+    "npm-shrinkwrap.json"
   ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
