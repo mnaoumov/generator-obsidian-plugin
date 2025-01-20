@@ -143,7 +143,7 @@ export default class ObsidianPluginGenerator extends Generator {
     const __dirname = getDirname(import.meta.url);
     const templatesDir = join(__dirname, 'templates');
 
-    for await (const filePath of getAllFiles(templatesDir)) {
+    for (const filePath of await readdirPosix(templatesDir, { recursive: true })) {
       const templatePath = filePath.slice(templatesDir.length + 1);
       const destinationPath = getDestinationPath(templatePath, this.answers);
       if (!destinationPath) {
@@ -186,19 +186,6 @@ export default class ObsidianPluginGenerator extends Generator {
 
 function extractWords(pluginId: string): string[] {
   return pluginId.split('-').map(toPascalCase);
-}
-
-async function* getAllFiles(dirPath: string): AsyncGenerator<string, void> {
-  const files = await readdirPosix(dirPath, { withFileTypes: true });
-
-  for (const file of files) {
-    const filePath = join(dirPath, file.name);
-    if (file.isDirectory()) {
-      yield * getAllFiles(filePath);
-    } else {
-      yield filePath;
-    }
-  }
 }
 
 function getDestinationPath(templatePath: string, answers: Answers): null | string {
