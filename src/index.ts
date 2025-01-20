@@ -10,6 +10,7 @@ import {
   basename,
   getDirname,
   join,
+  relative,
   toPosixPath
 } from 'obsidian-dev-utils/Path';
 import { readdirPosix } from 'obsidian-dev-utils/scripts/Fs';
@@ -143,8 +144,12 @@ export default class ObsidianPluginGenerator extends Generator {
     const __dirname = getDirname(import.meta.url);
     const templatesDir = join(__dirname, 'templates');
 
-    for (const filePath of await readdirPosix(templatesDir, { recursive: true })) {
-      const templatePath = filePath.slice(templatesDir.length + 1);
+    for (const dirent of await readdirPosix(templatesDir, { recursive: true, withFileTypes: true })) {
+      if (dirent.isDirectory()) {
+        continue;
+      }
+
+      const templatePath = join(relative(templatesDir, dirent.parentPath), dirent.name);
       const destinationPath = getDestinationPath(templatePath, this.answers);
       if (!destinationPath) {
         continue;
