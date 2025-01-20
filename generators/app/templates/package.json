@@ -21,5 +21,8 @@
     "obsidian-dev-utils": "latest",
     "obsidian-typings": "latest"
   },
+  "overrides": {
+    "boolean": "npm:dry-uninstall"
+  },
   "type": "module"
 }
