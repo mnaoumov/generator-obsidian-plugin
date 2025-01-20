@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 7.1.0
+
+- Publish npm-shrinkwrap.json
+- Ensure descriptions end with dot
+- Sort manifest
+- Sort package.json
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/14.4.0
+
 ## 7.0.0
 
 - Always add styles.css
