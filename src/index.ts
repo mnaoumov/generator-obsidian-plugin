@@ -33,7 +33,6 @@ interface Answers {
   authorName: string;
   currentYear: number;
   fundingUrl: string;
-  hasStyles: boolean;
   isDesktopOnly: boolean;
   pluginDescription: string;
   pluginId: string;
@@ -120,12 +119,6 @@ export default class ObsidianPluginGenerator extends Generator {
         type: 'confirm'
       },
       {
-        default: false,
-        message: 'Does your plugin need CSS styles?',
-        name: nameof<Answers>('hasStyles'),
-        type: 'confirm'
-      },
-      {
         default: '',
         message: 'Funding URL (leave empty if not needed)',
         name: nameof<Answers>('fundingUrl'),
@@ -198,10 +191,6 @@ function getDestinationPath(templatePath: string, answers: Answers): null | stri
 
   if (templatePath.endsWith('.noext')) {
     return templatePath.slice(0, -'.noext'.length);
-  }
-
-  if (templatePath === 'styles.css' && !answers.hasStyles) {
-    return null;
   }
 
   return templatePath;

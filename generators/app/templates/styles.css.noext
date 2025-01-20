@@ -1,0 +1,29 @@
+/** You can remove this file if you don't need any styles */
+
+.<%= pluginId %>.obsidian-dev-utils {
+  /* default styles */
+}
+
+.<%= pluginId %>.obsidian-dev-utils.alert-modal {
+  /* default styles */
+}
+
+.<%= pluginId %>.obsidian-dev-utils.confirm-modal {
+  /* default styles */
+}
+
+.<%= pluginId %>.obsidian-dev-utils.plugin-settings-tab {
+  /* default styles */
+}
+
+.<%= pluginId %>.obsidian-dev-utils.plugin-settings-tab .value-component-invalid {
+  /* default styles */
+}
+
+.<%= pluginId %>.obsidian-dev-utils.prompt-modal {
+  /* default styles */
+}
+
+.<%= pluginId %>.obsidian-dev-utils.select-item-modal {
+  /* default styles */
+}
