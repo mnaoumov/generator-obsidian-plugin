@@ -39,6 +39,9 @@
     "yeoman-generator": "^7.4.0",
     "yosay": "^3.0.0"
   },
+  "overrides": {
+    "whatwg-url": "^14.1.0"
+  },
   "scripts": {
     "build": "tsx scripts/build.ts",
     "lint": "obsidian-dev-utils lint",
