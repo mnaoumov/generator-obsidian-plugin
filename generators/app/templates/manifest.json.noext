@@ -1,11 +1,12 @@
 {
-  "id": "<%= pluginId %>",
-  "name": "<%= pluginName %>",
-  "version": "0.0.0",
-  "description": "<%= pluginDescription %>",
   "author": "<%= authorGitHubName %>",
   "authorUrl": "https://github.com/<%= authorGitHubName %>/",
-  "isDesktopOnly": <%= isDesktopOnly %><% if (fundingUrl) { %>,
-  "fundingUrl": "<%= fundingUrl %>"
+  "description": "<%= pluginDescription %>",
+<% if (fundingUrl) { %>
+  "fundingUrl": "<%= fundingUrl %>",
 <%_ } %>
+  "id": "<%= pluginId %>",
+  "isDesktopOnly": <%= isDesktopOnly %>,
+  "name": "<%= pluginName %>",
+  "version": "0.0.0"
 }
