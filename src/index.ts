@@ -95,10 +95,17 @@ export default class ObsidianPluginGenerator extends Generator {
         type: 'input'
       },
       {
-        default: 'Does something awesome',
+        default: 'Does something awesome.',
         message: 'Your plugin\'s description?',
         name: nameof<Answers>('pluginDescription'),
-        type: 'input'
+        type: 'input',
+        validate(pluginDescription: string): boolean | string {
+          if (!pluginDescription.endsWith('.')) {
+            return 'Should end with a dot';
+          }
+
+          return true;
+        }
       },
       {
         default: 'John Doe',
