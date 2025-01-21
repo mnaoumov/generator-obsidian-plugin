@@ -16,6 +16,8 @@ npm install -g generator-obsidian-plugin
 Then generate your new project:
 
 ```bash
+mkdir new-plugin-name
+cd new-plugin-name
 yo obsidian-plugin
 ```
 
