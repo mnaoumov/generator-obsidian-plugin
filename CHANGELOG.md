@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 8.0.0
+
+- Fix PluginSettingsTab template
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/15.0.0
+
 ## 7.1.0
 
 - Publish npm-shrinkwrap.json
