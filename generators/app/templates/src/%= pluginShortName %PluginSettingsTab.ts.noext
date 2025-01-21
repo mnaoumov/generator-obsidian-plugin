@@ -1,6 +1,5 @@
 import { Setting } from 'obsidian';
 import { PluginSettingsTabBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginSettingsTabBase';
-import { extend } from 'obsidian-dev-utils/obsidian/Plugin/ValueComponent';
 
 import type { <%= pluginShortName %>Plugin } from './<%= pluginShortName %>Plugin.ts';
 
@@ -11,15 +10,19 @@ export class <%= pluginShortName %>PluginSettingsTab extends PluginSettingsTabBa
     new Setting(this.containerEl)
       .setName('Test Setting')
       .setDesc('This is a test setting.')
-      .addText((text) =>
-        extend(text)
-          .bind(this.plugin, 'testSetting', {
-            componentToPluginSettingsValueConverter: (uiValue: string) => uiValue.replace(' (converted)', ''),
-            onChanged: () => { this.display(); },
-            pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => pluginSettingsValue + ' (converted)',
-            valueValidator: (uiValue) => uiValue.length > 0 ? null : 'Value must be non-empty'
-          })
-          .setPlaceholder('Enter a value')
+      .addText((text) => this.bind(text, 'testSetting', {
+        componentToPluginSettingsValueConverter: (uiValue: string) => uiValue.replace(' (converted)', ''),
+        onChanged: () => { this.display(); },
+        pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => pluginSettingsValue + ' (converted)',
+        valueValidator: (uiValue) => {
+          if (uiValue) {
+            return 'Value must be non-empty';
+          }
+
+          return;
+        }
+      })
+        .setPlaceholder('Enter a value')
       );
   }
 }
