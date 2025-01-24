@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 8.1.0
+
+- Add format
+
 ## 8.0.0
 
 - Fix PluginSettingsTab template
