@@ -48,7 +48,7 @@ interface Environment extends BaseEnvironment<QueuedAdapter> {
 
 // eslint-disable-next-line import-x/no-default-export
 export default class ObsidianPluginGenerator extends Generator {
-  public declare env: Environment;
+  declare public env: Environment;
   private answers!: Answers;
 
   public async prompting(): Promise<void> {

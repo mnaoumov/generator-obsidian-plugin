@@ -125,11 +125,9 @@
 
 - https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.23.3
 
-
 ## 4.21.2
 
 - https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.21.2
-
 
 ## 4.3.0
 
@@ -138,7 +136,6 @@
 ## 4.2.0
 
 - https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.8.0
-
 
 ## 4.1.3
 

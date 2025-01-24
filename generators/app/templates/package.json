@@ -10,6 +10,8 @@
     "build": "obsidian-dev-utils build",
     "build:validate": "obsidian-dev-utils build:validate",
     "dev": "obsidian-dev-utils dev",
+    "format": "obsidian-dev-utils format",
+    "format:check": "obsidian-dev-utils format:check",
     "lint": "obsidian-dev-utils lint",
     "lint:fix": "obsidian-dev-utils lint:fix",
     "spellcheck": "obsidian-dev-utils spellcheck",
