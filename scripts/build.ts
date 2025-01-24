@@ -30,6 +30,6 @@ await wrapCliTask(async () => {
 
   const buildContext = await context(buildOptions);
   const result = await buildContext.rebuild();
-  const isSuccess = result.errors.length == 0 && result.warnings.length == 0;
+  const isSuccess = result.errors.length === 0 && result.warnings.length === 0;
   return CliTaskResult.Success(isSuccess);
 });
