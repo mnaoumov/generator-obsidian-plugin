@@ -40,13 +40,37 @@ npm run build
 
 Compiles the production version of your plugin into the `dist/build` folder.
 
-#### Validate TypeScript build
+#### Clean build folder
 
 ```bash
-npm run build:validate
+npm run build:clean
 ```
 
-Validates if TypeScript code compiles.
+Cleans `dist` folder.
+
+#### Compile code
+
+```bash
+npm run build:compile
+```
+
+Checks if code compiles.
+
+#### Compile Svelte code
+
+```bash
+npm run build:compile:svelte
+```
+
+Checks if Svelte code compiles.
+
+#### Compile TypeScript code
+
+```bash
+npm run build:compile:svelte:typeScript
+```
+
+Checks if TypeScript code compiles.
 
 #### Build Development Version
 
