@@ -20,11 +20,13 @@
   "devDependencies": {
     "@codemirror/language": "latest",
     "@codemirror/state": "latest",
+    "@codemirror/view": "latest",
     "@tsconfig/strictest": "latest",
     "@types/node": "latest",
     "obsidian": "latest",
     "obsidian-dev-utils": "latest",
-    "obsidian-typings": "latest"
+    "obsidian-typings": "latest",
+    "svelte": "latest"
   },
   "overrides": {
     "boolean": "npm:dry-uninstall"
