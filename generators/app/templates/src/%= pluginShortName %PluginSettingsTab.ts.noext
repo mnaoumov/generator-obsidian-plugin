@@ -10,19 +10,16 @@ export class <%= pluginShortName %>PluginSettingsTab extends PluginSettingsTabBa
     new Setting(this.containerEl)
       .setName('Test Setting')
       .setDesc('This is a test setting.')
-      .addText((text) => this.bind(text, 'testSetting', {
-        componentToPluginSettingsValueConverter: (uiValue: string) => uiValue.replace(' (converted)', ''),
-        onChanged: () => { this.display(); },
-        pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => pluginSettingsValue + ' (converted)',
-        valueValidator: (uiValue) => {
-          if (uiValue) {
-            return 'Value must be non-empty';
-          }
-
-          return;
-        }
-      })
-        .setPlaceholder('Enter a value')
+      .addText((text) =>
+        this.bind(text, 'testSetting', {
+          componentToPluginSettingsValueConverter: (uiValue: string) => uiValue.replace(' (converted)', ''),
+          onChanged: () => {
+            this.display();
+          },
+          pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => pluginSettingsValue + ' (converted)',
+          valueValidator: (uiValue) => uiValue.length > 0 ? undefined : 'Value must be non-empty'
+        })
+          .setPlaceholder('Enter a value')
       );
   }
 }

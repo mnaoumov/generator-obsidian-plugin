@@ -18,6 +18,8 @@
     "version": "obsidian-dev-utils version"
   },
   "devDependencies": {
+    "@codemirror/language": "latest",
+    "@codemirror/state": "latest",
     "@tsconfig/strictest": "latest",
     "@types/node": "latest",
     "obsidian": "latest",
