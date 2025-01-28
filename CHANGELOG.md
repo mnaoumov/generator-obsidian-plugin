@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 9.0.0
+
+- Add Svelte support
+- Add SASS support
+- Add many usage examples
+
 ## 8.1.0
 
 - Add format
