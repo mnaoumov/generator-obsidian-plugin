@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 9.0.1
+
+- Fix svelte templates
+
 ## 9.0.0
 
 - Add Svelte support
