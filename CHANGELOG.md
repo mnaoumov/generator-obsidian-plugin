@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 9.0.3
+
+- Update scripts and README
+
 ## 9.0.2
 
 - Remove test styles
