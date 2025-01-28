@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 9.0.2
+
+- Remove test styles
+
 ## 9.0.1
 
 - Fix svelte templates
