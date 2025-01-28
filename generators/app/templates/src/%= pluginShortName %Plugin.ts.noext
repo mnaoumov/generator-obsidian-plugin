@@ -13,8 +13,8 @@ import {
 } from 'obsidian';
 import { PluginBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginBase';
 
-import { <%= pluginShortName %>PluginSettings } from './%= pluginShortName %PluginSettings.ts';
-import { <%= pluginShortName %>PluginSettingsTab } from './%= pluginShortName %PluginSettingsTab.ts';
+import { <%= pluginShortName %>PluginSettings } from './<%= pluginShortName %>PluginSettings.ts';
+import { <%= pluginShortName %>PluginSettingsTab } from './<%= pluginShortName %>PluginSettingsTab.ts';
 import { sampleStateField } from './EditorExtensions/SampleStateField.ts';
 import { sampleViewPlugin } from './EditorExtensions/SampleViewPlugin.ts';
 import { SampleEditorSuggest } from './EditorSuggests/SampleEditorSuggest.ts';

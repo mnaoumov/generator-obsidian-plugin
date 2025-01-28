@@ -7,14 +7,14 @@ import {
 import type {
   SampleComponentExports,
   SampleComponentProps
-} from '../SvelteComponents/SampleComponent.svelte';
+} from '../SvelteComponents/SampleComponent.d.ts';
 
 import SampleComponent from '../SvelteComponents/SampleComponent.svelte';
 
 export const SAMPLE_VIEW_TYPE = '<%= pluginId %>-sample-view';
 
 export class SampleView extends ItemView {
-  private SampleComponent: null | SampleComponentExports = null;
+  private sampleComponent: null | SampleComponentExports = null;
 
   public override getDisplayText(): string {
     return 'Sample view';
@@ -25,8 +25,8 @@ export class SampleView extends ItemView {
   }
 
   public override async onClose(): Promise<void> {
-    if (this.SampleComponent) {
-      await unmount(this.SampleComponent);
+    if (this.sampleComponent) {
+      await unmount(this.sampleComponent);
     }
   }
 
@@ -35,12 +35,12 @@ export class SampleView extends ItemView {
       startCount: 10
     };
 
-    this.SampleComponent = mount(SampleComponent, {
+    this.sampleComponent = mount(SampleComponent, {
       props,
       target: this.contentEl
-    });
+    }) as SampleComponentExports;
 
-    this.SampleComponent.increment();
+    this.sampleComponent.increment();
     await Promise.resolve();
   }
 }

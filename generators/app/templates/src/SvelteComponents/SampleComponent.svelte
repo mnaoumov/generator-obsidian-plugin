@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { SampleComponentProps } from "./SampleComponent.svelte";
+  import type { SampleComponentProps } from './SampleComponent.d.ts';
 
   let { startCount }: SampleComponentProps = $props();
 
