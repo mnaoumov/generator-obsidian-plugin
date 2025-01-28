@@ -1,0 +1,30 @@
+/** You can remove this file if you don't need any styles */
+
+$plugin-id: 'a2';
+$lib-name: 'obsidian-dev-utils';
+
+.#{$plugin-id}.#{$lib-name} {
+  &.alert-modal {
+    color: blue;
+  }
+
+  &.confirm-modal {
+    color: red;
+  }
+
+  &.plugin-settings-tab {
+    color: navajowhite;
+
+    .value-component-invalid {
+      color: green;
+    }
+  }
+
+  &.prompt-modal {
+    color: yellow;
+  }
+
+  &.select-item-modal {
+    color: orange;
+  }
+}

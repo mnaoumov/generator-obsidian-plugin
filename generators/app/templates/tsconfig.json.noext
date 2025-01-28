@@ -1,6 +1,7 @@
 {
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
+    "allowArbitraryExtensions": true,
     "allowImportingTsExtensions": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -19,11 +20,13 @@
     "target": "ES2024",
     "types": [
       "node",
-      "obsidian-typings"
+      "obsidian-typings",
+      "svelte"
     ],
     "verbatimModuleSyntax": true
   },
   "include": [
+    "./src/**/*.svelte",
     "./src/**/*.ts",
     "./scripts/**/*.ts"
   ]
