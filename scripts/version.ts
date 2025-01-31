@@ -4,7 +4,8 @@ import { publish } from 'obsidian-dev-utils/scripts/NpmPublish';
 import { updateVersion } from 'obsidian-dev-utils/scripts/version';
 
 await wrapCliTask(async () => {
-  const versionUpdateTypeStr = process.argv[2];
+  const VERSION_UPDATE_TYPE_ARG_INDEX = 2;
+  const versionUpdateTypeStr = process.argv[VERSION_UPDATE_TYPE_ARG_INDEX];
   await updateVersion(versionUpdateTypeStr);
   const isBeta = versionUpdateTypeStr === 'beta';
   await publish(isBeta);

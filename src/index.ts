@@ -156,7 +156,7 @@ export default class ObsidianPluginGenerator extends Generator {
       }
 
       if (destinationPath.endsWith('.json')) {
-        const tempJsonPath = this.destinationPath(destinationPath + '.temp');
+        const tempJsonPath = this.destinationPath(`${destinationPath}.temp`);
         this.fs.copyTpl(
           this.templatePath(templatePath),
           tempJsonPath,
@@ -172,7 +172,7 @@ export default class ObsidianPluginGenerator extends Generator {
                 continue;
               }
 
-              devDependencies[packageName] = '^' + await latestVersion(packageName);
+              devDependencies[packageName] = `^${await latestVersion(packageName)}`;
             }
           }
         }
@@ -194,7 +194,7 @@ function extractWords(pluginId: string): string[] {
 }
 
 function getDestinationPath(templatePath: string, answers: Answers): null | string {
-  templatePath = replaceAll(templatePath, /%= (.+?) %/g, (_, answerKey: string) => String(answers[answerKey as keyof Answers]));
+  templatePath = replaceAll(templatePath, /%= (?<AnswerKey>.+?) %/g, (_, answerKey: string) => String(answers[answerKey as keyof Answers]));
 
   if (templatePath.endsWith('.noext')) {
     return templatePath.slice(0, -'.noext'.length);
