@@ -30,6 +30,7 @@
   ],
   "scripts": {
     "build": "tsx scripts/build.ts",
+    "build:compile": "obsidian-dev-utils build:compile",
     "format": "obsidian-dev-utils format",
     "format:check": "obsidian-dev-utils format:check",
     "lint": "obsidian-dev-utils lint",
