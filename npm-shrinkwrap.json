@@ -23,7 +23,7 @@
         "@types/yosay": "^2.0.3",
         "esbuild": "^0.24.2",
         "npm-run-all": "^4.1.5",
-        "obsidian-dev-utils": "^17.2.0",
+        "obsidian-dev-utils": "^17.3.0",
         "tsx": "^4.19.2"
       },
       "engines": {
@@ -9297,9 +9297,9 @@
       }
     },
     "node_modules/obsidian-dev-utils": {
-      "version": "17.2.0",
-      "resolved": "https://registry.npmjs.org/obsidian-dev-utils/-/obsidian-dev-utils-17.2.0.tgz",
-      "integrity": "sha512-Ml42jD3qayNXu2PMUsiIA/Wj8LeWez7zKyOpu3XirVTs6UwpNpMd8gsjUYuMC/xWNNZYynAekmd8A9IK1BRNMg==",
+      "version": "17.3.0",
+      "resolved": "https://registry.npmjs.org/obsidian-dev-utils/-/obsidian-dev-utils-17.3.0.tgz",
+      "integrity": "sha512-oMv69FLUAXkhGWw8mgTO/iasTfpxAmkyvwkIr4BjUoUW5nAwZOvKnbD2Vjo4hwIG0izGyIIcD/5sOgRp0148Gw==",
       "dev": true,
       "license": "MIT",
       "dependencies": {
