@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 9.1.1
+
+- Use proper name
+
 ## 9.1.0
 
 - Lint template
