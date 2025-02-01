@@ -1,8 +1,6 @@
-import type {
-  EditorState,
-  Extension
-} from '@codemirror/state';
+import type { Extension } from '@codemirror/state';
 import type { DecorationSet } from '@codemirror/view';
+import type { StateFieldSpec } from 'obsidian-dev-utils/codemirror/StateFieldSpec';
 
 import { syntaxTree } from '@codemirror/language';
 import {
@@ -17,15 +15,6 @@ import {
 
 import { SampleWidget } from './SampleWidget.ts';
 
-interface StateFieldSpec<Value> {
-  compare?: (a: Value, b: Value) => boolean;
-  create: (state: EditorState) => Value;
-  fromJSON?: (json: unknown, state: EditorState) => Value;
-  provide?: (field: StateField<Value>) => Extension;
-  toJSON?: (value: Value, state: EditorState) => unknown;
-  update: (value: Value, transaction: Transaction) => Value;
-}
-
 class SampleStateField implements StateFieldSpec<DecorationSet> {
   public create(): DecorationSet {
     return Decoration.none;
@@ -36,12 +25,13 @@ class SampleStateField implements StateFieldSpec<DecorationSet> {
   }
 
   public update(_oldState: DecorationSet, transaction: Transaction): DecorationSet {
+    const OFFSET = 2;
     const builder = new RangeSetBuilder<Decoration>();
 
     syntaxTree(transaction.state).iterate({
       enter(node) {
         if (node.type.name.startsWith('list')) {
-          const listCharFrom = node.from - 2;
+          const listCharFrom = node.from - OFFSET;
 
           builder.add(
             listCharFrom,

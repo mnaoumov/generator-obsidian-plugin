@@ -11,6 +11,7 @@ import {
   Notice,
   PluginSettingTab
 } from 'obsidian';
+import { getDebugger } from 'obsidian-dev-utils/Debug';
 import { PluginBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginBase';
 
 import { <%= pluginShortName %>PluginSettings } from './<%= pluginShortName %>PluginSettings.ts';
@@ -76,7 +77,7 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
       display: this.manifest.name
     });
 
-    const INTERVAL_IN_MILLISECONDS = 5 * 60 * 1000;
+    const INTERVAL_IN_MILLISECONDS = 60_000;
     this.registerInterval(window.setInterval(this.handleSampleIntervalTick.bind(this), INTERVAL_IN_MILLISECONDS));
 
     this.registerMarkdownCodeBlockProcessor('sample-code-block-processor', this.handleSampleCodeBlockProcessor.bind(this));
@@ -89,7 +90,7 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
   }
 
   private handleSampleCodeBlockProcessor(source: string, el: HTMLElement, ctx: MarkdownPostProcessorContext): void {
-    console.log('handleSampleCodeBlockProcessor', source, el, ctx);
+    getDebugger('handleSampleCodeBlockProcessor')(source, el, ctx);
     el.setText('Sample code block processor');
   }
 
@@ -107,7 +108,7 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
   }
 
   private handleSampleMarkdownPostProcessor(el: HTMLElement, ctx: MarkdownPostProcessorContext): void {
-    console.log('handleSampleMarkdownPostProcessor', el, ctx);
+    getDebugger('handleSampleMarkdownPostProcessor')(el, ctx);
     if (el.hasClass('el-h6')) {
       el.setText('Sample markdown post processor');
     }
@@ -120,7 +121,7 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
   private async openSampleView(): Promise<void> {
     const { workspace } = this.app;
 
-    let leaf: null | WorkspaceLeaf = null;
+    let leaf: null | WorkspaceLeaf;
     const leaves = workspace.getLeavesOfType(SAMPLE_VIEW_TYPE);
 
     if (leaves.length > 0) {
