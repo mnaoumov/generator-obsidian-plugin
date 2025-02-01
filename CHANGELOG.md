@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 9.1.0
+
+- Lint template
+- build:compile
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/17.3.0
+
 ## 9.0.3
 
 - Update scripts and README
