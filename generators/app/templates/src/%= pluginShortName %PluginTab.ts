@@ -16,7 +16,7 @@ export class <%= pluginShortName %>PluginSettingsTab extends PluginSettingsTabBa
           onChanged: () => {
             this.display();
           },
-          pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => pluginSettingsValue + ' (converted)',
+          pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => `${pluginSettingsValue} (converted)`,
           valueValidator: (uiValue) => uiValue.length > 0 ? undefined : 'Value must be non-empty'
         })
           .setPlaceholder('Enter a value')

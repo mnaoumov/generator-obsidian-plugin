@@ -23,13 +23,14 @@ class SampleViewPlugin implements PluginValue {
   }
 
   public buildDecorations(view: EditorView): DecorationSet {
+    const OFFSET = 2;
     const builder = new RangeSetBuilder<Decoration>();
 
     for (const { from, to } of view.visibleRanges) {
       syntaxTree(view.state).iterate({
         enter(node) {
           if (node.type.name.startsWith('list')) {
-            const listCharFrom = node.from - 2;
+            const listCharFrom = node.from - OFFSET;
 
             builder.add(
               listCharFrom,

@@ -31,8 +31,9 @@ export class SampleView extends ItemView {
   }
 
   public override async onOpen(): Promise<void> {
+    const START_COUNT = 10;
     const props: SampleComponentProps = {
-      startCount: 10
+      startCount: START_COUNT
     };
 
     this.sampleComponent = mount(SampleComponent, {
