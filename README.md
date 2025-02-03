@@ -23,10 +23,13 @@ yo obsidian-plugin
 
 ## Features of this template
 
-- Enables [unofficial](https://github.com/Fevol/obsidian-typings/) TypeScript typings to the internal [Obsidian](https://obsidian.md/) API.
+- [Obsidian Extended Typings](https://github.com/Fevol/obsidian-typings/) for internal [Obsidian](https://obsidian.md/) API.
 - Code style is forced via [`ESLint`](https://eslint.org/).
 - Spell checking is forced via [`CSpell`](https://cspell.org/).
-- Uses CLI commands and code helpers from [Obsidian Dev Utils](https://github.com/mnaoumov/obsidian-dev-utils).
+- Code formatting is forced via [`dprint`](https://dprint.dev/).
+- CLI commands and code helpers from [Obsidian Dev Utils](https://github.com/mnaoumov/obsidian-dev-utils).
+- Supports [svelte](https://svelte.dev/) components.
+- Supports [SASS](https://sass-lang.com/) for CSS pre-processing.
 
 ### NPM Commands
 
