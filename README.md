@@ -28,8 +28,8 @@ yo obsidian-plugin
 - Spell checking is forced via [`CSpell`](https://cspell.org/).
 - Code formatting is forced via [`dprint`](https://dprint.dev/).
 - CLI commands and code helpers from [Obsidian Dev Utils](https://github.com/mnaoumov/obsidian-dev-utils).
-- Supports [svelte](https://svelte.dev/) components.
-- Supports [SASS](https://sass-lang.com/) for CSS pre-processing.
+- Supports [svelte](https://svelte.dev/) components. See example in `src/SvelteComponents` in the generated project.
+- Supports [SASS](https://sass-lang.com/) for CSS pre-processing. See example in `src/styles/main.scss` in the generated project.
 
 ### NPM Commands
 
@@ -70,7 +70,7 @@ Checks if Svelte code compiles.
 #### Compile TypeScript code
 
 ```bash
-npm run build:compile:svelte:typeScript
+npm run build:compile:typeScript
 ```
 
 Checks if TypeScript code compiles.
@@ -131,6 +131,8 @@ npm run version <versionUpdateType>
 
 Runs build checks before updating the version and releases if all checks pass. The `<versionUpdateType>` can be `major`, `minor`, `patch`, `beta`, or a specific version like `x.y.z[-suffix]`.
 
+If you use `beta` as `<versionUpdateType>` for your Obsidian plugin, the plugin will be deployed compatible to install with [BRAT](https://obsidian.md/plugins?id=obsidian42-brat).
+
 ## Support
 
 <a href="https://www.buymeacoffee.com/mnaoumov" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;"></a>
@@ -138,3 +140,5 @@ Runs build checks before updating the version and releases if all checks pass. T
 ## License
 
 © [Michael Naumov](https://github.com/mnaoumov/)
+
+[Hot Reload]: https://github.com/pjeby/hot-reload
