@@ -4,15 +4,48 @@ $plugin-id: '<%= pluginId %>';
 $lib-name: 'obsidian-dev-utils';
 
 .#{$plugin-id}.#{$lib-name} {
+  & {}
+
+  & :invalid {
+    box-shadow: 0 0 0 2px var(--text-error);
+  }
+
   &.alert-modal {}
 
   &.confirm-modal {}
 
-  &.plugin-settings-tab {
-    .value-component-invalid {}
+  &.date-component {}
+
+  &.datetime-component {}
+
+  &.email-component {}
+
+  &.file-component {}
+
+  &.month-component {}
+
+  select&.month-component,
+  &.month-component.dropdown {
+    height: auto;
   }
+
+  &.multiple-dropdown-component {}
+
+  &.multiple-email-component {}
+
+  &.multiple-file-component {}
+
+  &.number-component {}
+
+  &.plugin-settings-tab {}
 
   &.prompt-modal {}
 
   &.select-item-modal {}
+
+  &.time-component {}
+
+  &.url-component {}
+
+  &.week-component {}
 }
