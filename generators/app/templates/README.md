@@ -4,8 +4,8 @@ This is a plugin for [Obsidian](https://obsidian.md/) that <%= pluginDescription
 
 ## Installation
 
-- `<%= pluginName %>` is not available in [the official Community Plugins repository](https://obsidian.md/plugins) yet.
-- Beta releases can be installed through [BRAT](https://obsidian.md/plugins?id=obsidian42-brat).
+- The plugin is not available in [the official Community Plugins repository](https://obsidian.md/plugins) yet.
+- [Beta releases](obsidian://brat?plugin=https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>) can be installed via [BRAT](https://obsidian.md/plugins?id=obsidian42-brat).
 
 ## Debugging
 
