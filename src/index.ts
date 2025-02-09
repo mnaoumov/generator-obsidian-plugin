@@ -62,12 +62,10 @@ export default class ObsidianPluginGenerator extends Generator {
     const latestGeneratorVersion = await latestVersion('generator-obsidian-plugin');
 
     if (compare(currentGeneratorVersion, latestGeneratorVersion) < 0) {
-      this.log(
-        yosay(
-          `Your generator version is outdated. The latest generator version is ${
-            chalk.green(latestGeneratorVersion)
-          }. You can update your generator by running \`npm update -g generator-obsidian-plugin\`.`
-        )
+      console.warn(
+        `Your generator version is outdated. The latest generator version is ${
+          chalk.green(latestGeneratorVersion)
+        }. You can update your generator by running \`npm update -g generator-obsidian-plugin\`.`
       );
       const { shouldRunOutdatedGenerator } = await this.prompt({
         default: false,
