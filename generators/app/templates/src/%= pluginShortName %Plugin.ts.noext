@@ -119,20 +119,18 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
   }
 
   private async openSampleView(): Promise<void> {
-    const { workspace } = this.app;
-
     let leaf: null | WorkspaceLeaf;
-    const leaves = workspace.getLeavesOfType(SAMPLE_VIEW_TYPE);
+    const leaves = this.app.workspace.getLeavesOfType(SAMPLE_VIEW_TYPE);
 
     if (leaves.length > 0) {
       leaf = leaves[0] ?? null;
     } else {
-      leaf = workspace.getRightLeaf(false);
+      leaf = this.app.workspace.getRightLeaf(false);
       await leaf?.setViewState({ active: true, type: SAMPLE_VIEW_TYPE });
     }
 
     if (leaf) {
-      await workspace.revealLeaf(leaf);
+      await this.app.workspace.revealLeaf(leaf);
     }
   }
 
