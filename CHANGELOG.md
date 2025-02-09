@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 10.2.0
+
+- Add modal examples
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.3.0
+
 ## 10.1.0
 
 - Check if generator the latest
