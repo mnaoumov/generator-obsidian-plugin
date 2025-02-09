@@ -11,7 +11,12 @@ import {
   Notice,
   PluginSettingTab
 } from 'obsidian';
+import { convertAsyncToSync } from 'obsidian-dev-utils/Async';
 import { getDebugger } from 'obsidian-dev-utils/Debug';
+import { alert } from 'obsidian-dev-utils/obsidian/Modals/Alert';
+import { confirm } from 'obsidian-dev-utils/obsidian/Modals/Confirm';
+import { prompt } from 'obsidian-dev-utils/obsidian/Modals/Prompt';
+import { selectItem } from 'obsidian-dev-utils/obsidian/Modals/SelectItem';
 import { PluginBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginBase';
 
 import { <%= pluginShortName %>PluginSettings } from './<%= pluginShortName %>PluginSettings.ts';
@@ -87,6 +92,8 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
     this.registerObsidianProtocolHandler('sample-action', this.handleSampleObsidianProtocolHandler.bind(this));
 
     this.registerView(SAMPLE_VIEW_TYPE, (leaf) => new SampleView(leaf));
+
+    this.registerModalCommands();
   }
 
   private handleSampleCodeBlockProcessor(source: string, el: HTMLElement, ctx: MarkdownPostProcessorContext): void {
@@ -138,6 +145,38 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
     }
   }
 
+  private registerModalCommands(): void {
+    this.addCommand({
+      callback: this.showSampleModal.bind(this),
+      id: 'show-sample-modal',
+      name: 'Show Sample Modal'
+    });
+
+    this.addCommand({
+      callback: convertAsyncToSync(this.showAlert.bind(this)),
+      id: 'show-alert-modal',
+      name: 'Show Alert Modal'
+    });
+
+    this.addCommand({
+      callback: convertAsyncToSync(this.showConfirm.bind(this)),
+      id: 'show-confirm-modal',
+      name: 'Show Confirm Modal'
+    });
+
+    this.addCommand({
+      callback: convertAsyncToSync(this.showPrompt.bind(this)),
+      id: 'show-prompt-modal',
+      name: 'Show Prompt Modal'
+    });
+
+    this.addCommand({
+      callback: convertAsyncToSync(this.showSelectItem.bind(this)),
+      id: 'show-select-item-modal',
+      name: 'Show Select Item Modal'
+    });
+  }
+
   private runSampleCommand(): void {
     new Notice('Sample command');
   }
@@ -149,7 +188,7 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
     }
 
     if (!checking) {
-      new SampleModal(this.app).open();
+      new Notice('Sample command with check');
     }
 
     return true;
@@ -161,5 +200,52 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
 
   private runSampleRibbonIconCommand(): void {
     new Notice('Sample ribbon icon command');
+  }
+
+  private async showAlert(): Promise<void> {
+    await alert({
+      app: this.app,
+      message: 'Sample alert message',
+      title: 'Sample alert title'
+    });
+  }
+
+  private async showConfirm(): Promise<void> {
+    const result = await confirm({
+      app: this.app,
+      message: 'Sample confirm message',
+      title: 'Sample confirm title'
+    });
+
+    new Notice(`Sample confirm result: ${result.toString()}`);
+  }
+
+  private async showPrompt(): Promise<void> {
+    await prompt({
+      app: this.app,
+      defaultValue: 'Sample prompt default value',
+      placeholder: 'Sample prompt placeholder',
+      title: 'Sample prompt title',
+      // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
+      valueValidator: (value): string | void => {
+        const MIN_LENGTH = 30;
+        if (value.length < MIN_LENGTH) {
+          return `Value must be at least ${MIN_LENGTH.toString()} characters long`;
+        }
+      }
+    });
+  }
+
+  private showSampleModal(): void {
+    new SampleModal(this.app).open();
+  }
+
+  private async showSelectItem(): Promise<void> {
+    await selectItem({
+      app: this.app,
+      items: ['Item 1', 'Item 2', 'Item 3'],
+      itemTextFunc: (item) => item,
+      placeholder: 'Sample select item placeholder'
+    });
   }
 }
