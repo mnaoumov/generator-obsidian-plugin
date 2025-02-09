@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 10.2.1
+
+- Show warning
+
 ## 10.2.0
 
 - Add modal examples
