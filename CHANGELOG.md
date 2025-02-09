@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 10.0.2
+
+- Add moment package
+
 ## 10.0.1
 
 - Remove deconstruction
