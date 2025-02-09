@@ -26,6 +26,7 @@
     "@codemirror/view": "latest",
     "@tsconfig/strictest": "latest",
     "@types/node": "latest",
+    "moment": "latest",
     "obsidian": "latest",
     "obsidian-dev-utils": "latest",
     "obsidian-typings": "latest",
