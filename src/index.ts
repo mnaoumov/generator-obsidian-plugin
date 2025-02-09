@@ -15,7 +15,7 @@ import {
 } from 'obsidian-dev-utils/Path';
 import { readdirPosix } from 'obsidian-dev-utils/scripts/Fs';
 import { replaceAll } from 'obsidian-dev-utils/String';
-import { satisfies } from 'semver';
+import { compare } from 'semver';
 import Generator from 'yeoman-generator';
 import yosay from 'yosay';
 
@@ -23,7 +23,7 @@ import yosay from 'yosay';
 import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
 
 const minimumNodeVersion = '18.0.0';
-if (!satisfies(process.version, `>=${minimumNodeVersion}`)) {
+if (compare(process.version, minimumNodeVersion) < 0) {
   console.error(`You need Node.js version ${minimumNodeVersion} or higher to use this generator.`);
   process.exit(1);
 }
@@ -52,11 +52,34 @@ export default class ObsidianPluginGenerator extends Generator {
   private answers!: Answers;
 
   public async prompting(): Promise<void> {
+    const currentGeneratorVersion = this.rootGeneratorVersion();
     this.log(
       yosay(
-        `Welcome to the ${chalk.red('generator-obsidian-plugin')} generator!`
+        `Welcome to the ${chalk.red(`generator-obsidian-plugin v${currentGeneratorVersion}`)} generator!`
       )
     );
+
+    const latestGeneratorVersion = await latestVersion('generator-obsidian-plugin');
+
+    if (compare(currentGeneratorVersion, latestGeneratorVersion) < 0) {
+      this.log(
+        yosay(
+          `Your generator version is outdated. The latest generator version is ${
+            chalk.green(latestGeneratorVersion)
+          }. You can update your generator by running \`npm update -g generator-obsidian-plugin\`.`
+        )
+      );
+      const { shouldRunOutdatedGenerator } = await this.prompt({
+        default: false,
+        message: 'Do you want to run the outdated generator?',
+        name: 'shouldRunOutdatedGenerator',
+        type: 'confirm'
+      } as PromptQuestions<{ shouldRunOutdatedGenerator: boolean }>);
+
+      if (!shouldRunOutdatedGenerator) {
+        process.exit(1);
+      }
+    }
 
     const questions: PromptQuestions<Answers> = [
       {
