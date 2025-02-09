@@ -1,0 +1,9 @@
+/**
+ * You can remove this file if you don't need any styles
+ * See default library styles: https://github.com/mnaoumov/obsidian-dev-utils/blob/main/src/styles/main.scss
+ * See available library css classes: https://github.com/mnaoumov/obsidian-dev-utils/blob/main/src/CssClass.ts
+ */
+
+.<%= pluginId %>.obsidian-dev-utils {
+  /* Override library styles */
+}
