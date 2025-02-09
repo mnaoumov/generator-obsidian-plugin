@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 10.0.1
+
+- Remove deconstruction
+
 ## 10.0.0
 
 - Simplify template scss
