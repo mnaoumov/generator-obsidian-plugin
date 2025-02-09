@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 10.1.0
+
+- Check if generator the latest
+- Don't handle create before layoutReady
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.1.0
+
 ## 10.0.2
 
 - Add moment package
