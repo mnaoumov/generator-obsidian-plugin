@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 10.0.0
+
+- Simplify template scss
+- Add eslint.config
+- Add all components
+- Add BRAT link
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.0.4
+
 ## 9.1.1
 
 - Use proper name
