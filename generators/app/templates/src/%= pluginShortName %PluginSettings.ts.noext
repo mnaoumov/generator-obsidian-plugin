@@ -20,6 +20,7 @@ export class <%= pluginShortName %>PluginSettings extends PluginSettingsBase {
 
   public multipleDropdownSetting: string[] = ['Value2', 'Value5'];
   public multipleEmailSetting: string[] = ['defaultEmail@example.com', 'defaultEmail2@example.com'];
+  public multipleTextSetting: string[] = ['defaultText1', 'defaultText2', 'defaultText3'];
   public numberSetting = 123;
   public progressBarSetting = 50;
   public searchSetting = 'defaultSearch';

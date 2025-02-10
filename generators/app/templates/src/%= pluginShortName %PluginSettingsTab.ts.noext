@@ -123,6 +123,13 @@ export class <%= pluginShortName %>PluginSettingsTab extends PluginSettingsTabBa
       });
 
     new SettingEx(this.containerEl)
+      .setName('Multiple Text Setting Name')
+      .setDesc('Multiple Text Setting Description.')
+      .addMultipleText((multipleText) => {
+        this.bind(multipleText, 'multipleTextSetting');
+      });
+
+    new SettingEx(this.containerEl)
       .setName('Number Setting Name')
       .setDesc('Number Setting Description.')
       .addNumber((number) => {
