@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 10.3.0
+
+- addMultipleText
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.4.2
+
 ## 10.2.1
 
 - Show warning
