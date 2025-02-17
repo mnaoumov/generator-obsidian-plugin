@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 10.3.2
+
+- Revert updates to make working with yo
+
 ## 10.3.1
 
 - Fix compilation
