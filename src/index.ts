@@ -13,7 +13,7 @@ import {
   relative,
   toPosixPath
 } from 'obsidian-dev-utils/Path';
-import { readdirPosix } from 'obsidian-dev-utils/scripts/Fs';
+import { readdirPosix } from 'obsidian-dev-utils/ScriptUtils/Fs';
 import { replaceAll } from 'obsidian-dev-utils/String';
 import { compare } from 'semver';
 import Generator from 'yeoman-generator';

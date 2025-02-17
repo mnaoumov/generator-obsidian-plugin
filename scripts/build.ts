@@ -4,7 +4,7 @@ import { context } from 'esbuild';
 import {
   CliTaskResult,
   wrapCliTask
-} from 'obsidian-dev-utils/scripts/CliUtils';
+} from 'obsidian-dev-utils/ScriptUtils/CliUtils';
 
 await wrapCliTask(async () => {
   const buildOptions: BuildOptions = {

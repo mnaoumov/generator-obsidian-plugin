@@ -1,7 +1,7 @@
-import { wrapCliTask } from 'obsidian-dev-utils/scripts/CliUtils';
-import { process } from 'obsidian-dev-utils/scripts/NodeModules';
-import { publish } from 'obsidian-dev-utils/scripts/NpmPublish';
-import { updateVersion } from 'obsidian-dev-utils/scripts/version';
+import { wrapCliTask } from 'obsidian-dev-utils/ScriptUtils/CliUtils';
+import { process } from 'obsidian-dev-utils/ScriptUtils/NodeModules';
+import { publish } from 'obsidian-dev-utils/ScriptUtils/NpmPublish';
+import { updateVersion } from 'obsidian-dev-utils/ScriptUtils/version';
 
 await wrapCliTask(async () => {
   const VERSION_UPDATE_TYPE_ARG_INDEX = 2;
