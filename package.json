@@ -64,6 +64,7 @@
     "@octokit/request": "^9.2.2",
     "@octokit/request-error": "^6.1.7",
     "esbuild": "^0.25.0",
+    "type-fest": "^4.35.0",
     "whatwg-url": "^14.1.0"
   }
 }
