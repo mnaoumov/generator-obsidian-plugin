@@ -60,10 +60,6 @@
     "node": ">=18.0.0"
   },
   "overrides": {
-    "@octokit/plugin-paginate-rest": "^11.4.2",
-    "@octokit/request": "^9.2.2",
-    "@octokit/request-error": "^6.1.7",
-    "esbuild": "^0.25.0",
     "type-fest": "^4.35.0",
     "whatwg-url": "^14.1.0"
   }
