@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 10.3.1
+
+- Fix compilation
+- Fix audit warnings
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/19.2.1
+
 ## 10.3.0
 
 - addMultipleText
