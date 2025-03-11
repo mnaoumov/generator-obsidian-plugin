@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 10.4.0
+
+- Update libs
+- Add React
+
 ## 10.3.2
 
 - Revert updates to make working with yo
