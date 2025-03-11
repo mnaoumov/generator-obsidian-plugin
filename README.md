@@ -29,6 +29,7 @@ yo obsidian-plugin
 - Code formatting is forced via [`dprint`](https://dprint.dev/).
 - CLI commands and code helpers from [Obsidian Dev Utils](https://github.com/mnaoumov/obsidian-dev-utils).
 - Supports [svelte](https://svelte.dev/) components. See example in `src/SvelteComponents` in the generated project.
+- Supports [react](https://react.dev) components. See example in `src/ReactComponents` in the generated project.
 - Supports [SASS](https://sass-lang.com/) for CSS pre-processing. See example in `src/styles/main.scss` in the generated project.
 
 ### NPM Commands
