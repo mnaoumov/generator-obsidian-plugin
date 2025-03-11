@@ -26,10 +26,14 @@
     "@codemirror/view": "latest",
     "@tsconfig/strictest": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "moment": "latest",
     "obsidian": "latest",
     "obsidian-dev-utils": "latest",
     "obsidian-typings": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "svelte": "latest"
   },
   "overrides": {
