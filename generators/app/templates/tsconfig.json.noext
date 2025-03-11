@@ -3,12 +3,12 @@
   "compilerOptions": {
     "allowArbitraryExtensions": true,
     "allowImportingTsExtensions": true,
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "inlineSourceMap": true,
     "inlineSources": true,
+    "jsx": "react-jsx",
     "lib": [
       "DOM",
       "ES2024"
@@ -28,6 +28,7 @@
   "include": [
     "./src/**/*.svelte",
     "./src/**/*.ts",
+    "./src/**/*.tsx",
     "./scripts/**/*.ts"
   ]
 }

@@ -26,6 +26,14 @@ import { sampleViewPlugin } from './EditorExtensions/SampleViewPlugin.ts';
 import { SampleEditorSuggest } from './EditorSuggests/SampleEditorSuggest.ts';
 import { SampleModal } from './Modals/SampleModal.ts';
 import {
+  SAMPLE_REACT_VIEW_TYPE,
+  SampleReactView
+} from './Views/SampleReactView.tsx';
+import {
+  SAMPLE_SVELTE_VIEW_TYPE,
+  SampleSvelteView
+} from './Views/SampleSvelteView.ts';
+import {
   SAMPLE_VIEW_TYPE,
   SampleView
 } from './Views/SampleView.ts';
@@ -41,7 +49,9 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
 
   protected override async onLayoutReady(): Promise<void> {
     new Notice('This is executed after all plugins are loaded');
-    await this.openSampleView();
+    await this.openView(SAMPLE_VIEW_TYPE);
+    await this.openView(SAMPLE_SVELTE_VIEW_TYPE);
+    await this.openView(SAMPLE_REACT_VIEW_TYPE);
   }
 
   protected override onloadComplete(): void {
@@ -92,6 +102,8 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
     this.registerObsidianProtocolHandler('sample-action', this.handleSampleObsidianProtocolHandler.bind(this));
 
     this.registerView(SAMPLE_VIEW_TYPE, (leaf) => new SampleView(leaf));
+    this.registerView(SAMPLE_SVELTE_VIEW_TYPE, (leaf) => new SampleSvelteView(leaf));
+    this.registerView(SAMPLE_REACT_VIEW_TYPE, (leaf) => new SampleReactView(leaf));
 
     this.registerModalCommands();
   }
@@ -129,15 +141,15 @@ export class <%= pluginShortName %>Plugin extends PluginBase<<%= pluginShortName
     new Notice(`Sample obsidian protocol handler: ${params.action}`);
   }
 
-  private async openSampleView(): Promise<void> {
+  private async openView(viewType: string): Promise<void> {
     let leaf: null | WorkspaceLeaf;
-    const leaves = this.app.workspace.getLeavesOfType(SAMPLE_VIEW_TYPE);
+    const leaves = this.app.workspace.getLeavesOfType(viewType);
 
     if (leaves.length > 0) {
       leaf = leaves[0] ?? null;
     } else {
-      leaf = this.app.workspace.getRightLeaf(false);
-      await leaf?.setViewState({ active: true, type: SAMPLE_VIEW_TYPE });
+      leaf = this.app.workspace.getRightLeaf(true);
+      await leaf?.setViewState({ active: true, type: viewType });
     }
 
     if (leaf) {
