@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 10.4.1
+
+- Lint
+
 ## 10.4.0
 
 - Update libs
