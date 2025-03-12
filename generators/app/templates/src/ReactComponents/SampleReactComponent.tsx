@@ -1,15 +1,17 @@
+import type { JSX } from 'react';
+
+import { useApp } from 'obsidian-dev-utils/obsidian/React/AppContext';
 import { useState } from 'react';
-import { useApp } from './AppContext.ts';
 
 export interface SampleReactComponentProps {
   startCount: number;
 }
 
-export const SampleReactComponent = (props: SampleReactComponentProps) => {
+export function SampleReactComponent(props: SampleReactComponentProps): JSX.Element {
   const [count, setCount] = useState(props.startCount);
   const app = useApp();
 
-  function increment() {
+  function increment(): void {
     setCount(count + 1);
   }
 
@@ -18,11 +20,16 @@ export const SampleReactComponent = (props: SampleReactComponentProps) => {
       <h4>Sample React Component!</h4>
 
       <div>
-        <span>My number is {count}!</span>
+        <span>
+          My number is {count}
+          !
+        </span>
       </div>
 
       <button onClick={increment}>Increment</button>
-      <div>Vault name: {app.vault.getName()}</div>
+      <div>
+        Vault name: {app.vault.getName()}
+      </div>
     </>
   );
-};
+}
