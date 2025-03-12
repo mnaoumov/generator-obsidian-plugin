@@ -21,6 +21,10 @@ cd new-plugin-name
 yo obsidian-plugin
 ```
 
+## Sample output
+
+You can see an sample output of this generator at [Sample Plugin Extended](https://github.com/mnaoumov/obsidian-sample-plugin-extended).
+
 ## Features of this template
 
 - [Obsidian Extended Typings](https://github.com/Fevol/obsidian-typings/) for internal [Obsidian](https://obsidian.md/) API.
