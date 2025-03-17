@@ -29,14 +29,14 @@
     "package.json"
   ],
   "scripts": {
-    "build": "tsx scripts/build.ts",
+    "build": "obsidian-dev-utils build",
     "build:compile": "obsidian-dev-utils build:compile",
     "format": "obsidian-dev-utils format",
     "format:check": "obsidian-dev-utils format:check",
     "lint": "obsidian-dev-utils lint",
     "lint:fix": "obsidian-dev-utils lint:fix",
     "spellcheck": "obsidian-dev-utils spellcheck",
-    "version": "tsx scripts/version.ts"
+    "version": "obsidian-dev-utils version"
   },
   "dependencies": {
     "chalk": "^5.4.1",
