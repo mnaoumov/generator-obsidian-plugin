@@ -28,6 +28,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "jiti": "latest",
     "moment": "latest",
     "obsidian": "latest",
     "obsidian-dev-utils": "latest",
