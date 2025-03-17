@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 10.5.0
+
+- Avoid duplicating documentation
+- Switch to common scripts pattern
+- Switch eslint config format
+
 ## 10.4.1
 
 - Lint
