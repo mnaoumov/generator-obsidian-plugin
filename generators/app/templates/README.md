@@ -4,8 +4,18 @@ This is a plugin for [Obsidian](https://obsidian.md/) that <%= pluginDescription
 
 ## Installation
 
-- The plugin is not available in [the official Community Plugins repository](https://obsidian.md/plugins) yet.
-- [Beta releases](obsidian://brat?plugin=https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>) can be installed via [BRAT](https://obsidian.md/plugins?id=obsidian42-brat).
+The plugin is not available in [the official Community Plugins repository](https://obsidian.md/plugins) yet.
+
+To install the latest beta release of this plugin, follow these steps:
+
+1. Make sure to have the [BRAT plugin](https://obsidian.md/plugins?id=obsidian42-brat) installed and enabled.
+2. Paste this link in your browser and press enter:
+
+   `obsidian://brat?plugin=https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>`
+
+3. An Obsidian pop-up window should appear. In the window, click the 'Add plugin' button once and wait a few seconds for the plugin to install.
+
+
 
 ## Debugging
 
