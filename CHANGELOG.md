@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 10.6.0
+
+- Update libs
+- Improve README
+- Improve docs #7 (thanks to @shumadrid)
+
 ## 10.5.0
 
 - Avoid duplicating documentation
