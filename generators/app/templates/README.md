@@ -6,22 +6,24 @@ This is a plugin for [Obsidian](https://obsidian.md/) that <%= pluginDescription
 
 The plugin is not available in [the official Community Plugins repository](https://obsidian.md/plugins) yet.
 
-To install the latest beta release of this plugin, follow these steps:
+### Beta versions
+
+To install the latest beta release of this plugin (regardless if it is available in [the official Community Plugins repository](https://obsidian.md/plugins) or not), follow these steps:
 
 1. Make sure to have the [BRAT plugin](https://obsidian.md/plugins?id=obsidian42-brat) installed and enabled.
-2. Paste this link in your browser and press enter:
+2. Paste the following link in your browser and press `Enter`:
 
-   `obsidian://brat?plugin=https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>`
+    ```
+    obsidian://brat?plugin=https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>
+    ```
 
-3. An Obsidian pop-up window should appear. In the window, click the 'Add plugin' button once and wait a few seconds for the plugin to install.
-
-
+3. An Obsidian pop-up window should appear. In the window, click the `Add plugin` button once and wait a few seconds for the plugin to install.
 
 ## Debugging
 
 By default, debug messages for this plugin are hidden.
 
-To show them, run the following command:
+To show them, run the following command in the `DevTools Console`:
 
 ```js
 window.DEBUG.enable('<%= pluginId %>');
