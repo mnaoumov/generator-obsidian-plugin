@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 10.7.0
+
+- Update README template
+
 ## 10.6.0
 
 - Update libs
