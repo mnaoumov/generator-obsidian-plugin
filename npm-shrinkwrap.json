@@ -24,7 +24,7 @@
         "esbuild": "^0.25.2",
         "jiti": "^2.4.2",
         "npm-run-all": "^4.1.5",
-        "obsidian-dev-utils": "^23.0.1",
+        "obsidian-dev-utils": "^24.0.1",
         "tsx": "^4.19.3"
       },
       "engines": {
@@ -9834,9 +9834,9 @@
       }
     },
     "node_modules/obsidian-dev-utils": {
-      "version": "23.0.1",
-      "resolved": "https://registry.npmjs.org/obsidian-dev-utils/-/obsidian-dev-utils-23.0.1.tgz",
-      "integrity": "sha512-TFsPhjlPAEPLc7nwTaFDiMuq8Z4YytFkdV5jDnqJqsxwH9v05i6WxO4pcppJWFLH1Z6EZjFjRC0di5usOyJNhQ==",
+      "version": "24.0.1",
+      "resolved": "https://registry.npmjs.org/obsidian-dev-utils/-/obsidian-dev-utils-24.0.1.tgz",
+      "integrity": "sha512-4Ayh/WZSMq1D3M+RvoXQA4HC32V1Flgqeu8HDHZLSjaTozCdtz2p+0AlaVFsozvaK786/gTkP+7NZe0aBIoFvQ==",
       "dev": true,
       "license": "MIT",
       "dependencies": {
