@@ -8,7 +8,7 @@ import latestVersion from 'latest-version';
 import { nameof } from 'obsidian-dev-utils/Object';
 import {
   basename,
-  getDirname,
+  getFolderName,
   join,
   relative,
   toPosixPath
@@ -162,8 +162,8 @@ export default class ObsidianPluginGenerator extends Generator {
   public async writing(): Promise<void> {
     this.env.options.nodePackageManager = 'npm';
 
-    const __dirname = getDirname(import.meta.url);
-    const templatesDir = join(__dirname, 'templates');
+    const folderName = getFolderName(import.meta.url);
+    const templatesDir = join(folderName, 'templates');
 
     for (const dirent of await readdirPosix(templatesDir, { recursive: true, withFileTypes: true })) {
       if (dirent.isDirectory()) {
