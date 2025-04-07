@@ -1,6 +1,6 @@
 {
   "name": "generator-obsidian-plugin",
-  "version": "11.0.0",
+  "version": "11.0.1",
   "description": "Obsidian Plugin Bootstrap",
   "keywords": [
     "obsidian",
