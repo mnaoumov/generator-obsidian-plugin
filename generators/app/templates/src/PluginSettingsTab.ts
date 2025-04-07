@@ -3,6 +3,8 @@ import { SettingEx } from 'obsidian-dev-utils/obsidian/SettingEx';
 
 import type { PluginTypes } from './PluginTypes.ts';
 
+import { TypedItem } from './PluginSettings.ts';
+
 export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
   public override display(): void {
     this.containerEl.empty();
@@ -15,6 +17,13 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
           .onClick(() => {
             new Notice('Button clicked');
           });
+      });
+
+    new SettingEx(this.containerEl)
+      .setName('Checkbox Setting Name')
+      .setDesc('Checkbox Setting Description.')
+      .addCheckbox((checkbox) => {
+        this.bind(checkbox, 'checkboxSetting');
       });
 
     new SettingEx(this.containerEl)
@@ -183,6 +192,45 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
       .setDesc('Toggle Setting Description.')
       .addToggle((toggle) => {
         this.bind(toggle, 'toggleSetting');
+      });
+
+    new SettingEx(this.containerEl)
+      .setName('Tri-state Checkbox Setting Name')
+      .setDesc('Tri-state Checkbox Setting Description.')
+      .addTriStateCheckbox((triStateCheckbox) => {
+        this.bind(triStateCheckbox, 'triStateCheckboxSetting');
+      });
+
+    new SettingEx(this.containerEl)
+      .setName('Typed Dropdown Setting Name')
+      .setDesc('Typed Dropdown Setting Description.')
+      .addTypedDropdown((typedDropdown) => {
+        const map = new Map<TypedItem, string>();
+        map.set(TypedItem.Foo, 'Display Foo');
+        map.set(TypedItem.Bar, 'Display Bar');
+        map.set(TypedItem.Baz, 'Display Baz');
+        typedDropdown.addOptions(map);
+        this.bind(typedDropdown, 'typedDropdownSetting', {
+          onChanged(newValue, oldValue) {
+            console.warn('Typed Dropdown Setting changed', { newValue, oldValue });
+          }
+        });
+      });
+
+    new SettingEx(this.containerEl)
+      .setName('Typed Dropdown Setting Name')
+      .setDesc('Typed Multiple Dropdown Setting Description.')
+      .addTypedMultipleDropdown((typedMultipleDropdown) => {
+        const map = new Map<TypedItem, string>();
+        map.set(TypedItem.Foo, 'Display Foo');
+        map.set(TypedItem.Bar, 'Display Bar');
+        map.set(TypedItem.Baz, 'Display Baz');
+        typedMultipleDropdown.addOptions(map);
+        this.bind(typedMultipleDropdown, 'typedMultipleDropdownSetting', {
+          onChanged(newValue, oldValue) {
+            console.warn('Typed Multiple Dropdown Setting changed', { newValue, oldValue });
+          }
+        });
       });
 
     new SettingEx(this.containerEl)
