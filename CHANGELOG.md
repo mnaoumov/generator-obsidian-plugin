@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.0.1
+
+- Add demo of new controls
+
 ## 11.0.0
 
 - Update libs
