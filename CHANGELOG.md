@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.0.2
+
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/24.0.1
+
 ## 11.0.1
 
 - Add demo of new controls
