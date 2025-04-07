@@ -3,9 +3,8 @@ import type { IsoMonth } from 'obsidian-dev-utils/obsidian/Components/MonthCompo
 import type { IsoWeek } from 'obsidian-dev-utils/obsidian/Components/WeekComponent';
 
 import { duration } from 'moment';
-import { PluginSettingsBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginSettingsBase';
 
-export class <%= pluginShortName %>PluginSettings extends PluginSettingsBase {
+export class PluginSettings {
   /* eslint-disable no-magic-numbers */
   public colorSetting = '#123456';
   public dateSetting = new Date();
@@ -37,9 +36,4 @@ export class <%= pluginShortName %>PluginSettings extends PluginSettingsBase {
   };
 
   /* eslint-enable no-magic-numbers */
-
-  public constructor(data: unknown) {
-    super();
-    this.init(data);
-  }
 }
