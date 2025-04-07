@@ -1,9 +1,9 @@
 import { PluginSettingsTabBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginSettingsTabBase';
 import { SettingEx } from 'obsidian-dev-utils/obsidian/SettingEx';
 
-import type { <%= pluginShortName %>Plugin } from './<%= pluginShortName %>Plugin.ts';
+import type { PluginTypes } from './PluginTypes.ts';
 
-export class <%= pluginShortName %>PluginSettingsTab extends PluginSettingsTabBase<<%= pluginShortName %>Plugin> {
+export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
   public override display(): void {
     this.containerEl.empty();
 
@@ -208,13 +208,7 @@ export class <%= pluginShortName %>PluginSettingsTab extends PluginSettingsTabBa
           onChanged: () => {
             new Notice('Advanced Text Setting changed');
           },
-          pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => `${pluginSettingsValue} (converted)`,
-          // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-          valueValidator(uiValue): string | void {
-            if (uiValue === '') {
-              return 'Value must be non-empty';
-            }
-          }
+          pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => `${pluginSettingsValue} (converted)`
         })
           .setPlaceholder('Enter a value');
       });
