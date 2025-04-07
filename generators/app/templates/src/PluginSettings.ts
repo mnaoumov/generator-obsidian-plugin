@@ -6,6 +6,7 @@ import { duration } from 'moment';
 
 export class PluginSettings {
   /* eslint-disable no-magic-numbers */
+  public checkboxSetting = true;
   public colorSetting = '#123456';
   public dateSetting = new Date();
   public dateTimeSetting = new Date();
@@ -28,6 +29,9 @@ export class PluginSettings {
   public textSetting = 'defaultText';
   public timeSetting: Duration = duration({ hours: 12, minutes: 34 });
   public toggleSetting = true;
+  public triStateCheckboxSetting: boolean | null = null;
+  public typedDropdownSetting: TypedItem = TypedItem.Foo;
+  public typedMultipleDropdownSetting: TypedItem[] = [TypedItem.Bar, TypedItem.Baz];
   public urlSetting = 'https://example.com';
 
   public weekSetting: IsoWeek = {
@@ -36,4 +40,24 @@ export class PluginSettings {
   };
 
   /* eslint-enable no-magic-numbers */
+}
+
+// eslint-disable-next-line perfectionist/sort-modules
+export class TypedItem {
+  public static readonly Bar = new TypedItem('Bar');
+  public static readonly Baz = new TypedItem('Baz');
+  public static readonly Foo = new TypedItem('Foo');
+
+  public constructor(public readonly name: string) {}
+
+  public static deserialize(name: string): TypedItem {
+    const items = [TypedItem.Bar, TypedItem.Baz, TypedItem.Foo];
+    const item = items.find((i) => i.name === name);
+
+    if (item === undefined) {
+      throw new Error(`Unknown item: ${name}`);
+    }
+
+    return item;
+  }
 }
