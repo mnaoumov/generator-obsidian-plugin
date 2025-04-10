@@ -1,6 +1,6 @@
 import type { Duration } from 'moment';
-import type { IsoMonth } from 'obsidian-dev-utils/obsidian/Components/MonthComponent';
-import type { IsoWeek } from 'obsidian-dev-utils/obsidian/Components/WeekComponent';
+import type { IsoMonth } from 'obsidian-dev-utils/obsidian/Components/SettingComponents/MonthComponent';
+import type { IsoWeek } from 'obsidian-dev-utils/obsidian/Components/SettingComponents/WeekComponent';
 
 import { duration } from 'moment';
 
@@ -18,9 +18,9 @@ export class PluginSettings {
     year: 2025
   };
 
-  public multipleDropdownSetting: string[] = ['Value2', 'Value5'];
-  public multipleEmailSetting: string[] = ['defaultEmail@example.com', 'defaultEmail2@example.com'];
-  public multipleTextSetting: string[] = ['defaultText1', 'defaultText2', 'defaultText3'];
+  public multipleDropdownSetting: readonly string[] = ['Value2', 'Value5'];
+  public multipleEmailSetting: readonly string[] = ['defaultEmail@example.com', 'defaultEmail2@example.com'];
+  public multipleTextSetting: readonly string[] = ['defaultText1', 'defaultText2', 'defaultText3'];
   public numberSetting = 123;
   public progressBarSetting = 50;
   public searchSetting = 'defaultSearch';
@@ -31,7 +31,7 @@ export class PluginSettings {
   public toggleSetting = true;
   public triStateCheckboxSetting: boolean | null = null;
   public typedDropdownSetting: TypedItem = TypedItem.Foo;
-  public typedMultipleDropdownSetting: TypedItem[] = [TypedItem.Bar, TypedItem.Baz];
+  public typedMultipleDropdownSetting: readonly TypedItem[] = [TypedItem.Bar, TypedItem.Baz];
   public urlSetting = 'https://example.com';
 
   public weekSetting: IsoWeek = {
