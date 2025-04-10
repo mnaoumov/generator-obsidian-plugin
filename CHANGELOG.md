@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.1.0
+
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/25.0.1
+
 ## 11.0.3
 
 - Call super.display
