@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 11.2.0
+
+- Rename createSettingsTab
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/26.0.0
+
 ## 11.1.0
 
 - https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/25.0.1
