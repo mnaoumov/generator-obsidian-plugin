@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.2.1
+
+- Republish
+
 ## 11.2.0
 
 - Rename createSettingsTab
