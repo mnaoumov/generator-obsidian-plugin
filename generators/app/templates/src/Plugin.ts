@@ -2,8 +2,7 @@ import type {
   Editor,
   MarkdownPostProcessorContext,
   ObsidianProtocolData,
-  TAbstractFile,
-  WorkspaceLeaf
+  TAbstractFile
 } from 'obsidian';
 
 import {
@@ -145,19 +144,7 @@ export class Plugin extends PluginBase<PluginTypes> {
   }
 
   private async openView(viewType: string): Promise<void> {
-    let leaf: null | WorkspaceLeaf;
-    const leaves = this.app.workspace.getLeavesOfType(viewType);
-
-    if (leaves.length > 0) {
-      leaf = leaves[0] ?? null;
-    } else {
-      leaf = this.app.workspace.getRightLeaf(true);
-      await leaf?.setViewState({ active: true, type: viewType });
-    }
-
-    if (leaf) {
-      await this.app.workspace.revealLeaf(leaf);
-    }
+    await this.app.workspace.ensureSideLeaf(viewType, 'right');
   }
 
   private registerModalCommands(): void {

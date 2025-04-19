@@ -4,6 +4,7 @@ import { SettingEx } from 'obsidian-dev-utils/obsidian/SettingEx';
 import type { PluginTypes } from './PluginTypes.ts';
 
 import { TypedItem } from './PluginSettings.ts';
+import { Notice } from 'obsidian';
 
 export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
   public override display(): void {
@@ -25,6 +26,14 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
       .setDesc('Checkbox Setting Description.')
       .addCheckbox((checkbox) => {
         this.bind(checkbox, 'checkboxSetting');
+      });
+
+    new SettingEx(this.containerEl)
+      .setName('Code Highlighter Setting Name')
+      .setDesc('Code Highlighter Setting Description.')
+      .addCodeHighlighter((codeHighlighter) => {
+        codeHighlighter.setLanguage('javascript');
+        this.bind(codeHighlighter, 'codeHighlighterSetting');
       });
 
     new SettingEx(this.containerEl)
@@ -219,7 +228,7 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
       });
 
     new SettingEx(this.containerEl)
-      .setName('Typed Dropdown Setting Name')
+      .setName('Typed Multiple Dropdown Setting Name')
       .setDesc('Typed Multiple Dropdown Setting Description.')
       .addTypedMultipleDropdown((typedMultipleDropdown) => {
         const map = new Map<TypedItem, string>();
