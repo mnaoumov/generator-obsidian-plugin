@@ -7,6 +7,9 @@ import { duration } from 'moment';
 export class PluginSettings {
   /* eslint-disable no-magic-numbers */
   public checkboxSetting = true;
+  public codeHighlighterSetting = `function foo() {
+  console.log('bar');
+}`;
   public colorSetting = '#123456';
   public dateSetting = new Date();
   public dateTimeSetting = new Date();
