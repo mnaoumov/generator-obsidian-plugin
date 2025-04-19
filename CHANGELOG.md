@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 11.3.0
+
+- Add Code Highlighter sample
+- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/26.7.0
+
 ## 11.2.1
 
 - Republish
