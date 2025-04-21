@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.3.1
+
+- Update template
+
 ## 11.3.0
 
 - Add Code Highlighter sample
