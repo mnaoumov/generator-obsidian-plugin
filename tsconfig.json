@@ -1,8 +1,8 @@
 {
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
+    "allowArbitraryExtensions": true,
     "allowImportingTsExtensions": true,
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
@@ -24,15 +24,14 @@
     "skipLibCheck": false,
     "target": "ES2024",
     "types": [
-      "node"
+      "node",
+      "obsidian-typings"
     ],
     "verbatimModuleSyntax": true
   },
   "include": [
     "./eslint.config.*ts",
-    "./src/**/*.svelte",
     "./src/**/*.ts",
-    "./src/**/*.tsx",
     "./scripts/**/*.ts"
   ]
 }
