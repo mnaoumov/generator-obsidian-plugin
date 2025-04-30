@@ -10,6 +10,7 @@ export class PluginSettings {
   public codeHighlighterSetting = `function foo() {
   console.log('bar');
 }`;
+
   public colorSetting = '#123456';
   public dateSetting = new Date();
   public dateTimeSetting = new Date();
