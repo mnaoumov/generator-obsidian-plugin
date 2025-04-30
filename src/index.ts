@@ -38,6 +38,7 @@ interface Answers {
   pluginId: string;
   pluginName: string;
   pluginShortName: string;
+  shouldEnableUnofficialInternalObsidianApi: boolean;
 }
 
 interface Environment extends BaseEnvironment<QueuedAdapter> {
@@ -151,6 +152,12 @@ export default class ObsidianPluginGenerator extends Generator {
         message: 'Funding URL (leave empty if not needed)',
         name: nameof<Answers>('fundingUrl'),
         type: 'input'
+      },
+      {
+        default: false,
+        message: 'Should enable unofficial internal obsidian API (only for advanced users)?',
+        name: nameof<Answers>('shouldEnableUnofficialInternalObsidianApi'),
+        type: 'confirm'
       }
     ];
 
