@@ -4,6 +4,9 @@ import type {
   ObsidianProtocolData,
   TAbstractFile
 } from 'obsidian';
+import type { ExtractPluginSettingsWrapper } from 'obsidian-dev-utils/obsidian/Plugin/PluginTypesBase';
+import type { MaybeReturn } from 'obsidian-dev-utils/Type';
+import type { ReadonlyDeep } from 'type-fest';
 
 import {
   MarkdownView,
@@ -108,6 +111,32 @@ export class Plugin extends PluginBase<PluginTypes> {
     this.registerView(SAMPLE_REACT_VIEW_TYPE, (leaf) => new SampleReactView(leaf));
 
     this.registerModalCommands();
+  }
+
+  protected override async onLoadSettings(
+    loadedSettings: ReadonlyDeep<ExtractPluginSettingsWrapper<PluginTypes>>,
+    isInitialLoad: boolean
+  ): Promise<void> {
+    await super.onLoadSettings(loadedSettings, isInitialLoad);
+    if (loadedSettings.settings.textSetting === 'bar') {
+      new Notice('Sample text setting is bar');
+    }
+  }
+
+  protected override async onSaveSettings(
+    newSettings: ReadonlyDeep<ExtractPluginSettingsWrapper<PluginTypes>>,
+    oldSettings: ReadonlyDeep<ExtractPluginSettingsWrapper<PluginTypes>>,
+    context: unknown
+  ): Promise<void> {
+    await super.onSaveSettings(newSettings, oldSettings, context);
+    if (newSettings.settings.textSetting === 'baz' && oldSettings.settings.textSetting === 'bar') {
+      new Notice('Sample text setting is changed from bar to baz');
+    }
+  }
+
+  protected override async onunloadImpl(): Promise<void> {
+    await super.onunloadImpl();
+    new Notice('Sample plugin is being unloaded');
   }
 
   private handleSampleCodeBlockProcessor(source: string, el: HTMLElement, ctx: MarkdownPostProcessorContext): void {
@@ -228,8 +257,7 @@ export class Plugin extends PluginBase<PluginTypes> {
       defaultValue: 'Sample prompt default value',
       placeholder: 'Sample prompt placeholder',
       title: 'Sample prompt title',
-      // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-      valueValidator: (value): string | void => {
+      valueValidator: (value): MaybeReturn<string> => {
         const MIN_LENGTH = 30;
         if (value.length < MIN_LENGTH) {
           return `Value must be at least ${MIN_LENGTH.toString()} characters long`;
