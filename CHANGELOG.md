@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.4.0
+
+- More examples
+
 ## 11.3.1
 
 - Update template
