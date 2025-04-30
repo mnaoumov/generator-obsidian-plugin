@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.5.1
+
+- Disable obsidian-typings by default
+
 ## 11.5.0
 
 - Disable obsidian-typings by default
