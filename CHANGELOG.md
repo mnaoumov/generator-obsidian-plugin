@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.5.2
+
+- Fix import type syntax
+
 ## 11.5.1
 
 - Disable obsidian-typings by default
