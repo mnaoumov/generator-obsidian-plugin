@@ -1,6 +1,6 @@
 <% if (shouldEnableUnofficialInternalObsidianApi) { -%>
 // eslint-disable-next-line import-x/no-unassigned-import
-import 'obsidian-typings'; // Do not delete this line if you want to use unofficial internal obsidian API.
+import type {} from 'obsidian-typings'; // Do not delete this line if you want to use unofficial internal obsidian API.
 
 <% } -%>
 import './styles/main.scss'; // Do not delete this line if you want to have a styles.css file in your build output.
