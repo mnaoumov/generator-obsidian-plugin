@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.5.3
+
+- Update eslint template
+
 ## 11.5.2
 
 - Fix import type syntax
