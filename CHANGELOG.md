@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 11.5.4
+
+- Update libs
+- Update ky (#13)
+
 ## 11.5.3
 
 - Update eslint template
