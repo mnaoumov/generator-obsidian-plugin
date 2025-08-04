@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.5.5
+
+- Update package-json (#13)
+
 ## 11.5.4
 
 - Update libs
