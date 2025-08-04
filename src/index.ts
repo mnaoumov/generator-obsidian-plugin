@@ -5,7 +5,7 @@ import type {
 
 import chalk from 'chalk';
 import latestVersion from 'latest-version';
-import { nameof } from 'obsidian-dev-utils/Object';
+import { nameof } from 'obsidian-dev-utils/ObjectUtils';
 import {
   basename,
   getFolderName,
