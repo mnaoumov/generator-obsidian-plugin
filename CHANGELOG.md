@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.5.7
+
+- Fix types
+
 ## 11.5.6
 
 - Implement latest-version manually. As latest-version package intermittently throws > Body is unusable: Body has already been read See #13
