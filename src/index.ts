@@ -4,7 +4,6 @@ import type {
 } from '@yeoman/types';
 
 import chalk from 'chalk';
-import latestVersion from 'latest-version';
 import { nameof } from 'obsidian-dev-utils/ObjectUtils';
 import {
   basename,
@@ -229,6 +228,17 @@ function getDestinationPath(templatePath: string, answers: Answers): null | stri
   }
 
   return templatePath;
+}
+
+async function latestVersion(packageName: string): Promise<string> {
+  const response = await fetch(`https://registry.npmjs.org/${packageName}/latest`);
+  const json = await response.json();
+
+  if (typeof json !== 'object' || json === null || Array.isArray(json)) {
+    throw new Error(`Invalid response from npm registry for ${packageName}`);
+  }
+
+  return json['version'] as string;
 }
 
 function makePluginName(pluginId: string): string {

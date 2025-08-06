@@ -40,9 +40,6 @@
   },
   "dependencies": {
     "chalk": "^5.5.0",
-    "ky": "^1.8.2",
-    "latest-version": "^9.0.0",
-    "package-json": "^10.0.1",
     "semver": "^7.7.2",
     "yeoman-generator": "^7.5.1",
     "yosay": "^3.0.0"
@@ -64,8 +61,6 @@
     "node": ">=18.0.0"
   },
   "overrides": {
-    "ky": "$ky",
-    "package-json": "$package-json",
     "type-fest": "^4.35.0",
     "whatwg-url": "^14.1.0"
   }
