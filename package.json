@@ -63,6 +63,7 @@
   },
   "overrides": {
     "@antfu/utils": "$@antfu/utils",
+    "dompurify": "3.0.1",
     "type-fest": "^4.35.0",
     "whatwg-url": "^14.1.0"
   }
