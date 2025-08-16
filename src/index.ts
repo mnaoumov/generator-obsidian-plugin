@@ -110,7 +110,7 @@ export default class ObsidianPluginGenerator extends Generator {
         }
       },
       {
-        default: (answers: Answers) => makePluginName(answers.pluginId),
+        default: (answers: Partial<Answers>) => makePluginName(answers.pluginId ?? ''),
         message: 'Your plugin\'s name?',
         name: nameof<Answers>('pluginName'),
         type: 'input'
