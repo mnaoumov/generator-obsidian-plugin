@@ -32,7 +32,7 @@
     "moment": "latest",
     "obsidian": "latest",
     "obsidian-dev-utils": "latest",
-    "obsidian-typings": "latest",
+    "obsidian-typings": "obsidian-public-latest",
     "react": "latest",
     "react-dom": "latest",
     "svelte": "latest"
