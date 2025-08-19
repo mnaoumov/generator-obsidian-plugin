@@ -25,7 +25,6 @@
         "jiti": "^2.5.1",
         "npm-run-all": "^4.1.5",
         "obsidian-dev-utils": "^33.1.0",
-        "obsidian-typings": "^3.16.6",
         "tsx": "^4.20.4"
       },
       "engines": {
@@ -11450,7 +11449,17 @@
         "obsidian-dev-utils": "dist/bin/cli.cjs"
       }
     },
-    "node_modules/obsidian-typings": {
+    "node_modules/obsidian-dev-utils/node_modules/@types/codemirror": {
+      "version": "5.60.16",
+      "resolved": "https://registry.npmjs.org/@types/codemirror/-/codemirror-5.60.16.tgz",
+      "integrity": "sha512-V/yHdamffSS075jit+fDxaOAmdP2liok8NSNJnAZfDJErzOheuygHZEhAJrfmk5TEyM32MhkZjwo/idX791yxw==",
+      "dev": true,
+      "license": "MIT",
+      "dependencies": {
+        "@types/tern": "*"
+      }
+    },
+    "node_modules/obsidian-dev-utils/node_modules/obsidian-typings": {
       "version": "3.16.6",
       "resolved": "https://registry.npmjs.org/obsidian-typings/-/obsidian-typings-3.16.6.tgz",
       "integrity": "sha512-c9cduI6ieb0y+UoAyF5vqGCwNpXe9c7TaJLAXsREaFNOQuMPe4UE7/GKlFx0rzWCyMBcZjvyX9EAuMSqUO58Pg==",
@@ -11488,17 +11497,7 @@
         "typescript": ">=4.8.0"
       }
     },
-    "node_modules/obsidian-typings/node_modules/@types/codemirror": {
-      "version": "5.60.16",
-      "resolved": "https://registry.npmjs.org/@types/codemirror/-/codemirror-5.60.16.tgz",
-      "integrity": "sha512-V/yHdamffSS075jit+fDxaOAmdP2liok8NSNJnAZfDJErzOheuygHZEhAJrfmk5TEyM32MhkZjwo/idX791yxw==",
-      "dev": true,
-      "license": "MIT",
-      "dependencies": {
-        "@types/tern": "*"
-      }
-    },
-    "node_modules/obsidian-typings/node_modules/moment": {
+    "node_modules/obsidian-dev-utils/node_modules/obsidian-typings/node_modules/moment": {
       "version": "2.29.4",
       "resolved": "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz",
       "integrity": "sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==",
