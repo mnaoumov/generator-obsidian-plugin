@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 11.6.0
+
+- Add overrides to fix build
+- Explicitly demand obsidian-public-latest
+- Don't resolve latest deps
+
 ## 11.5.9
 
 - Update libs
