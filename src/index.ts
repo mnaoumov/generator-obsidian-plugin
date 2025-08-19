@@ -182,36 +182,11 @@ export default class ObsidianPluginGenerator extends Generator {
         continue;
       }
 
-      if (destinationPath.endsWith('.json')) {
-        const tempJsonPath = this.destinationPath(`${destinationPath}.temp`);
-        this.fs.copyTpl(
-          this.templatePath(templatePath),
-          tempJsonPath,
-          this.answers
-        );
-
-        const json = this.fs.readJSON(tempJsonPath) as Record<string, unknown>;
-        if (destinationPath.endsWith('package.json')) {
-          const devDependencies = json['devDependencies'] as Record<string, string> | undefined;
-          if (devDependencies) {
-            for (const [packageName, version] of Object.entries(devDependencies)) {
-              if (version !== 'latest') {
-                continue;
-              }
-
-              devDependencies[packageName] = `^${await latestVersion(packageName)}`;
-            }
-          }
-        }
-        this.fs.extendJSON(this.destinationPath(destinationPath), json);
-        this.fs.delete(tempJsonPath);
-      } else {
-        this.fs.copyTpl(
-          this.templatePath(templatePath),
-          this.destinationPath(destinationPath),
-          this.answers
-        );
-      }
+      this.fs.copyTpl(
+        this.templatePath(templatePath),
+        this.destinationPath(destinationPath),
+        this.answers
+      );
     }
   }
 }
