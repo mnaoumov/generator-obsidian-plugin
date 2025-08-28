@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.7.0
+
+- Refactor
+
 ## 11.6.0
 
 - Add overrides to fix build
