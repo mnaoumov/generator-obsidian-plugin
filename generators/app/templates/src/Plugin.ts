@@ -248,7 +248,7 @@ export class Plugin extends PluginBase<PluginTypes> {
       title: 'Sample confirm title'
     });
 
-    new Notice(`Sample confirm result: ${result.toString()}`);
+    new Notice(`Sample confirm result: ${String(result)}`);
   }
 
   private async showPrompt(): Promise<void> {
@@ -260,7 +260,7 @@ export class Plugin extends PluginBase<PluginTypes> {
       valueValidator: (value): MaybeReturn<string> => {
         const MIN_LENGTH = 30;
         if (value.length < MIN_LENGTH) {
-          return `Value must be at least ${MIN_LENGTH.toString()} characters long`;
+          return `Value must be at least ${String(MIN_LENGTH)} characters long`;
         }
       }
     });
