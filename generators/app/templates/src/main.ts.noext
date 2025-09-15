@@ -1,5 +1,5 @@
 <% if (shouldEnableUnofficialInternalObsidianApi) { -%>
-// eslint-disable-next-line import-x/no-unassigned-import
+// eslint-disable-next-line import-x/no-unassigned-import, import-x/no-empty-named-blocks
 import type {} from 'obsidian-typings'; // Do not delete this line if you want to use unofficial internal obsidian API.
 
 <% } -%>
