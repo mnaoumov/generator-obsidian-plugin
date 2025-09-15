@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.8.0
+
+- Fix lint error
+
 ## 11.7.0
 
 - Refactor
