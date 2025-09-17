@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.8.1
+
+- Minor changes
+
 ## 11.8.0
 
 - Fix lint error
