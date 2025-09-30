@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.9.1
+
+- chore: enable conventional commits
+
 ## 11.9.0
 
 - chore: update libs
