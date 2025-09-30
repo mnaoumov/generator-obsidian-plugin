@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 11.9.0
+
+- chore: update libs
+- chore: lint
+
 ## 11.8.1
 
 - Minor changes
