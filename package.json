@@ -31,10 +31,12 @@
   "scripts": {
     "build": "obsidian-dev-utils build",
     "build:compile": "obsidian-dev-utils build:compile",
+    "commit": "cz",
     "format": "obsidian-dev-utils format",
     "format:check": "obsidian-dev-utils format:check",
     "lint": "obsidian-dev-utils lint",
     "lint:fix": "obsidian-dev-utils lint:fix",
+    "prepare": "husky",
     "spellcheck": "obsidian-dev-utils spellcheck",
     "version": "obsidian-dev-utils version"
   },
@@ -45,13 +47,19 @@
     "yosay": "^3.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/types": "^20.0.0",
     "@tsconfig/strictest": "^2.0.6",
     "@types/debug": "^4.1.12",
     "@types/json-schema": "^7.0.15",
     "@types/semver": "^7.7.1",
     "@types/yosay": "^2.0.3",
     "@yeoman/adapter": "^3.1.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.25.10",
+    "husky": "^9.1.7",
     "jiti": "^2.6.0",
     "npm-run-all": "^4.1.5",
     "obsidian-dev-utils": "latest",
