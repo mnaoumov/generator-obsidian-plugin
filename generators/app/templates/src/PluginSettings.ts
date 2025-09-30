@@ -4,8 +4,27 @@ import type { IsoWeek } from 'obsidian-dev-utils/obsidian/Components/SettingComp
 
 import { duration } from 'moment';
 
+export class TypedItem {
+  public static readonly Bar = new TypedItem('Bar');
+  public static readonly Baz = new TypedItem('Baz');
+  public static readonly Foo = new TypedItem('Foo');
+
+  public constructor(public readonly name: string) {}
+
+  public static deserialize(name: string): TypedItem {
+    const items = [TypedItem.Bar, TypedItem.Baz, TypedItem.Foo];
+    const item = items.find((i) => i.name === name);
+
+    if (item === undefined) {
+      throw new Error(`Unknown item: ${name}`);
+    }
+
+    return item;
+  }
+}
+
 export class PluginSettings {
-  /* eslint-disable no-magic-numbers */
+  /* eslint-disable no-magic-numbers -- In plugin settings magic numbers are allowed. */
   public checkboxSetting = true;
   public codeHighlighterSetting = `function foo() {
   console.log('bar');
@@ -43,25 +62,5 @@ export class PluginSettings {
     year: 2025
   };
 
-  /* eslint-enable no-magic-numbers */
-}
-
-// eslint-disable-next-line perfectionist/sort-modules
-export class TypedItem {
-  public static readonly Bar = new TypedItem('Bar');
-  public static readonly Baz = new TypedItem('Baz');
-  public static readonly Foo = new TypedItem('Foo');
-
-  public constructor(public readonly name: string) {}
-
-  public static deserialize(name: string): TypedItem {
-    const items = [TypedItem.Bar, TypedItem.Baz, TypedItem.Foo];
-    const item = items.find((i) => i.name === name);
-
-    if (item === undefined) {
-      throw new Error(`Unknown item: ${name}`);
-    }
-
-    return item;
-  }
+  /* eslint-enable no-magic-numbers -- In plugin settings magic numbers are allowed. */
 }
