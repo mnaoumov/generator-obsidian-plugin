@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.10.0
+
+- chore: cleanup template
+
 ## 11.9.1
 
 - chore: enable conventional commits
