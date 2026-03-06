@@ -9,29 +9,28 @@
       "version": "11.9.1",
       "license": "MIT",
       "dependencies": {
-        "chalk": "^5.6.2",
-        "semver": "^7.7.2",
-        "yeoman-generator": "^7.5.1",
-        "yosay": "^3.0.0"
+        "chalk": "latest",
+        "semver": "latest",
+        "yeoman-generator": "latest",
+        "yosay": "latest"
       },
       "devDependencies": {
-        "@commitlint/cli": "^20.0.0",
-        "@commitlint/config-conventional": "^20.0.0",
-        "@commitlint/types": "^20.0.0",
-        "@tsconfig/strictest": "^2.0.6",
-        "@types/debug": "^4.1.12",
-        "@types/json-schema": "^7.0.15",
-        "@types/semver": "^7.7.1",
-        "@types/yosay": "^2.0.3",
-        "@yeoman/adapter": "^3.1.0",
-        "commitizen": "^4.3.1",
-        "cz-conventional-changelog": "^3.3.0",
-        "esbuild": "^0.25.10",
-        "husky": "^9.1.7",
-        "jiti": "^2.6.0",
-        "npm-run-all": "^4.1.5",
-        "obsidian-dev-utils": "latest",
-        "tsx": "^4.20.6"
+        "@commitlint/cli": "latest",
+        "@commitlint/config-conventional": "latest",
+        "@commitlint/types": "latest",
+        "@tsconfig/strictest": "latest",
+        "@types/debug": "latest",
+        "@types/json-schema": "latest",
+        "@types/semver": "latest",
+        "@types/yosay": "latest",
+        "@yeoman/adapter": "latest",
+        "commitizen": "latest",
+        "cz-conventional-changelog": "latest",
+        "esbuild": "latest",
+        "husky": "latest",
+        "jiti": "latest",
+        "npm-run-all": "latest",
+        "obsidian-dev-utils": "latest"
       },
       "engines": {
         "node": ">=18.0.0"
@@ -146,7 +145,8 @@
       "resolved": "https://registry.npmjs.org/@bufbuild/protobuf/-/protobuf-2.8.0.tgz",
       "integrity": "sha512-r1/0w5C9dkbcdjyxY8ZHsC5AOWg4Pnzhm2zu7LO4UHSounp2tMm6Y+oioV9zlGbLveE7YaWRDUk48WLxRDgoqg==",
       "dev": true,
-      "license": "(Apache-2.0 AND BSD-3-Clause)"
+      "license": "(Apache-2.0 AND BSD-3-Clause)",
+      "peer": true
     },
     "node_modules/@capacitor/core": {
       "version": "5.7.8",
@@ -235,7 +235,6 @@
       "integrity": "sha512-FVqsPqtPWKVVL3dPSxy8wEF/ymIEuVzF1PK3VbUgrxXpJUSHQWWZz4JMToquRxnkw+36LTamCZG2iua2Ptq0fA==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@marijn/find-cluster-break": "^1.0.0"
       }
@@ -246,7 +245,6 @@
       "integrity": "sha512-bTWAJxL6EOFLPzTx+O5P5xAO3gTqpatQ2b/ARQ8itfU/v2LlpS3pH2fkL0A3E/Fx8Y2St2KES7ZEV0sHTsSW/A==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@codemirror/state": "^6.5.0",
         "crelt": "^1.0.6",
@@ -265,7 +263,7 @@
         "@commitlint/lint": "^20.0.0",
         "@commitlint/load": "^20.0.0",
         "@commitlint/read": "^20.0.0",
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "tinyexec": "^1.0.0",
         "yargs": "^17.0.0"
       },
@@ -283,7 +281,7 @@
       "dev": true,
       "license": "MIT",
       "dependencies": {
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "conventional-changelog-conventionalcommits": "^7.0.2"
       },
       "engines": {
@@ -297,7 +295,7 @@
       "dev": true,
       "license": "MIT",
       "dependencies": {
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "ajv": "^8.11.0"
       },
       "engines": {
@@ -335,7 +333,7 @@
       "dev": true,
       "license": "MIT",
       "dependencies": {
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "lodash.camelcase": "^4.3.0",
         "lodash.kebabcase": "^4.1.1",
         "lodash.snakecase": "^4.1.1",
@@ -363,7 +361,7 @@
       "dev": true,
       "license": "MIT",
       "dependencies": {
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "chalk": "^5.3.0"
       },
       "engines": {
@@ -377,7 +375,7 @@
       "dev": true,
       "license": "MIT",
       "dependencies": {
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "semver": "^7.6.0"
       },
       "engines": {
@@ -410,7 +408,7 @@
         "@commitlint/config-validator": "^20.0.0",
         "@commitlint/execute-rule": "^20.0.0",
         "@commitlint/resolve-extends": "^20.0.0",
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "chalk": "^5.3.0",
         "cosmiconfig": "^9.0.0",
         "cosmiconfig-typescript-loader": "^6.1.0",
@@ -439,7 +437,7 @@
       "dev": true,
       "license": "MIT",
       "dependencies": {
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "conventional-changelog-angular": "^7.0.0",
         "conventional-commits-parser": "^5.0.0"
       },
@@ -455,7 +453,7 @@
       "license": "MIT",
       "dependencies": {
         "@commitlint/top-level": "^20.0.0",
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "git-raw-commits": "^4.0.0",
         "minimist": "^1.2.8",
         "tinyexec": "^1.0.0"
@@ -472,7 +470,7 @@
       "license": "MIT",
       "dependencies": {
         "@commitlint/config-validator": "^20.0.0",
-        "@commitlint/types": "^20.0.0",
+        "@commitlint/types": "latest",
         "global-directory": "^4.0.1",
         "import-meta-resolve": "^4.0.0",
         "lodash.mergewith": "^4.6.2",
@@ -827,8 +825,7 @@
       "resolved": "https://registry.npmjs.org/@cspell/dict-css/-/dict-css-4.0.18.tgz",
       "integrity": "sha512-EF77RqROHL+4LhMGW5NTeKqfUd/e4OOv6EDFQ/UQQiFyWuqkEKyEz0NDILxOFxWUEVdjT2GQ2cC7t12B6pESwg==",
       "dev": true,
-      "license": "MIT",
-      "peer": true
+      "license": "MIT"
     },
     "node_modules/@cspell/dict-dart": {
       "version": "2.3.1",
@@ -968,16 +965,14 @@
       "resolved": "https://registry.npmjs.org/@cspell/dict-html/-/dict-html-4.0.12.tgz",
       "integrity": "sha512-JFffQ1dDVEyJq6tCDWv0r/RqkdSnV43P2F/3jJ9rwLgdsOIXwQbXrz6QDlvQLVvNSnORH9KjDtenFTGDyzfCaA==",
       "dev": true,
-      "license": "MIT",
-      "peer": true
+      "license": "MIT"
     },
     "node_modules/@cspell/dict-html-symbol-entities": {
       "version": "4.0.4",
       "resolved": "https://registry.npmjs.org/@cspell/dict-html-symbol-entities/-/dict-html-symbol-entities-4.0.4.tgz",
       "integrity": "sha512-afea+0rGPDeOV9gdO06UW183Qg6wRhWVkgCFwiO3bDupAoyXRuvupbb5nUyqSTsLXIKL8u8uXQlJ9pkz07oVXw==",
       "dev": true,
-      "license": "MIT",
-      "peer": true
+      "license": "MIT"
     },
     "node_modules/@cspell/dict-java": {
       "version": "5.0.12",
@@ -1175,8 +1170,7 @@
       "resolved": "https://registry.npmjs.org/@cspell/dict-typescript/-/dict-typescript-3.2.3.tgz",
       "integrity": "sha512-zXh1wYsNljQZfWWdSPYwQhpwiuW0KPW1dSd8idjMRvSD0aSvWWHoWlrMsmZeRl4qM4QCEAjua8+cjflm41cQBg==",
       "dev": true,
-      "license": "MIT",
-      "peer": true
+      "license": "MIT"
     },
     "node_modules/@cspell/dict-vue": {
       "version": "3.0.5",
@@ -2565,6 +2559,7 @@
       "integrity": "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "@jridgewell/sourcemap-codec": "^1.5.0",
         "@jridgewell/trace-mapping": "^0.3.24"
@@ -2576,6 +2571,7 @@
       "integrity": "sha512-LI9u/+laYG4Ds1TDKSJW2YPrIlcVYOwi2fUC6xB43lueCjgxV4lffOCZCtYFiH6TNOX+tQKXx97T4IKHbhyHEQ==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "@jridgewell/gen-mapping": "^0.3.5",
         "@jridgewell/trace-mapping": "^0.3.24"
@@ -2970,7 +2966,6 @@
       "resolved": "https://registry.npmjs.org/@octokit/core/-/core-6.1.6.tgz",
       "integrity": "sha512-kIU8SLQkYWGp3pVKiYzA5OSaNF5EE03P/R8zEmmrG6XwOg5oBjXyQVVIauQ0dgau4zYhpZEhJrvIYt6oM+zZZA==",
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@octokit/auth-token": "^5.0.0",
         "@octokit/graphql": "^8.2.2",
@@ -3480,7 +3475,6 @@
       "integrity": "sha512-7199re3wvMAlVqXLaCyAr8IkJSXqkeVAxcYyB2rBu4Id5m2hhlGX1dQsdMBiCXLwu6/LLVqDvJggSNVQBzL6ZQ==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@types/css-font-loading-module": "^0.0.7"
       },
@@ -3530,7 +3524,6 @@
       "integrity": "sha512-0XtvrfxHlS2T+beBBSpo7GI8+QLyyTqMVQpNmPqB4woYxzrOEJ9JaUFBaBfCvycLeUkfVih1u6HAbtF+2d1EjQ==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@pixi/color": "7.2.4",
         "@pixi/constants": "7.2.4",
@@ -3553,7 +3546,6 @@
       "integrity": "sha512-w5tqb8cWEO5qIDaO9GEqRvxYhL0iMk0Wsngw23bbLm1gLEQmrFkB2tpJlRAqd7H82C3DrDDeWvkrrxW6+m4apg==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "peerDependencies": {
         "@pixi/core": "7.2.4"
       }
@@ -3564,7 +3556,6 @@
       "integrity": "sha512-/JtmoB98fzIU8giN9xvlRvmvOi6u4MaD2DnKNOMHkQ1MBraj3pmrXM9fZ0JbNzi+324GraAAY76QidgHjIYoYQ==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "peerDependencies": {
         "@pixi/core": "7.2.4",
         "@pixi/display": "7.2.4"
@@ -3653,7 +3644,6 @@
       "integrity": "sha512-3A2EumTjWJgXlDLOyuBrl9b6v1Za/E+/IjOGUIX843HH4NYaf1a2sfDfljx6r3oiDvy+VhuBFmgynRcV5IyA0Q==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "peerDependencies": {
         "@pixi/core": "7.2.4",
         "@pixi/display": "7.2.4",
@@ -3673,7 +3663,6 @@
       "integrity": "sha512-wiALIqcRKib2BqeH9kOA5fOKWN352nqAspgbDa8gA7OyWzmNwqIedIlElixd0oLFOrIN5jOZAdzeKnoYQlt9Aw==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "peerDependencies": {
         "@pixi/core": "7.2.4",
         "@pixi/display": "7.2.4"
@@ -3780,7 +3769,6 @@
       "integrity": "sha512-DhR1B+/d0eXpxHIesJMXcVPrKFwQ+zRA1LvEIFfzewqfaRN3X6PMIuoKX8SIb6tl+Hq8Ba9Pe28zI7d2rmRzrA==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "peerDependencies": {
         "@pixi/core": "7.2.4",
         "@pixi/display": "7.2.4"
@@ -3826,7 +3814,6 @@
       "integrity": "sha512-DGu7ktpe+zHhqR2sG9NsJt4mgvSObv5EqXTtUxD4Z0li1gmqF7uktpLyn5I6vSg1TTEL4TECClRDClVDGiykWw==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "peerDependencies": {
         "@pixi/core": "7.2.4",
         "@pixi/sprite": "7.2.4"
@@ -3877,7 +3864,6 @@
       "integrity": "sha512-VUGQHBOINIS4ePzoqafwxaGPVRTa3oM/mEutIIHbNGI3b+QvSO+1Dnk40M0zcH6Bo+MxQZbOZK5X/wO9oU5+LQ==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@pixi/color": "7.2.4",
         "@pixi/constants": "7.2.4",
@@ -3981,6 +3967,7 @@
       "integrity": "sha512-IwQk4yfwLdibDlrXVE04jTZYlLnwsTT2PIOQQGNLWfjavGifnk1JD1LcZjZaBTRcxZu2FfPfNLOE04DSu9lqtQ==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "peerDependencies": {
         "acorn": "^8.9.0"
       }
@@ -4455,7 +4442,8 @@
       "version": "1.20.4",
       "resolved": "https://registry.npmjs.org/@types/expect/-/expect-1.20.4.tgz",
       "integrity": "sha512-Q5Vn3yjTDyCMV50TB6VRIbQNxSE4OmZR86VSbGaNpfUolm0iePBB4KdEEHmxoY5sT2+2DIvXW0rvMDP2nHZ4Mg==",
-      "license": "MIT"
+      "license": "MIT",
+      "peer": true
     },
     "node_modules/@types/geojson": {
       "version": "7946.0.16",
@@ -4544,7 +4532,6 @@
       "resolved": "https://registry.npmjs.org/@types/node/-/node-24.5.1.tgz",
       "integrity": "sha512-/SQdmUP2xa+1rdx7VwB9yPq8PaKej8TD5cQ+XfKDPWWC+VDJU4rvVVagXqKUzhKjtFoNA8rXDJAkCxQPAe00+Q==",
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "undici-types": "~7.12.0"
       }
@@ -4674,6 +4661,7 @@
       "resolved": "https://registry.npmjs.org/@types/vinyl/-/vinyl-2.0.12.tgz",
       "integrity": "sha512-Sr2fYMBUVGYq8kj3UthXFAu5UN6ZW+rYr4NACjZQJvHvj+c8lYv0CahmZ2P/r7iUkN44gGUBwqxZkrKXYPb7cw==",
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "@types/expect": "^1.20.4",
         "@types/node": "*"
@@ -4733,7 +4721,6 @@
       "integrity": "sha512-VGMpFQGUQWYT9LfnPcX8ouFojyrZ/2w3K5BucvxL/spdNehccKhB4jUyB1yBCXpr2XFm0jkECxgrpXBW2ipoAw==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@typescript-eslint/scope-manager": "8.44.0",
         "@typescript-eslint/types": "8.44.0",
@@ -4910,7 +4897,6 @@
       "integrity": "sha512-nktOlVcg3ALo0mYlV+L7sWUD58KG4CMj1rb2HUVOO4aL3K/6wcD+NERqd0rrA5Vg06b42YhF6cFxeixsp9Riqg==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@eslint-community/eslint-utils": "^4.7.0",
         "@typescript-eslint/scope-manager": "8.44.0",
@@ -5404,23 +5390,22 @@
       ]
     },
     "node_modules/@yeoman/adapter": {
-      "version": "3.1.0",
-      "resolved": "https://registry.npmjs.org/@yeoman/adapter/-/adapter-3.1.0.tgz",
-      "integrity": "sha512-otAxZdj8ktp5i3M7HzoJhHF6kWdfGUpN47dWkvRzeivcS4CSrWZnKgV6GFgUOSk9vw86YJLDiJAo4ZtAHo0q3A==",
+      "version": "2.1.1",
+      "resolved": "https://registry.npmjs.org/@yeoman/adapter/-/adapter-2.1.1.tgz",
+      "integrity": "sha512-GJqZ/e+IkgAIaUUqBNngR2Y53eVCiJeMrqx8cLATDauEB6/SdEUIGeyRjaWuXdg+kAJHreFtNdBUDmfHO1lc0w==",
       "devOptional": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@inquirer/core": "^10.0.0",
         "chalk": "^5.2.0",
         "inquirer": "^12.0.0",
         "log-symbols": "^7.0.0",
-        "ora": "^9.0.0",
+        "ora": "^8.1.0",
         "p-queue": "^8.0.1",
         "text-table": "^0.2.0"
       },
       "engines": {
-        "node": "20 || >=22"
+        "node": ">=18.12.0"
       }
     },
     "node_modules/@yeoman/namespace": {
@@ -5465,7 +5450,6 @@
       "integrity": "sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "bin": {
         "acorn": "bin/acorn"
       },
@@ -5564,6 +5548,7 @@
       "integrity": "sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==",
       "dev": true,
       "license": "Apache-2.0",
+      "peer": true,
       "engines": {
         "node": ">= 0.4"
       }
@@ -5693,6 +5678,7 @@
       "integrity": "sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==",
       "dev": true,
       "license": "Apache-2.0",
+      "peer": true,
       "engines": {
         "node": ">= 0.4"
       }
@@ -5880,7 +5866,8 @@
       "resolved": "https://registry.npmjs.org/buffer-builder/-/buffer-builder-0.2.0.tgz",
       "integrity": "sha512-7VPMEPuYznPSoR21NE1zvd2Xna6c/CloiZCfcMXR1Jny6PjX0N4Nsa38zcBFo/FMK+BlA+FLKbJCQ0i2yxp+Xg==",
       "dev": true,
-      "license": "MIT/X11"
+      "license": "MIT/X11",
+      "peer": true
     },
     "node_modules/buffer-crc32": {
       "version": "0.2.13",
@@ -6065,7 +6052,6 @@
       "integrity": "sha512-ci2iJH6LeIkvP9eJW6gpueU8cnZhv85ELY8w8WiFtNjMHA5ad6pQLaJo9mEly/9qUyCpvqX8/POVUTf18/HFdw==",
       "dev": true,
       "license": "Apache-2.0",
-      "peer": true,
       "dependencies": {
         "@chevrotain/cst-dts-gen": "11.0.3",
         "@chevrotain/gast": "11.0.3",
@@ -6150,13 +6136,13 @@
       }
     },
     "node_modules/cli-spinners": {
-      "version": "3.3.0",
-      "resolved": "https://registry.npmjs.org/cli-spinners/-/cli-spinners-3.3.0.tgz",
-      "integrity": "sha512-/+40ljC3ONVnYIttjMWrlL51nItDAbBrq2upN8BPyvGU/2n5Oxw3tbNwORCaNuNqLJnxGqOfjUuhsv7l5Q4IsQ==",
+      "version": "2.9.2",
+      "resolved": "https://registry.npmjs.org/cli-spinners/-/cli-spinners-2.9.2.tgz",
+      "integrity": "sha512-ywqV+5MmyL4E7ybXgKys4DugZbX0FC6LnwrhjuykIjnK9k8OQacQ7axGKnjDXWNhns0xot3bZI5h55H8yo9cJg==",
       "devOptional": true,
       "license": "MIT",
       "engines": {
-        "node": ">=18.20"
+        "node": ">=6"
       },
       "funding": {
         "url": "https://github.com/sponsors/sindresorhus"
@@ -6314,6 +6300,7 @@
       "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "engines": {
         "node": ">=6"
       }
@@ -6347,7 +6334,8 @@
       "resolved": "https://registry.npmjs.org/colorjs.io/-/colorjs.io-0.5.2.tgz",
       "integrity": "sha512-twmVoizEW7ylZSN32OgKdXRmo1qg+wT5/6C3xu5b9QsWzSFAhHLn2xd8ro0diCsKfCj1RdaTP/nrcW+vAoQPIw==",
       "dev": true,
-      "license": "MIT"
+      "license": "MIT",
+      "peer": true
     },
     "node_modules/commander": {
       "version": "14.0.1",
@@ -6394,7 +6382,7 @@
       "license": "MIT",
       "dependencies": {
         "cachedir": "2.3.0",
-        "cz-conventional-changelog": "3.3.0",
+        "cz-conventional-changelog": "latest",
         "dedent": "0.7.0",
         "detect-indent": "6.1.0",
         "find-node-modules": "^2.1.2",
@@ -6409,7 +6397,7 @@
         "strip-json-comments": "3.1.1"
       },
       "bin": {
-        "commitizen": "bin/commitizen",
+        "commitizen": "latest",
         "cz": "bin/git-cz",
         "git-cz": "bin/git-cz"
       },
@@ -6471,19 +6459,6 @@
       },
       "engines": {
         "node": ">=8"
-      }
-    },
-    "node_modules/commitizen/node_modules/cli-spinners": {
-      "version": "2.9.2",
-      "resolved": "https://registry.npmjs.org/cli-spinners/-/cli-spinners-2.9.2.tgz",
-      "integrity": "sha512-ywqV+5MmyL4E7ybXgKys4DugZbX0FC6LnwrhjuykIjnK9k8OQacQ7axGKnjDXWNhns0xot3bZI5h55H8yo9cJg==",
-      "dev": true,
-      "license": "MIT",
-      "engines": {
-        "node": ">=6"
-      },
-      "funding": {
-        "url": "https://github.com/sponsors/sindresorhus"
       }
     },
     "node_modules/commitizen/node_modules/cli-width": {
@@ -7258,7 +7233,6 @@
       "integrity": "sha512-iJc4TwyANnOGR1OmWhsS9ayRS3s+XQ185FmuHObThD+5AeJCakAAbWv8KimMTt08xCCLNgneQwFp+JRJOr9qGQ==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "engines": {
         "node": ">=0.10"
       }
@@ -7314,7 +7288,7 @@
       "license": "MIT",
       "dependencies": {
         "chalk": "^2.4.1",
-        "commitizen": "^4.0.3",
+        "commitizen": "latest",
         "conventional-commit-types": "^3.0.0",
         "lodash.map": "^4.5.1",
         "longest": "^2.0.1",
@@ -7785,7 +7759,6 @@
       "integrity": "sha512-fmTRWbNMmsmWq6xJV8D19U/gw/bwrHfNXxrIN+HfZgnzqTHp9jOmKMhsTUjXOJnZOdZY9Q28y4yebKzqDKlxlQ==",
       "dev": true,
       "license": "ISC",
-      "peer": true,
       "engines": {
         "node": ">=12"
       }
@@ -8557,7 +8530,6 @@
       "dev": true,
       "hasInstallScript": true,
       "license": "MIT",
-      "peer": true,
       "bin": {
         "esbuild": "bin/esbuild"
       },
@@ -8655,7 +8627,6 @@
       "integrity": "sha512-QePbBFMJFjgmlE+cXAlbHZbHpdFVS2E/6vzCy7aKlebddvl1vadiC4JFV5u/wqTkNUwEV8WrQi257jf5f06hrg==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@eslint-community/eslint-utils": "^4.8.0",
         "@eslint-community/regexpp": "^4.12.1",
@@ -8777,7 +8748,6 @@
       "integrity": "sha512-vPZZsiOKaBAIATpFE2uMI4w5IRwdv/FpQ+qZZMR4E+PeOcM4OeoEbqxRMnywdxP19TyB/3h6QBB0EWon7letSQ==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@typescript-eslint/types": "^8.35.0",
         "comment-parser": "^1.4.1",
@@ -9067,7 +9037,8 @@
       "resolved": "https://registry.npmjs.org/esm-env/-/esm-env-1.2.2.tgz",
       "integrity": "sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==",
       "dev": true,
-      "license": "MIT"
+      "license": "MIT",
+      "peer": true
     },
     "node_modules/espree": {
       "version": "10.4.0",
@@ -9120,6 +9091,7 @@
       "integrity": "sha512-yzmPNpl7TBbMRC5Lj2JlJZNPml0tzqoqP5B1JXycNUwtqma9AKCO0M2wHrdgsHcy1WRW7S9rJknAMtByg3usgA==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "@jridgewell/sourcemap-codec": "^1.4.15"
       }
@@ -9640,6 +9612,7 @@
       "resolved": "https://registry.npmjs.org/first-chunk-stream/-/first-chunk-stream-5.0.0.tgz",
       "integrity": "sha512-WdHo4ejd2cG2Dl+sLkW79SctU7mUQDfr4s1i26ffOZRs5mgv+BRttIM9gwcq0rDbemo0KlpVPaa3LBVLqPXzcQ==",
       "license": "MIT",
+      "peer": true,
       "engines": {
         "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
       },
@@ -9874,9 +9847,9 @@
       }
     },
     "node_modules/get-east-asian-width": {
-      "version": "1.4.0",
-      "resolved": "https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.4.0.tgz",
-      "integrity": "sha512-QZjmEOC+IT1uk6Rx0sX22V6uHWVwbdbxf1faPqJ1QhLdGgsRGCZoyaQBm/piRdJy/D2um6hM1UP7ZEeQ4EkP+Q==",
+      "version": "1.5.0",
+      "resolved": "https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.5.0.tgz",
+      "integrity": "sha512-CQ+bEO+Tva/qlmw24dCejulK5pMzVnUOFOijVogd3KQs07HnRIgp8TGipvCCRT06xeYEbpbgwaCxglFyiuIcmA==",
       "devOptional": true,
       "license": "MIT",
       "engines": {
@@ -11043,6 +11016,7 @@
       "integrity": "sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "@types/estree": "^1.0.6"
       }
@@ -11317,7 +11291,6 @@
       "integrity": "sha512-VXe6RjJkBPj0ohtqaO8vSWP3ZhAKo66fKrFNCll4BTcwljPLz03pCbaNKfzGP5MbrCYcbJ7v0nOYYwUzTEIdXQ==",
       "dev": true,
       "license": "MIT",
-      "peer": true,
       "bin": {
         "jiti": "lib/jiti-cli.mjs"
       }
@@ -11642,7 +11615,8 @@
       "resolved": "https://registry.npmjs.org/locate-character/-/locate-character-3.0.0.tgz",
       "integrity": "sha512-SW13ws7BjaeJ6p7Q6CO2nchbYEc3X3J6WrmTTDto7yMPqVSZTUyY5Tjbid+Ab8gLnATtygYtiDIJGQRRn2ZOiA==",
       "dev": true,
-      "license": "MIT"
+      "license": "MIT",
+      "peer": true
     },
     "node_modules/locate-path": {
       "version": "6.0.0",
@@ -11807,6 +11781,7 @@
       "integrity": "sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "@jridgewell/sourcemap-codec": "^1.5.5"
       }
@@ -12015,7 +11990,6 @@
       "resolved": "https://registry.npmjs.org/mem-fs-editor/-/mem-fs-editor-11.1.4.tgz",
       "integrity": "sha512-Z4QX14Ev6eOVTuVSayS5rdiOua6C3gHcFw+n9Qc7WiaVTbC+H8b99c32MYGmbQN9UFHJeI/p3lf3LAxiIzwEmA==",
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "@types/ejs": "^3.1.4",
         "@types/node": ">=18",
@@ -13311,41 +13285,79 @@
       }
     },
     "node_modules/ora": {
-      "version": "9.0.0",
-      "resolved": "https://registry.npmjs.org/ora/-/ora-9.0.0.tgz",
-      "integrity": "sha512-m0pg2zscbYgWbqRR6ABga5c3sZdEon7bSgjnlXC64kxtxLOyjRcbbUkLj7HFyy/FTD+P2xdBWu8snGhYI0jc4A==",
+      "version": "8.2.0",
+      "resolved": "https://registry.npmjs.org/ora/-/ora-8.2.0.tgz",
+      "integrity": "sha512-weP+BZ8MVNnlCm8c0Qdc1WSWq4Qn7I+9CJGm7Qali6g44e/PUzbjNqJX5NJ9ljlNMosfJvg1fKEGILklK9cwnw==",
       "devOptional": true,
       "license": "MIT",
       "dependencies": {
-        "chalk": "^5.6.2",
+        "chalk": "^5.3.0",
         "cli-cursor": "^5.0.0",
-        "cli-spinners": "^3.2.0",
+        "cli-spinners": "^2.9.2",
         "is-interactive": "^2.0.0",
-        "is-unicode-supported": "^2.1.0",
-        "log-symbols": "^7.0.1",
+        "is-unicode-supported": "^2.0.0",
+        "log-symbols": "^6.0.0",
         "stdin-discarder": "^0.2.2",
-        "string-width": "^8.1.0",
-        "strip-ansi": "^7.1.2"
+        "string-width": "^7.2.0",
+        "strip-ansi": "^7.1.0"
       },
       "engines": {
-        "node": ">=20"
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/ora/node_modules/emoji-regex": {
+      "version": "10.6.0",
+      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-10.6.0.tgz",
+      "integrity": "sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==",
+      "devOptional": true,
+      "license": "MIT"
+    },
+    "node_modules/ora/node_modules/log-symbols": {
+      "version": "6.0.0",
+      "resolved": "https://registry.npmjs.org/log-symbols/-/log-symbols-6.0.0.tgz",
+      "integrity": "sha512-i24m8rpwhmPIS4zscNzK6MSEhk0DUWa/8iYQWxhffV8jkI4Phvs3F+quL5xvS0gdQR0FyTCMMH33Y78dDTzzIw==",
+      "devOptional": true,
+      "license": "MIT",
+      "dependencies": {
+        "chalk": "^5.3.0",
+        "is-unicode-supported": "^1.3.0"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/sindresorhus"
+      }
+    },
+    "node_modules/ora/node_modules/log-symbols/node_modules/is-unicode-supported": {
+      "version": "1.3.0",
+      "resolved": "https://registry.npmjs.org/is-unicode-supported/-/is-unicode-supported-1.3.0.tgz",
+      "integrity": "sha512-43r2mRvz+8JRIKnWJ+3j8JtjRKZ6GmjzfaE/qiBJnikNnYv/6bagRJ1kUhNk8R5EX/GkobD+r+sfxCPJsiKBLQ==",
+      "devOptional": true,
+      "license": "MIT",
+      "engines": {
+        "node": ">=12"
       },
       "funding": {
         "url": "https://github.com/sponsors/sindresorhus"
       }
     },
     "node_modules/ora/node_modules/string-width": {
-      "version": "8.1.0",
-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-8.1.0.tgz",
-      "integrity": "sha512-Kxl3KJGb/gxkaUMOjRsQ8IrXiGW75O4E3RPjFIINOVH8AMl2SQ/yWdTzWwF3FevIX9LcMAjJW+GRwAlAbTSXdg==",
+      "version": "7.2.0",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-7.2.0.tgz",
+      "integrity": "sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==",
       "devOptional": true,
       "license": "MIT",
       "dependencies": {
-        "get-east-asian-width": "^1.3.0",
+        "emoji-regex": "^10.3.0",
+        "get-east-asian-width": "^1.0.0",
         "strip-ansi": "^7.1.0"
       },
       "engines": {
-        "node": ">=20"
+        "node": ">=18"
       },
       "funding": {
         "url": "https://github.com/sponsors/sindresorhus"
@@ -13845,7 +13857,6 @@
         }
       ],
       "license": "MIT",
-      "peer": true,
       "dependencies": {
         "nanoid": "^3.3.11",
         "picocolors": "^1.1.1",
@@ -14811,6 +14822,330 @@
         "sass-embedded-win32-x64": "1.92.1"
       }
     },
+    "node_modules/sass-embedded-all-unknown": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-all-unknown/-/sass-embedded-all-unknown-1.92.1.tgz",
+      "integrity": "sha512-5t6/YZf+vhO3OY/49h8RCL6Cwo78luva0M+TnTM9gu9ASffRXAuOVLNKciSXa3loptyemDDS6IU5/dVH5w0KmA==",
+      "cpu": [
+        "!arm",
+        "!arm64",
+        "!riscv64",
+        "!x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "peer": true,
+      "dependencies": {
+        "sass": "1.92.1"
+      }
+    },
+    "node_modules/sass-embedded-android-arm": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-android-arm/-/sass-embedded-android-arm-1.92.1.tgz",
+      "integrity": "sha512-4EjpVVzuksERdgAd4BqeSXFnWtWN3DSRyEIUPJ7BhcS9sfDh2Gf6miI2kNTvIQLJ2XIJynDDcEQ8a1U9KwKUTQ==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-android-arm64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-android-arm64/-/sass-embedded-android-arm64-1.92.1.tgz",
+      "integrity": "sha512-Q+UruGb7yKawHagVmVDRRKsnc4mJZvWMBnuRCu2coJo2FofyqBmXohVGXbxko97sYceA9TJTrUEx3WVKQUNCbQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-android-riscv64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-android-riscv64/-/sass-embedded-android-riscv64-1.92.1.tgz",
+      "integrity": "sha512-nCY5btLlX7W7Jc6cCL6D2Yklpiu540EJ2G08YVGu12DrAMCBzqM347CSRf2ojp1H8jyhvmLkaFwnrJWzh+6S+w==",
+      "cpu": [
+        "riscv64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-android-x64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-android-x64/-/sass-embedded-android-x64-1.92.1.tgz",
+      "integrity": "sha512-qYWR3bftJ77aLYwYDFuzDI4dcwVVixxqQxlIQWNGkHRCexj614qGSSHemr18C2eVj3mjXAQxTQxU68U7pkGPAA==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-darwin-arm64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-darwin-arm64/-/sass-embedded-darwin-arm64-1.92.1.tgz",
+      "integrity": "sha512-g2yQ3txjMYLKMjL2cW1xRO9nnV3ijf95NbX/QShtV6tiVUETZNWDsRMDEwBNGYY6PTE/UZerjJL1R/2xpQg6WA==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-darwin-x64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-darwin-x64/-/sass-embedded-darwin-x64-1.92.1.tgz",
+      "integrity": "sha512-eH+fgxLQhTEPjZPCgPAVuX5e514Qp/4DMAUMtlNShv4cr4TD5qOp1XlsPYR/b7uE7p2cKFkUpUn/bHNqJ2ay4A==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-linux-arm": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-linux-arm/-/sass-embedded-linux-arm-1.92.1.tgz",
+      "integrity": "sha512-cT3w8yoQTqrtZvWLJeutEGmawITDTY4J6oSVQjeDcPnnoPt0gOFxem8YMznraACXvahw/2+KJDH33BTNgiPo0A==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-linux-arm64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-linux-arm64/-/sass-embedded-linux-arm64-1.92.1.tgz",
+      "integrity": "sha512-dNmlpGeZkry1BofhAdGFBXrpM69y9LlYuNnncf+HfsOOUtj8j0q1RwS+zb5asknhKFUOAG8GCGRY1df7Rwu35g==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-linux-musl-arm": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-linux-musl-arm/-/sass-embedded-linux-musl-arm-1.92.1.tgz",
+      "integrity": "sha512-nPBos6lI31ef2zQhqTZhFOU7ar4impJbLIax0XsqS269YsiCwjhk11VmUloJTpFlJuKMiVXNo7dPx+katxhD/Q==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-linux-musl-arm64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-linux-musl-arm64/-/sass-embedded-linux-musl-arm64-1.92.1.tgz",
+      "integrity": "sha512-TfiEBkCyNzVoOhjHXUT+vZ6+p0ueDbvRw6f4jHdkvljZzXdXMby4wh7BU1odl69rgRTkSvYKhgbErRLDR/F7pQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-linux-musl-riscv64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-linux-musl-riscv64/-/sass-embedded-linux-musl-riscv64-1.92.1.tgz",
+      "integrity": "sha512-R+RcJA4EYpJDE9JM1GgPYgZo7x94FlxZ6jPodOQkEaZ1S9kvXVCuP5X/0PXRPhu08KJOfeMsAElzfdAjUf7KJg==",
+      "cpu": [
+        "riscv64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-linux-musl-x64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-linux-musl-x64/-/sass-embedded-linux-musl-x64-1.92.1.tgz",
+      "integrity": "sha512-/HolYRGXJjx8nLw6oj5ZrkR7PFM7X/5kE4MYZaFMpDIPIcw3bqB2fUXLo/MYlRLsw7gBAT6hJAMBrNdKuTphfw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-linux-riscv64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-linux-riscv64/-/sass-embedded-linux-riscv64-1.92.1.tgz",
+      "integrity": "sha512-b9bxe0CMsbSsLx3nrR0cq8xpIkoAC6X36o4DGMITF3m2v3KsojC7ru9X0Gz+zUFr6rwpq/0lTNzFLNu6sPNo3w==",
+      "cpu": [
+        "riscv64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-linux-x64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-linux-x64/-/sass-embedded-linux-x64-1.92.1.tgz",
+      "integrity": "sha512-xuiK5Jp5NldW4bvlC7AuX1Wf7o0gLZ3md/hNg+bkTvxtCDgnUHtfdo8Q+xWP11bD9QX31xXFWpmUB8UDLi6XQQ==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-unknown-all": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-unknown-all/-/sass-embedded-unknown-all-1.92.1.tgz",
+      "integrity": "sha512-AT9oXvtNY4N+Nd0wvoWqq9A5HjdH/X3aUH4boQUtXyaJ/9DUwnQmBpP5Gtn028ZS8exOGBdobmmWAuigv0k/OA==",
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "!android",
+        "!darwin",
+        "!linux",
+        "!win32"
+      ],
+      "peer": true,
+      "dependencies": {
+        "sass": "1.92.1"
+      }
+    },
+    "node_modules/sass-embedded-win32-arm64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-win32-arm64/-/sass-embedded-win32-arm64-1.92.1.tgz",
+      "integrity": "sha512-KvmpQjY9yTBMtTYz4WBqetlv9bGaDW1aStcu7MSTbH7YiSybX/9fnxlCAEQv1WlIidQhcJAiyk0Eae+LGK7cIQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
+    "node_modules/sass-embedded-win32-x64": {
+      "version": "1.92.1",
+      "resolved": "https://registry.npmjs.org/sass-embedded-win32-x64/-/sass-embedded-win32-x64-1.92.1.tgz",
+      "integrity": "sha512-B6Nz/GbH7Vkpb2TkQHsGcczWM5t+70VWopWF1x5V5yxLpA8ZzVQ7NTKKi+jDoVY2Efu6ZyzgT9n5KgG2kWliXA==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ],
+      "peer": true,
+      "engines": {
+        "node": ">=14.0.0"
+      }
+    },
     "node_modules/scrypt-js": {
       "version": "3.0.1",
       "resolved": "https://registry.npmjs.org/scrypt-js/-/scrypt-js-3.0.1.tgz",
@@ -15417,6 +15752,7 @@
       "resolved": "https://registry.npmjs.org/strip-bom-buf/-/strip-bom-buf-3.0.1.tgz",
       "integrity": "sha512-iJaWw2WroigLHzQysdc5WWeUc99p7ea7AEgB6JkY8CMyiO1yTVAA1gIlJJgORElUIR+lcZJkNl1OGChMhvc2Cw==",
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "is-utf8": "^0.2.1"
       },
@@ -15432,6 +15768,7 @@
       "resolved": "https://registry.npmjs.org/strip-bom-stream/-/strip-bom-stream-5.0.0.tgz",
       "integrity": "sha512-Yo472mU+3smhzqeKlIxClre4s4pwtYZEvDNQvY/sJpnChdaxmKuwU28UVx/v1ORKNMxkmj1GBuvxJQyBk6wYMQ==",
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "first-chunk-stream": "^5.0.0",
         "strip-bom-buf": "^3.0.0"
@@ -15501,6 +15838,7 @@
       "integrity": "sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "has-flag": "^4.0.0"
       },
@@ -15637,6 +15975,7 @@
       "integrity": "sha512-8lD+t2KrrScJ/7KXCSyfhT3/hRq78rC0wBFqNJXv3mZyn6hW2ypM05JmlSvtqRbeq6jqA94oHbxAr2vYsJ8vDA==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "sync-message-port": "^1.0.0"
       },
@@ -15650,6 +15989,7 @@
       "integrity": "sha512-GTt8rSKje5FilG+wEdfCkOcLL7LWqpMlr2c3LRuKt/YXxcJ52aGSbGBAdI4L3aaqfrBt6y711El53ItyH1NWzg==",
       "dev": true,
       "license": "MIT",
+      "peer": true,
       "engines": {
         "node": ">=16.0.0"
       }
@@ -15946,7 +16286,6 @@
       "integrity": "sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==",
       "dev": true,
       "license": "Apache-2.0",
-      "peer": true,
       "bin": {
         "tsc": "bin/tsc",
         "tsserver": "bin/tsserver"
@@ -16230,7 +16569,8 @@
       "resolved": "https://registry.npmjs.org/varint/-/varint-6.0.0.tgz",
       "integrity": "sha512-cXEIW6cfr15lFv563k4GuVuW/fiwjknytD37jIOLSdSWuOI6WnO/oKwmP2FQTU2l01LP8/M5TSAJpzUaGe3uWg==",
       "dev": true,
-      "license": "MIT"
+      "license": "MIT",
+      "peer": true
     },
     "node_modules/version-range": {
       "version": "4.15.0",
@@ -16294,6 +16634,7 @@
       "resolved": "https://registry.npmjs.org/vinyl-file/-/vinyl-file-5.0.0.tgz",
       "integrity": "sha512-MvkPF/yA1EX7c6p+juVIvp9+Lxp70YUfNKzEWeHMKpUNVSnTZh2coaOqLxI0pmOe2V9nB+OkgFaMDkodaJUyGw==",
       "license": "MIT",
+      "peer": true,
       "dependencies": {
         "@types/vinyl": "^2.0.7",
         "strip-bom-buf": "^3.0.1",
@@ -16994,7 +17335,8 @@
       "resolved": "https://registry.npmjs.org/zimmerframe/-/zimmerframe-1.1.4.tgz",
       "integrity": "sha512-B58NGBEoc8Y9MWWCQGl/gq9xBCe4IiKM0a2x7GZdQKOW5Exr8S1W24J6OgM1njK8xCRGvAJIL/MxXHf6SkmQKQ==",
       "dev": true,
-      "license": "MIT"
+      "license": "MIT",
+      "peer": true
     },
     "node_modules/zwitch": {
       "version": "2.0.4",

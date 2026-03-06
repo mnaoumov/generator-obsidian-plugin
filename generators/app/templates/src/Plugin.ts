@@ -62,20 +62,20 @@ export class Plugin extends PluginBase<PluginTypes> {
     await super.onloadImpl();
     this.addCommand({
       callback: this.runSampleCommand.bind(this),
-      id: 'sample-command',
-      name: 'Sample command'
+      id: 'sample',
+      name: 'Sample'
     });
 
     this.addCommand({
       editorCallback: this.runSampleEditorCommand.bind(this),
-      id: 'sample-editor-command',
-      name: 'Sample editor command'
+      id: 'sample-editor',
+      name: 'Sample editor'
     });
 
     this.addCommand({
       checkCallback: this.runSampleCommandWithCheck.bind(this),
-      id: 'sample-command-with-check',
-      name: 'Sample command with check'
+      id: 'sample-with-check',
+      name: 'Sample with check'
     });
 
     this.addRibbonIcon('dice', 'Sample ribbon icon', this.runSampleRibbonIconCommand.bind(this));
@@ -180,31 +180,31 @@ export class Plugin extends PluginBase<PluginTypes> {
     this.addCommand({
       callback: this.showSampleModal.bind(this),
       id: 'show-sample-modal',
-      name: 'Show Sample Modal'
+      name: 'Show sample modal'
     });
 
     this.addCommand({
       callback: convertAsyncToSync(this.showAlert.bind(this)),
       id: 'show-alert-modal',
-      name: 'Show Alert Modal'
+      name: 'Show alert modal'
     });
 
     this.addCommand({
       callback: convertAsyncToSync(this.showConfirm.bind(this)),
       id: 'show-confirm-modal',
-      name: 'Show Confirm Modal'
+      name: 'Show confirm modal'
     });
 
     this.addCommand({
       callback: convertAsyncToSync(this.showPrompt.bind(this)),
       id: 'show-prompt-modal',
-      name: 'Show Prompt Modal'
+      name: 'Show prompt modal'
     });
 
     this.addCommand({
       callback: convertAsyncToSync(this.showSelectItem.bind(this)),
       id: 'show-select-item-modal',
-      name: 'Show Select Item Modal'
+      name: 'Show select item modal'
     });
   }
 

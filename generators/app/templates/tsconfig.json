@@ -20,17 +20,16 @@
     "target": "ES2024",
     "types": [
       "node",
-      "svelte"
+      "svelte",
+      "obsidian-typings"
     ],
     "verbatimModuleSyntax": true
   },
   "include": [
     "./.markdownlint-cli2.mts",
     "./commitlint.config.ts",
-    "./eslint.config.*ts",
+    "./eslint.config.mts",
     "./scripts/**/*.ts",
-    "./src/**/*.svelte",
-    "./src/**/*.ts",
-    "./src/**/*.tsx"
+    "./src/**/*.ts"
   ]
 }

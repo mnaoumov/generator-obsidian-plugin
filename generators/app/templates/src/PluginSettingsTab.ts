@@ -12,54 +12,54 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
     this.containerEl.empty();
 
     new SettingEx(this.containerEl)
-      .setName('Button Setting Name')
-      .setDesc('Button Setting Description.')
+      .setName('Button setting name')
+      .setDesc('Button setting description.')
       .addButton((button) => {
-        button.setButtonText('Button Text')
+        button.setButtonText('Button text')
           .onClick(() => {
             new Notice('Button clicked');
           });
       });
 
     new SettingEx(this.containerEl)
-      .setName('Checkbox Setting Name')
-      .setDesc('Checkbox Setting Description.')
+      .setName('Checkbox setting name')
+      .setDesc('Checkbox setting description.')
       .addCheckbox((checkbox) => {
         this.bind(checkbox, 'checkboxSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Code Highlighter Setting Name')
-      .setDesc('Code Highlighter Setting Description.')
+      .setName('Code highlighter setting name')
+      .setDesc('Code highlighter setting description.')
       .addCodeHighlighter((codeHighlighter) => {
         codeHighlighter.setLanguage('javascript');
         this.bind(codeHighlighter, 'codeHighlighterSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Color Setting Name')
-      .setDesc('Color Setting Description.')
+      .setName('Color setting name')
+      .setDesc('Color setting description.')
       .addColorPicker((color) => {
         this.bind(color, 'colorSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Date Setting Name')
-      .setDesc('Date Setting Description.')
+      .setName('Date setting name')
+      .setDesc('Date setting description.')
       .addDate((date) => {
         this.bind(date, 'dateSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('DateTime Setting Name')
-      .setDesc('DateTime Setting Description.')
+      .setName('Date time setting name')
+      .setDesc('Date time setting description.')
       .addDateTime((dateTime) => {
         this.bind(dateTime, 'dateTimeSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Dropdown Setting Name')
-      .setDesc('Dropdown Setting Description.')
+      .setName('Dropdown setting name')
+      .setDesc('Dropdown setting description.')
       .addDropdown((dropdown) => {
         dropdown.addOptions({
           Value1: 'Display 1',
@@ -70,25 +70,25 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
       });
 
     new SettingEx(this.containerEl)
-      .setName('Email Setting Name')
-      .setDesc('Email Setting Description.')
+      .setName('Email setting name')
+      .setDesc('Email setting description.')
       .addEmail((email) => {
         this.bind(email, 'emailSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Extra Button Setting Name')
-      .setDesc('Extra Button Setting Description.')
+      .setName('Extra button setting name')
+      .setDesc('Extra button setting description.')
       .addExtraButton((extraButton) => {
         extraButton
           .onClick(() => {
-            new Notice('Extra Button clicked');
+            new Notice('Extra button clicked');
           });
       });
 
     new SettingEx(this.containerEl)
-      .setName('File Setting Name')
-      .setDesc('File Setting Description.')
+      .setName('File setting name')
+      .setDesc('File setting description.')
       .addFile((file) => {
         file.onChange((value) => {
           new Notice(`File selected: ${value?.name ?? '(None)'}`);
@@ -96,22 +96,22 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
       });
 
     new SettingEx(this.containerEl)
-      .setName('Moment Format Setting Name')
-      .setDesc('Moment Format Setting Description.')
+      .setName('Moment format setting name')
+      .setDesc('Moment format setting description.')
       .addMomentFormat((momentFormat) => {
         this.bind(momentFormat, 'momentFormatSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Month Setting Name')
-      .setDesc('Month Setting Description.')
+      .setName('Month setting name')
+      .setDesc('Month setting description.')
       .addMonth((month) => {
         this.bind(month, 'monthSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Multiple Dropdown Setting Name')
-      .setDesc('Multiple Dropdown Setting Description.')
+      .setName('Multiple dropdown setting name')
+      .setDesc('Multiple dropdown setting description.')
       .addMultipleDropdown((multipleDropdown) => {
         multipleDropdown.addOptions({
           Value1: 'Display 1',
@@ -125,15 +125,15 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
       });
 
     new SettingEx(this.containerEl)
-      .setName('Multiple Email Setting Name')
-      .setDesc('Multiple Email Setting Description.')
+      .setName('Multiple email setting name')
+      .setDesc('Multiple email setting description.')
       .addMultipleEmail((multipleEmail) => {
         this.bind(multipleEmail, 'multipleEmailSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Multiple File Setting Name')
-      .setDesc('Multiple File Setting Description.')
+      .setName('Multiple file setting name')
+      .setDesc('Multiple file setting description.')
       .addMultipleFile((multipleFile) => {
         multipleFile.onChange((value) => {
           const fileNames = value.map((file) => file.name);
@@ -142,78 +142,78 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
       });
 
     new SettingEx(this.containerEl)
-      .setName('Multiple Text Setting Name')
-      .setDesc('Multiple Text Setting Description.')
+      .setName('Multiple text setting name')
+      .setDesc('Multiple text setting description.')
       .addMultipleText((multipleText) => {
         this.bind(multipleText, 'multipleTextSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Number Setting Name')
-      .setDesc('Number Setting Description.')
+      .setName('Number setting name')
+      .setDesc('Number setting description.')
       .addNumber((number) => {
         this.bind(number, 'numberSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('ProgressBar Setting Name')
-      .setDesc('ProgressBar Setting Description.')
+      .setName('Progress bar setting name')
+      .setDesc('Progress bar setting description.')
       .addProgressBar((progressBar) => {
         progressBar.setValue(this.plugin.settings.progressBarSetting);
       });
 
     new SettingEx(this.containerEl)
-      .setName('Search Setting Name')
-      .setDesc('Search Setting Description.')
+      .setName('Search setting name')
+      .setDesc('Search setting description.')
       .addSearch((search) => {
         this.bind(search, 'searchSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Slider Setting Name')
-      .setDesc('Slider Setting Description.')
+      .setName('Slider setting name')
+      .setDesc('Slider setting description.')
       .addSlider((slider) => {
         this.bind(slider, 'sliderSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Text Setting Name')
-      .setDesc('Text Setting Description.')
+      .setName('Text setting name')
+      .setDesc('Text setting description.')
       .addText((text) => {
         this.bind(text, 'textSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Text Area Setting Name')
-      .setDesc('Text Area Setting Description.')
+      .setName('Text area setting name')
+      .setDesc('Text area setting description.')
       .addTextArea((textArea) => {
         this.bind(textArea, 'textAreaSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Time Setting Name')
-      .setDesc('Time Setting Description.')
+      .setName('Time setting name')
+      .setDesc('Time setting description.')
       .addTime((time) => {
         this.bind(time, 'timeSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Toggle Setting Name')
-      .setDesc('Toggle Setting Description.')
+      .setName('Toggle setting name')
+      .setDesc('Toggle setting description.')
       .addToggle((toggle) => {
         this.bind(toggle, 'toggleSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Tri-state Checkbox Setting Name')
-      .setDesc('Tri-state Checkbox Setting Description.')
+      .setName('Tri-state checkbox setting name')
+      .setDesc('Tri-state checkbox setting description.')
       .addTriStateCheckbox((triStateCheckbox) => {
         this.bind(triStateCheckbox, 'triStateCheckboxSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Typed Dropdown Setting Name')
-      .setDesc('Typed Dropdown Setting Description.')
+      .setName('Typed dropdown setting name')
+      .setDesc('Typed dropdown setting description.')
       .addTypedDropdown((typedDropdown) => {
         const map = new Map<TypedItem, string>();
         map.set(TypedItem.Foo, 'Display Foo');
@@ -222,14 +222,14 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
         typedDropdown.addOptions(map);
         this.bind(typedDropdown, 'typedDropdownSetting', {
           onChanged(newValue, oldValue) {
-            console.warn('Typed Dropdown Setting changed', { newValue, oldValue });
+            console.warn('Typed Dropdown setting changed', { newValue, oldValue });
           }
         });
       });
 
     new SettingEx(this.containerEl)
-      .setName('Typed Multiple Dropdown Setting Name')
-      .setDesc('Typed Multiple Dropdown Setting Description.')
+      .setName('Typed multiple dropdown setting name')
+      .setDesc('Typed multiple dropdown setting description.')
       .addTypedMultipleDropdown((typedMultipleDropdown) => {
         const map = new Map<TypedItem, string>();
         map.set(TypedItem.Foo, 'Display Foo');
@@ -238,33 +238,33 @@ export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
         typedMultipleDropdown.addOptions(map);
         this.bind(typedMultipleDropdown, 'typedMultipleDropdownSetting', {
           onChanged(newValue, oldValue) {
-            console.warn('Typed Multiple Dropdown Setting changed', { newValue, oldValue });
+            console.warn('Typed Multiple Dropdown setting changed', { newValue, oldValue });
           }
         });
       });
 
     new SettingEx(this.containerEl)
-      .setName('Url Setting Name')
-      .setDesc('Url Setting Description.')
+      .setName('URL setting name')
+      .setDesc('URL setting description.')
       .addUrl((url) => {
         this.bind(url, 'urlSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Week Setting Name')
-      .setDesc('Week Setting Description.')
+      .setName('Week setting name')
+      .setDesc('Week setting description.')
       .addWeek((week) => {
         this.bind(week, 'weekSetting');
       });
 
     new SettingEx(this.containerEl)
-      .setName('Advanced Text Setting Name')
-      .setDesc('Advanced Text Setting Description.')
+      .setName('Advanced text setting name')
+      .setDesc('Advanced text setting description.')
       .addText((text) => {
         this.bind(text, 'textSetting', {
           componentToPluginSettingsValueConverter: (uiValue: string) => uiValue.replace(' (converted)', ''),
           onChanged: () => {
-            new Notice('Advanced Text Setting changed');
+            new Notice('Advanced text setting changed');
           },
           pluginSettingsToComponentValueConverter: (pluginSettingsValue: string) => `${pluginSettingsValue} (converted)`
         })

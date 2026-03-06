@@ -1,0 +1,9 @@
+{
+  "author": "sampleAuthorGitHubName",
+  "authorUrl": "https://github.com/sampleAuthorGitHubName/",
+  "description": "Sample Description.",
+  "id": "<%= pluginId %>",
+  "isDesktopOnly": false,
+  "name": "Sample Plugin Extended",
+  "version": "0.0.0"
+}
