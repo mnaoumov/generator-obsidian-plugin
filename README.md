@@ -1,8 +1,9 @@
-# generator-obsidian-plugin [![](https://badge.fury.io/js/generator-obsidian-plugin.svg)](https://npmjs.org/package/generator-obsidian-plugin)
+# generator-obsidian-plugin
 
 > Obsidian Plugin Yeoman Generator
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/mnaoumov)
+[![NPM package](https://badge.fury.io/js/generator-obsidian-plugin.svg)](https://npmjs.org/package/generator-obsidian-plugin)
 [![GitHub release](https://img.shields.io/github/v/release/mnaoumov/generator-obsidian-plugin)](https://github.com/mnaoumov/generator-obsidian-plugin/releases)
 [![GitHub downloads](https://img.shields.io/github/downloads/mnaoumov/generator-obsidian-plugin/total)](https://github.com/mnaoumov/generator-obsidian-plugin/releases)
 
