@@ -1,8 +1,8 @@
 name: Bug report
-description: Report a bug and help improve the generator
+description: Report a bug and help improve the plugin
 title: "[BUG] Short description of the bug"
 labels: bug
-assignees: mnaoumov
+assignees: sampleAuthorGitHubName
 body:
   - type: markdown
     attributes:
@@ -11,7 +11,7 @@ body:
 
         > [!WARNING]
         >
-        > A video and is required for bug reproduction. Incomplete, vague, or poorly described bug reports will be closed.
+        > Both a video and a sample vault are required for bug reproduction. Incomplete, vague, or poorly described bug reports will be closed.
   - type: textarea
     attributes:
       label: Description
@@ -42,9 +42,16 @@ body:
       required: true
   - type: input
     attributes:
-      label: Generator version
+      label: Plugin version
       description: ⚠️ Must be the latest version. If not, explain why above.
       placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Obsidian version
+      description: ⚠️ Must be the latest version. If not, explain why above.
+      placeholder: 1.3.2
     validations:
       required: true
   - type: input
@@ -56,7 +63,7 @@ body:
   - type: textarea
     attributes:
       label: Attachments
-      description: Attach a video.
+      description: Attach a video and a sample vault.
       placeholder: Drag and drop files here.
   - type: dropdown
     attributes:
@@ -66,10 +73,27 @@ body:
         - "Attached"
     validations:
       required: true
+  - type: dropdown
+    attributes:
+      label: Sample vault
+      options:
+        - "Not attached. ⚠️ The bug report will be closed if the maintainer is unable to reproduce it without the attachment."
+        - "Attached"
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Bug isolation
+      description: Did you verify the bug in isolation from other plugins?
+      options:
+        - "No, only with other plugins enabled (provide details in the description field). ⚠️ Sample vault required or the bug report will be closed."
+        - "Yes, I could reproduce the bug in the vault with only this plugin enabled."
+    validations:
+      required: true
   - type: checkboxes
     attributes:
       label: Confirmations
       description: Ensure the following conditions are met
       options:
-        - label: I have checked the generator's GitHub repository and haven't found any similar bugs
+        - label: I have checked the plugin's GitHub repository and haven't found any similar bugs
           required: true

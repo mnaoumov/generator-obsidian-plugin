@@ -1,8 +1,7 @@
-import type { Duration } from 'moment';
 import type { IsoMonth } from 'obsidian-dev-utils/obsidian/Components/SettingComponents/MonthComponent';
 import type { IsoWeek } from 'obsidian-dev-utils/obsidian/Components/SettingComponents/WeekComponent';
 
-import { duration } from 'moment';
+import { moment } from 'obsidian';
 
 export class TypedItem {
   public static readonly Bar = new TypedItem('Bar');
@@ -50,7 +49,7 @@ export class PluginSettings {
   public sliderSetting = 50;
   public textAreaSetting = 'defaultTextArea';
   public textSetting = 'defaultText';
-  public timeSetting: Duration = duration({ hours: 12, minutes: 34 });
+  public timeSetting: moment.Duration = moment.duration({ hours: 12, minutes: 34 });
   public toggleSetting = true;
   public triStateCheckboxSetting: boolean | null = null;
   public typedDropdownSetting: TypedItem = TypedItem.Foo;

@@ -17,7 +17,7 @@ export class SampleSvelteView extends ItemView {
   private sampleSvelteComponent: null | SampleSvelteComponentExports = null;
 
   public override getDisplayText(): string {
-    return 'SampleSvelte view';
+    return 'Sample Svelte view';
   }
 
   public override getViewType(): string {

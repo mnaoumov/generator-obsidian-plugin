@@ -8,7 +8,9 @@
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [
+    "commitlint",
     "dblclick",
+    "obsidianmd",
     "tsbuildinfo"
   ],
   "ignoreWords": [],

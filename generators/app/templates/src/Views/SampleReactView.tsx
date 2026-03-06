@@ -15,7 +15,7 @@ export class SampleReactView extends ItemView {
   private root: null | Root = null;
 
   public override getDisplayText(): string {
-    return 'SampleReact view';
+    return 'Sample React view';
   }
 
   public override getViewType(): string {

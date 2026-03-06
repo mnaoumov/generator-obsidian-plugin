@@ -1,6 +1,7 @@
 # <%= pluginName %>
 
-This is a plugin for [Obsidian](https://obsidian.md/) that <%= pluginDescription %>
+[![GitHub release](https://img.shields.io/github/v/release/<%= authorGitHubName %>/obsidian-<%= pluginId %>)](https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>/releases)
+[![GitHub downloads](https://img.shields.io/github/downloads/<%= authorGitHubName %>/obsidian-<%= pluginId %>/total)](https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>/releases)
 
 ## Installation
 
