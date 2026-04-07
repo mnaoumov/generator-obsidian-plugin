@@ -12,6 +12,7 @@
       "DOM",
       "ES2024"
     ],
+    "libReplacement": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noEmit": true,
@@ -24,14 +25,15 @@
     "skipLibCheck": false,
     "target": "ES2024",
     "types": [
-      "node",
-      "obsidian-typings"
+      "@total-typescript/ts-reset",
+      "node"
     ],
     "verbatimModuleSyntax": true
   },
   "include": [
+    "./commitlint.config.ts",
     "./eslint.config.*ts",
-    "./src/**/*.ts",
-    "./scripts/**/*.ts"
+    "./scripts/**/*.ts",
+    "./src/**/*.ts"
   ]
 }
