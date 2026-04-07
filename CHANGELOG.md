@@ -83,7 +83,7 @@
 ## 11.3.0
 
 - Add Code Highlighter sample
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/26.7.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/26.7.0>
 
 ## 11.2.1
 
@@ -92,11 +92,11 @@
 ## 11.2.0
 
 - Rename createSettingsTab
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/26.0.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/26.0.0>
 
 ## 11.1.0
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/25.0.1
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/25.0.1>
 
 ## 11.0.3
 
@@ -104,7 +104,7 @@
 
 ## 11.0.2
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/24.0.1
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/24.0.1>
 
 ## 11.0.1
 
@@ -148,12 +148,12 @@
 
 - Fix compilation
 - Fix audit warnings
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/19.2.1
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/19.2.1>
 
 ## 10.3.0
 
 - addMultipleText
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.4.2
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.4.2>
 
 ## 10.2.1
 
@@ -162,13 +162,13 @@
 ## 10.2.0
 
 - Add modal examples
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.3.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.3.0>
 
 ## 10.1.0
 
 - Check if generator the latest
 - Don't handle create before layoutReady
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.1.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.1.0>
 
 ## 10.0.2
 
@@ -184,7 +184,7 @@
 - Add eslint.config
 - Add all components
 - Add BRAT link
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.0.4
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/18.0.4>
 
 ## 9.1.1
 
@@ -194,7 +194,7 @@
 
 - Lint template
 - build:compile
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/17.3.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/17.3.0>
 
 ## 9.0.3
 
@@ -221,7 +221,7 @@
 ## 8.0.0
 
 - Fix PluginSettingsTab template
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/15.0.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/15.0.0>
 
 ## 7.1.0
 
@@ -229,18 +229,18 @@
 - Ensure descriptions end with dot
 - Sort manifest
 - Sort package.json
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/14.4.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/14.4.0>
 
 ## 7.0.0
 
 - Always add styles.css
 - Fix boolean warning
 - Add debugging in README
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/14.3.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/14.3.0>
 
 ## 6.7.0
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/13.3.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/13.3.0>
 - Fix ES2024 Update templates
 
 ## 6.6.1
@@ -254,42 +254,42 @@
 ## 6.5.0
 
 - Add publish
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/11.0.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/11.0.0>
 
 ## 6.4.0
 
 - Update template
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/8.0.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/8.0.0>
 
 ## 6.3.0
 
 - Lint to allow default export once
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.12.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.12.0>
 
 ## 6.2.0
 
 - Lint template
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.11.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.11.0>
 
 ## 6.1.0
 
 - Update settings tab template
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.3.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.3.0>
 
 ## 6.0.0
 
 - Update libs and template
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.0.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/4.0.0>
 
 ## 5.39.0
 
 - Add tsbuildinfo to ignores
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.39.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.39.0>
 
 ## 5.37.0
 
 - Add @types/node
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.36.4
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.36.4>
 
 ## 5.36.5
 
@@ -302,28 +302,28 @@
 ## 5.36.3
 
 - Add build script
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.36.3
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.36.3>
 
 ## 5.29.0
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.29.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.29.0>
 
 ## 5.25.0
 
 - Add `.env` support
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.25.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.25.0>
 
 ## 5.24.1
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.24.1
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.24.1>
 
 ## 5.2.0
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.2.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.2.0>
 
 ## 5.1.0
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.1.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.1.0>
 
 ## 5.0.5
 
@@ -332,40 +332,40 @@
 ## 5.0.4
 
 - Update template
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.0.4
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/3.0.4>
 
 ## 4.25.1
 
 - Ignore dist from spellchecker
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.25.1
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.25.1>
 
 ## 4.23.3
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.23.3
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.23.3>
 
 ## 4.21.2
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.21.2
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.21.2>
 
 ## 4.3.0
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.3.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/2.3.0>
 
 ## 4.2.0
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.8.0
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.8.0>
 
 ## 4.1.3
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.4
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.4>
 
 ## 4.1.2
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.2
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.2>
 
 ## 4.1.1
 
-- https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.1
+- <https://github.com/mnaoumov/obsidian-dev-utils/releases/tag/1.7.1>
 
 ## 4.1.0
 

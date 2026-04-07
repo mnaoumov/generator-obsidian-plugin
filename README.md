@@ -62,5 +62,3 @@ The documentation above shows usage examples in the form `npx obsidian-dev-utils
 ## License
 
 © [Michael Naumov](https://github.com/mnaoumov/)
-
-[Hot Reload]: https://github.com/pjeby/hot-reload

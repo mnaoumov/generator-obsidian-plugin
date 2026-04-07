@@ -1,24 +1,27 @@
+/**
+ * @packageDocumentation
+ *
+ * Yeoman generator for scaffolding Obsidian plugins.
+ */
 import type {
   BaseEnvironment,
   QueuedAdapter
 } from '@yeoman/types';
 
 import chalk from 'chalk';
-import { nameof } from 'obsidian-dev-utils/ObjectUtils';
+import { readdir } from 'node:fs/promises';
 import {
   basename,
-  getFolderName,
+  dirname,
   join,
-  relative,
-  toPosixPath
-} from 'obsidian-dev-utils/Path';
-import { readdirPosix } from 'obsidian-dev-utils/ScriptUtils/Fs';
-import { replaceAll } from 'obsidian-dev-utils/String';
+  relative
+} from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { compare } from 'semver';
 import Generator from 'yeoman-generator';
 import yosay from 'yosay';
 
-// eslint-disable-next-line import-x/no-relative-packages
+// eslint-disable-next-line import-x/no-relative-packages -- yeoman-generator does not export PromptQuestions from its public API.
 import type { PromptQuestions } from '../node_modules/yeoman-generator/dist/questions.d.ts';
 
 const minimumNodeVersion = '18.0.0';
@@ -46,11 +49,28 @@ interface Environment extends BaseEnvironment<QueuedAdapter> {
   };
 }
 
-// eslint-disable-next-line import-x/no-default-export
-export default class ObsidianPluginGenerator extends Generator {
-  declare public env: Environment;
-  private answers!: Answers;
+interface NpmRegistryResponse {
+  version: string;
+}
 
+/**
+ * Yeoman generator that scaffolds a new Obsidian plugin project.
+ */
+// eslint-disable-next-line import-x/no-default-export -- Yeoman generators require a default export.
+export default class ObsidianPluginGenerator extends Generator {
+  /** The Yeoman environment with typed options. */
+  // eslint-disable-next-line no-restricted-syntax -- Override parent class type with a more specific Environment interface.
+  declare public env: Environment;
+  private _answers?: Answers;
+
+  private get answers(): Answers {
+    if (!this._answers) {
+      throw new Error('Answers not initialized. prompting() must run before accessing answers.');
+    }
+    return this._answers;
+  }
+
+  /** Prompts the user for plugin configuration. */
   public async prompting(): Promise<void> {
     const currentGeneratorVersion = this.rootGeneratorVersion();
     this.log(
@@ -81,9 +101,9 @@ export default class ObsidianPluginGenerator extends Generator {
 
     const questions: PromptQuestions<Answers> = [
       {
-        default: basename(toPosixPath(this._destinationRoot)).replace(/^obsidian-/, ''),
+        default: basename(this._destinationRoot.replaceAll('\\', '/')).replace(/^obsidian-/, ''),
         message: 'Your plugin\'s id?',
-        name: nameof<Answers>('pluginId'),
+        name: 'pluginId' satisfies keyof Answers,
         type: 'input',
         validate(pluginId: string): boolean | string {
           if (!pluginId) {
@@ -112,13 +132,13 @@ export default class ObsidianPluginGenerator extends Generator {
       {
         default: (answers: Partial<Answers>) => makePluginName(answers.pluginId ?? ''),
         message: 'Your plugin\'s name?',
-        name: nameof<Answers>('pluginName'),
+        name: 'pluginName' satisfies keyof Answers,
         type: 'input'
       },
       {
         default: 'Does something awesome.',
         message: 'Your plugin\'s description?',
-        name: nameof<Answers>('pluginDescription'),
+        name: 'pluginDescription' satisfies keyof Answers,
         type: 'input',
         validate(pluginDescription: string): boolean | string {
           if (!pluginDescription.endsWith('.')) {
@@ -131,47 +151,48 @@ export default class ObsidianPluginGenerator extends Generator {
       {
         default: 'John Doe',
         message: 'Your full name?',
-        name: nameof<Answers>('authorName'),
+        name: 'authorName' satisfies keyof Answers,
         type: 'input'
       },
       {
         default: 'johndoe',
         message: 'Your GitHub name?',
-        name: nameof<Answers>('authorGitHubName'),
+        name: 'authorGitHubName' satisfies keyof Answers,
         type: 'input'
       },
       {
         default: true,
         message: 'Is your plugin for Desktop only?',
-        name: nameof<Answers>('isDesktopOnly'),
+        name: 'isDesktopOnly' satisfies keyof Answers,
         type: 'confirm'
       },
       {
         default: '',
         message: 'Funding URL (leave empty if not needed)',
-        name: nameof<Answers>('fundingUrl'),
+        name: 'fundingUrl' satisfies keyof Answers,
         type: 'input'
       },
       {
         default: false,
         message: 'Should enable unofficial internal obsidian API (only for advanced users)?',
-        name: nameof<Answers>('shouldEnableUnofficialInternalObsidianApi'),
+        name: 'shouldEnableUnofficialInternalObsidianApi' satisfies keyof Answers,
         type: 'confirm'
       }
     ];
 
-    this.answers = await this.prompt(questions);
+    this._answers = await this.prompt(questions);
     this.answers.currentYear = new Date().getFullYear();
     this.answers.pluginShortName = extractWords(this.answers.pluginId).join('');
   }
 
+  /** Copies and processes template files into the destination directory. */
   public async writing(): Promise<void> {
     this.env.options.nodePackageManager = 'npm';
 
-    const folderName = getFolderName(import.meta.url);
+    const folderName = dirname(fileURLToPath(import.meta.url));
     const templatesDir = join(folderName, 'templates');
 
-    for (const dirent of await readdirPosix(templatesDir, { recursive: true, withFileTypes: true })) {
+    for (const dirent of await readdir(templatesDir, { recursive: true, withFileTypes: true })) {
       if (dirent.isDirectory()) {
         continue;
       }
@@ -196,7 +217,10 @@ function extractWords(pluginId: string): string[] {
 }
 
 function getDestinationPath(templatePath: string, answers: Answers): null | string {
-  templatePath = replaceAll(templatePath, /%= (?<AnswerKey>.+?) %/g, (_, answerKey: string) => String(answers[answerKey as keyof Answers]));
+  templatePath = templatePath.replaceAll(
+    /%= (?<AnswerKey>.+?) %/g,
+    (_match: string, answerKey: number | string) => String(answers[String(answerKey) as keyof Answers])
+  );
 
   if (templatePath.endsWith('.noext')) {
     return templatePath.slice(0, -'.noext'.length);
@@ -207,13 +231,13 @@ function getDestinationPath(templatePath: string, answers: Answers): null | stri
 
 async function latestVersion(packageName: string): Promise<string> {
   const response = await fetch(`https://registry.npmjs.org/${packageName}/latest`);
-  const json = await response.json();
+  const json = (await response.json()) as Partial<NpmRegistryResponse> | undefined;
 
-  if (typeof json !== 'object' || json === null || Array.isArray(json)) {
+  if (!json?.version) {
     throw new Error(`Invalid response from npm registry for ${packageName}`);
   }
 
-  return json['version'] as string;
+  return json.version;
 }
 
 function makePluginName(pluginId: string): string {

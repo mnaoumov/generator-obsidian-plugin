@@ -29,16 +29,17 @@
     "package.json"
   ],
   "scripts": {
-    "build": "obsidian-dev-utils build",
-    "build:compile": "obsidian-dev-utils build:compile",
-    "commit": "cz",
-    "format": "obsidian-dev-utils format",
-    "format:check": "obsidian-dev-utils format:check",
-    "lint": "obsidian-dev-utils lint",
-    "lint:fix": "obsidian-dev-utils lint:fix",
-    "prepare": "husky",
-    "spellcheck": "obsidian-dev-utils spellcheck",
-    "version": "obsidian-dev-utils version"
+    "build": "jiti scripts/build.ts",
+    "commit": "jiti scripts/commit.ts",
+    "format": "jiti scripts/format.ts",
+    "format:check": "jiti scripts/format-check.ts",
+    "lint": "jiti scripts/lint.ts",
+    "lint:fix": "jiti scripts/lint-fix.ts",
+    "lint:md": "jiti scripts/lint-md.ts",
+    "lint:md:fix": "jiti scripts/lint-md-fix.ts",
+    "prepare": "jiti scripts/prepare.ts",
+    "spellcheck": "jiti scripts/spellcheck.ts",
+    "version": "jiti scripts/version.ts"
   },
   "dependencies": {
     "chalk": "latest",
@@ -50,28 +51,46 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@commitlint/types": "latest",
+    "@eslint-community/eslint-plugin-eslint-comments": "latest",
+    "@eslint/compat": "latest",
+    "@eslint/js": "latest",
+    "@stylistic/eslint-plugin": "latest",
+    "@total-typescript/ts-reset": "latest",
     "@tsconfig/strictest": "latest",
-    "@types/debug": "latest",
-    "@types/json-schema": "latest",
+    "@types/markdown-it": "latest",
+    "@types/node": "latest",
     "@types/semver": "latest",
     "@types/yosay": "latest",
+    "@typescript-eslint/utils": "latest",
     "@yeoman/adapter": "latest",
+    "better-typescript-lib": "latest",
     "commitizen": "latest",
+    "cspell": "latest",
     "cz-conventional-changelog": "latest",
+    "dprint": "latest",
     "esbuild": "latest",
+    "eslint": "latest",
+    "eslint-import-resolver-typescript": "latest",
+    "eslint-plugin-import-x": "latest",
+    "eslint-plugin-jsdoc": "latest",
+    "eslint-plugin-perfectionist": "latest",
+    "eslint-plugin-tsdoc": "latest",
+    "globals": "latest",
     "husky": "latest",
     "jiti": "latest",
-    "npm-run-all": "latest",
-    "obsidian-dev-utils": "latest"
+    "markdownlint": "latest",
+    "markdownlint-cli2": "latest",
+    "markdownlint-rule-relative-links": "latest",
+    "nano-staged": "latest",
+    "type-fest": "latest",
+    "typescript": "latest",
+    "typescript-eslint": "latest"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "overrides": {
-    "@antfu/utils": "9.2.0",
-    "dompurify": "3.0.1",
     "eslint-plugin-import": "npm:eslint-plugin-import-x@latest",
-    "type-fest": "latest",
-    "whatwg-url": "latest"
+    "type-fest": "latest"
   }
 }
