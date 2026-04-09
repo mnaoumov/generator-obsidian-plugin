@@ -1,5 +1,5 @@
 /**
- * @packageDocumentation
+ * @file
  *
  * ESLint rule: no-used-underscore-variables
  *
@@ -61,7 +61,7 @@ export const noUsedUnderscoreVariables: Rule.RuleModule = {
       description: 'Disallow `_`-prefixed parameters and local variables that are actually used'
     },
     messages: {
-      [MESSAGE_ID]: '"{{ name }}" has a `_` prefix but is used. Remove the `_` prefix since it is not unused (G10e).'
+      [MESSAGE_ID]: '"{{ name }}" has a `_` prefix but is used. Remove the `_` prefix since it is not unused.'
     },
     schema: [],
     type: 'problem'
