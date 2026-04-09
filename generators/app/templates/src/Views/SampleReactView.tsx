@@ -1,7 +1,7 @@
 import type { Root } from 'react-dom/client';
 
 import { ItemView } from 'obsidian';
-import { AppContext } from 'obsidian-dev-utils/obsidian/React/AppContext';
+import { AppContext } from 'obsidian-dev-utils/obsidian/react/app-context';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 

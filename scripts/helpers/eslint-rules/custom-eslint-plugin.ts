@@ -1,5 +1,5 @@
 /**
- * @packageDocumentation
+ * @file
  *
  * Custom ESLint plugin bundling project-specific rules.
  */
