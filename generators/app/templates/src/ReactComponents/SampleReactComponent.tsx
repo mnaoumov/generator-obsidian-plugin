@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 
-import { useApp } from 'obsidian-dev-utils/obsidian/React/AppContext';
+import { useApp } from 'obsidian-dev-utils/obsidian/react/app-context';
 import { useState } from 'react';
 
 export interface SampleReactComponentProps {

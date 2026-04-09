@@ -1,5 +1,5 @@
 /**
- * @packageDocumentation
+ * @file
  *
  * Yeoman generator for scaffolding Obsidian plugins.
  */

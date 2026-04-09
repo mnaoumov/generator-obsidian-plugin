@@ -4,21 +4,21 @@ import type {
   ObsidianProtocolData,
   TAbstractFile
 } from 'obsidian';
-import type { ExtractPluginSettingsWrapper } from 'obsidian-dev-utils/obsidian/Plugin/PluginTypesBase';
-import type { MaybeReturn } from 'obsidian-dev-utils/Type';
+import type { ExtractPluginSettingsWrapper } from 'obsidian-dev-utils/obsidian/plugin/plugin-types-base';
+import type { MaybeReturn } from 'obsidian-dev-utils/type';
 import type { ReadonlyDeep } from 'type-fest';
 
 import {
   MarkdownView,
   Notice
 } from 'obsidian';
-import { convertAsyncToSync } from 'obsidian-dev-utils/Async';
-import { getDebugger } from 'obsidian-dev-utils/Debug';
-import { alert } from 'obsidian-dev-utils/obsidian/Modals/Alert';
-import { confirm } from 'obsidian-dev-utils/obsidian/Modals/Confirm';
-import { prompt } from 'obsidian-dev-utils/obsidian/Modals/Prompt';
-import { selectItem } from 'obsidian-dev-utils/obsidian/Modals/SelectItem';
-import { PluginBase } from 'obsidian-dev-utils/obsidian/Plugin/PluginBase';
+import { convertAsyncToSync } from 'obsidian-dev-utils/async';
+import { getDebugger } from 'obsidian-dev-utils/debug';
+import { alert } from 'obsidian-dev-utils/obsidian/modals/alert';
+import { confirm } from 'obsidian-dev-utils/obsidian/modals/confirm';
+import { prompt } from 'obsidian-dev-utils/obsidian/modals/prompt';
+import { selectItem } from 'obsidian-dev-utils/obsidian/modals/select-item';
+import { PluginBase } from 'obsidian-dev-utils/obsidian/plugin/plugin-base';
 
 import type { PluginTypes } from './PluginTypes.ts';
 
