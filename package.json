@@ -41,6 +41,10 @@
     "spellcheck": "jiti scripts/spellcheck.ts",
     "version": "jiti scripts/version.ts"
   },
+  "overrides": {
+    "eslint-plugin-import": "npm:eslint-plugin-import-x@latest",
+    "type-fest": "latest"
+  },
   "dependencies": {
     "chalk": "latest",
     "semver": "latest",
@@ -64,9 +68,8 @@
     "@typescript-eslint/utils": "latest",
     "@yeoman/adapter": "latest",
     "better-typescript-lib": "latest",
-    "commitizen": "latest",
     "cspell": "latest",
-    "cz-conventional-changelog": "latest",
+    "czg": "latest",
     "dprint": "latest",
     "esbuild": "latest",
     "eslint": "latest",
@@ -88,9 +91,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "overrides": {
-    "eslint-plugin-import": "npm:eslint-plugin-import-x@latest",
-    "type-fest": "latest"
   }
 }
