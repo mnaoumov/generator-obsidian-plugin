@@ -9,9 +9,9 @@
   "scripts": {
     "build": "jiti scripts/build.ts",
     "build:clean": "jiti scripts/build-clean.ts",
+    "build:compile": "jiti scripts/build-compile.ts",
     "build:compile:svelte": "jiti scripts/build-compile-svelte.ts",
     "build:compile:typescript": "jiti scripts/build-compile-typescript.ts",
-    "build:compile": "jiti scripts/build-compile.ts",
     "dev": "jiti scripts/dev.ts",
     "format": "jiti scripts/format.ts",
     "format:check": "jiti scripts/format-check.ts",
@@ -23,27 +23,27 @@
     "spellcheck": "jiti scripts/spellcheck.ts",
     "version": "jiti scripts/version.ts"
   },
-  "devDependencies": {
-    "@codemirror/language": "6.11.2",
-    "@codemirror/state": "6.5.0",
-    "@codemirror/view": "6.38.6",
-    "@tsconfig/strictest": "latest",
-    "@types/node": "25.0.3",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "jiti": "latest",
-    "moment": "2.29.4",
-    "obsidian": "latest",
-    "obsidian-dev-utils": "latest",
-    "obsidian-typings": "obsidian-public-latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "svelte": "latest"
-  },
   "overrides": {
     "@antfu/utils": "9.2.0",
     "boolean": "npm:dry-uninstall",
     "dompurify": "3.0.1",
-    "type-fest": "latest"
+    "type-fest": "^5.6.0"
+  },
+  "devDependencies": {
+    "@codemirror/language": "6.11.2",
+    "@codemirror/state": "6.5.0",
+    "@codemirror/view": "6.38.6",
+    "@obsidian-typings/obsidian-public-latest": "^6.0.0",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "jiti": "^2.7.0",
+    "moment": "2.29.4",
+    "obsidian": "^1.12.3",
+    "obsidian-dev-utils": "^63.1.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "svelte": "^5.55.7"
   }
 }
