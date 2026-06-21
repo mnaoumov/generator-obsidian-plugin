@@ -11,18 +11,18 @@
     "jsx": "react-jsx",
     "lib": [
       "DOM",
-        "DOM.Iterable",
-      "ES2024"
+      "DOM.Iterable",
+      "ES2022"
     ],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "node16",
+    "moduleResolution": "node16",
     "noEmit": true,
-    "skipLibCheck": false,
-    "target": "ES2024",
+    "skipLibCheck": true,
+    "target": "es2022",
     "types": [
+      "@obsidian-typings/obsidian-public-latest",
       "node",
-      "svelte",
-      "@obsidian-typings/obsidian-public-latest"
+      "svelte"
     ],
     "verbatimModuleSyntax": true
   },

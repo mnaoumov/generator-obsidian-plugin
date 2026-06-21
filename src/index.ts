@@ -92,7 +92,7 @@ export default class ObsidianPluginGenerator extends Generator {
         message: 'Do you want to run the outdated generator?',
         name: 'shouldRunOutdatedGenerator',
         type: 'confirm'
-      } as PromptQuestions<{ shouldRunOutdatedGenerator: boolean }>);
+      });
 
       if (!shouldRunOutdatedGenerator) {
         process.exit(1);

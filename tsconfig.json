@@ -10,12 +10,12 @@
     "inlineSources": true,
     "lib": [
       "DOM",
-        "DOM.Iterable",
-      "ES2024"
+      "DOM.Iterable",
+      "ES2022"
     ],
     "libReplacement": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "node16",
+    "moduleResolution": "node16",
     "noEmit": true,
     "paths": {
       "yeoman-generator": [
@@ -23,8 +23,8 @@
         "./node_modules/yeoman-generator/dist/index.js"
       ]
     },
-    "skipLibCheck": false,
-    "target": "ES2024",
+    "skipLibCheck": true,
+    "target": "es2022",
     "types": [
       "@total-typescript/ts-reset",
       "node"

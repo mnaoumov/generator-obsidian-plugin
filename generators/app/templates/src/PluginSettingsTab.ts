@@ -7,9 +7,8 @@ import type { PluginTypes } from './PluginTypes.ts';
 import { TypedItem } from './PluginSettings.ts';
 
 export class PluginSettingsTab extends PluginSettingsTabBase<PluginTypes> {
-  public override display(): void {
-    super.display();
-    this.containerEl.empty();
+  public override displayLegacy(): void {
+    super.displayLegacy();
 
     new SettingEx(this.containerEl)
       .setName('Button setting name')

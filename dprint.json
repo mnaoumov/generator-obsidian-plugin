@@ -8,7 +8,7 @@
     "functionExpression.spaceAfterFunctionKeyword": true,
     "importDeclaration.forceMultiLine": "whenMultiple",
     "importDeclaration.sortNamedImports": "maintain",
-    "lineWidth": 160,
+    "lineWidth": 1000,
     "module.sortExportDeclarations": "maintain",
     "module.sortImportDeclarations": "maintain",
     "quoteStyle": "alwaysSingle",
