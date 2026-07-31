@@ -53,6 +53,10 @@ interface NpmRegistryResponse {
   version: string;
 }
 
+interface OutdatedGeneratorAnswers {
+  shouldRunOutdatedGenerator: boolean;
+}
+
 /**
  * Yeoman generator that scaffolds a new Obsidian plugin project.
  */
@@ -83,11 +87,9 @@ export default class ObsidianPluginGenerator extends Generator {
 
     if (compare(currentGeneratorVersion, latestGeneratorVersion) < 0) {
       console.warn(
-        `Your generator version is outdated. The latest generator version is ${
-          chalk.green(latestGeneratorVersion)
-        }. You can update your generator by running \`npm update -g generator-obsidian-plugin\`.`
+        `Your generator version is outdated. The latest generator version is ${chalk.green(latestGeneratorVersion)}. You can update your generator by running \`npm update -g generator-obsidian-plugin\`.`
       );
-      const { shouldRunOutdatedGenerator } = await this.prompt({
+      const { shouldRunOutdatedGenerator } = await this.prompt<OutdatedGeneratorAnswers>({
         default: false,
         message: 'Do you want to run the outdated generator?',
         name: 'shouldRunOutdatedGenerator',

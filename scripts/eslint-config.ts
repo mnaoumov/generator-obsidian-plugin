@@ -1,7 +1,6 @@
 import type { Linter } from 'eslint';
 
 import commentsConfigs from '@eslint-community/eslint-plugin-eslint-comments/configs';
-import { includeIgnoreFile } from '@eslint/compat';
 import eslint from '@eslint/js';
 // eslint-disable-next-line import-x/no-rename-default -- The default export name `plugin` is too confusing.
 import stylistic from '@stylistic/eslint-plugin';
@@ -11,7 +10,10 @@ import { flatConfigs as eslintPluginImportXFlatConfigs } from 'eslint-plugin-imp
 import jsdoc from 'eslint-plugin-jsdoc';
 import { configs as perfectionistConfigs } from 'eslint-plugin-perfectionist';
 import eslintPluginTsdoc from 'eslint-plugin-tsdoc';
-import { defineConfig } from 'eslint/config';
+import {
+  defineConfig,
+  includeIgnoreFile
+} from 'eslint/config';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path/posix';
 import process from 'node:process';
