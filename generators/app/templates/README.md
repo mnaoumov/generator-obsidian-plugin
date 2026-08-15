@@ -3,6 +3,8 @@
 [![GitHub release](https://img.shields.io/github/v/release/<%= authorGitHubName %>/obsidian-<%= pluginId %>)](https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>/releases)
 [![GitHub downloads](https://img.shields.io/github/downloads/<%= authorGitHubName %>/obsidian-<%= pluginId %>/total)](https://github.com/<%= authorGitHubName %>/obsidian-<%= pluginId %>/releases)
 
+<%= pluginDescription %>
+
 ## Installation
 
 The plugin is not available in [the official Community Plugins repository](https://obsidian.md/plugins) yet.
@@ -25,7 +27,11 @@ To show them, run the following command in the `DevTools Console`:
 window.DEBUG.enable('<%= pluginId %>');
 ```
 
-For more details, refer to the [documentation](https://github.com/mnaoumov/obsidian-dev-utils/blob/main/docs/debugging.md).
+For more details, refer to the [documentation](https://mnaoumov.dev/obsidian-dev-utils/guides/debugging/).
+
+## Contributing
+
+Contributions are welcome — see [CONTRIBUTING](./CONTRIBUTING.md) to get set up.
 
 <% if (fundingUrl) { -%>
 ## Support
