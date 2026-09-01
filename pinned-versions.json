@@ -10,6 +10,12 @@
     "that is actually present in the declared section; the script reports either mismatch. See rule G100."
   ],
   "pins": {
+    "@yeoman/adapter": {
+      "section": "devDependencies",
+      "why": "@yeoman/adapter 5 cannot be installed here. It is declared only to satisfy the optional peer that @yeoman/types asks for, and @yeoman/types@1.10.3 still accepts the range below - which stops at 4. yeoman-generator peer-requires @yeoman/types@^1.1.1, so that range is reached no matter which yeoman-generator is installed, and npm fails resolution with ERESOLVE on an out-of-range peer even when it is peerOptional. A caret range would be re-upgraded to 5 by every sweep and fail the install again, so the pin is exact. Lift it when the range below admits ^5.",
+      "check": "node -e \"process.stdout.write(require('@yeoman/types/package.json').peerDependencies['@yeoman/adapter'])\"",
+      "expect": "^1.6.0 || ^2.0.0-beta.0 || ^3.0.0 || ^4.0.0"
+    },
     "typescript": {
       "section": "devDependencies",
       "why": "TypeScript 7 (tsgo) breaks this toolchain: @typescript-eslint's parser crashes on the native API, so type-aware ESLint cannot run on 7. @typescript-eslint peer-requires the range below, so 6.x is the last usable major. Hold until obsidian-dev-utils migrates.",

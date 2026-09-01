@@ -44,38 +44,38 @@
   },
   "overrides": {
     "eslint-plugin-import": "npm:eslint-plugin-import-x@^4.17.1",
-    "type-fest": "^5.8.0"
+    "type-fest": "^5.9.0"
   },
   "dependencies": {
     "chalk": "^6.0.0",
     "semver": "^7.8.5",
-    "yeoman-generator": "^8.2.2",
+    "yeoman-generator": "^8.3.0",
     "yosay": "^3.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.1",
-    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
     "@commitlint/types": "^21.2.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.7.2",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@total-typescript/ts-reset": "^0.6.1",
     "@tsconfig/strictest": "^2.0.8",
-    "@types/node": "^26.1.2",
-    "@types/semver": "^7.7.1",
+    "@types/node": "^26.4.0",
+    "@types/semver": "^7.8.0",
     "@types/yosay": "^2.0.3",
-    "@typescript-eslint/utils": "^8.65.0",
-    "@yeoman/adapter": "^4.0.2",
+    "@typescript-eslint/utils": "^8.69.0",
+    "@yeoman/adapter": "4.0.2",
     "better-typescript-lib": "^2.12.0",
-    "cspell": "^10.0.1",
-    "czg": "^1.13.1",
-    "dprint": "^0.55.2",
-    "esbuild": "^0.28.1",
-    "eslint": "^10.8.0",
+    "cspell": "^10.2.0",
+    "czg": "^1.14.0",
+    "dprint": "^0.57.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.9.1",
     "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-import-x": "^4.17.1",
-    "eslint-plugin-jsdoc": "^63.3.2",
-    "eslint-plugin-perfectionist": "^5.10.0",
+    "eslint-plugin-jsdoc": "^64.3.3",
+    "eslint-plugin-perfectionist": "^5.11.0",
     "eslint-plugin-tsdoc": "^0.5.2",
     "husky": "^9.1.7",
     "jiti": "^2.7.0",
@@ -84,7 +84,7 @@
     "markdownlint-rule-relative-links": "^5.1.2",
     "nano-staged": "^1.0.2",
     "typescript": "6.0.3",
-    "typescript-eslint": "^8.65.0"
+    "typescript-eslint": "^8.69.0"
   },
   "engines": {
     "node": ">=18.0.0"
