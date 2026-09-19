@@ -10,6 +10,7 @@
   "words": [
     "appname",
     "autolinks",
+    "bivariant",
     "collab",
     "dirents",
     "dprint",
@@ -33,6 +34,7 @@
     "setext",
     "shumadrid",
     "sublist",
+    "Thenables",
     "tsbuildinfo",
     "TSES",
     "tsconfigs",

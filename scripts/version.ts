@@ -4,6 +4,10 @@ import process from 'node:process';
 
 const VERSION_ARG_INDEX = 2;
 
+interface VersionedPackageJson {
+  version: string;
+}
+
 function main(): void {
   const versionUpdateType = process.argv[VERSION_ARG_INDEX];
 
@@ -18,7 +22,7 @@ function main(): void {
   execSync(`npm version ${versionUpdateType} --no-git-tag-version`, { stdio: 'inherit' });
   execSync('git add package.json npm-shrinkwrap.json', { stdio: 'inherit' });
 
-  const packageJson = JSON.parse(readFileSync('package.json', 'utf-8')) as { version: string };
+  const packageJson = JSON.parse(readFileSync('package.json', 'utf-8')) as VersionedPackageJson;
   const newVersion = packageJson.version;
 
   execSync(`git commit -m "chore: release v${newVersion}"`, { stdio: 'inherit' });

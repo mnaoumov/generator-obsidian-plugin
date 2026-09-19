@@ -44,9 +44,11 @@ interface Answers {
 }
 
 interface Environment extends BaseEnvironment<QueuedAdapter> {
-  options: {
-    nodePackageManager: string;
-  };
+  options: EnvironmentOptions;
+}
+
+interface EnvironmentOptions {
+  nodePackageManager: string;
 }
 
 interface NpmRegistryResponse {
