@@ -468,6 +468,22 @@ function getNoRestrictedSyntaxRulesConfigs(): Linter.Config[] {
             selector: 'TSAsExpression > TSAsExpression'
           },
           {
+            message: 'Do not use `as never`. It silently satisfies type constraints by claiming "this value is of every type" — almost always masks a real type mismatch. Fix the underlying types instead.',
+            selector: 'TSAsExpression > TSNeverKeyword'
+          },
+          {
+            message: 'Do not use `<never>` type assertions. Same reasoning as `as never`.',
+            selector: 'TSTypeAssertion > TSNeverKeyword'
+          },
+          {
+            message: 'Do not use anonymous inline object types. Define a named interface or `type` alias instead.',
+            selector: 'TSTypeLiteral:not(TSTypeAliasDeclaration > TSTypeLiteral)'
+          },
+          {
+            message: 'Do not use anonymous inline mapped types. Define a named `type` alias instead.',
+            selector: 'TSMappedType:not(TSTypeAliasDeclaration > TSMappedType)'
+          },
+          {
             message: 'Do not use _ prefix on methods or functions. The _ prefix is for unused parameters only.',
             selector: 'MethodDefinition[key.name=/^_/]:not([override=true])'
           },
@@ -488,6 +504,13 @@ function getNoRestrictedSyntaxRulesConfigs(): Linter.Config[] {
             selector: 'PropertyDefinition[declare=true]'
           }
         ]
+      }
+    },
+    {
+      // Generated from markdownlint-cli2's published JSON schema: its shape is the schema's, not this repo's to name.
+      files: ['scripts/helpers/@types/markdownlint-cli2-config-schema.d.ts'],
+      rules: {
+        'no-restricted-syntax': 'off'
       }
     }
   ]);
@@ -587,6 +610,14 @@ function getTseslintConfigs(): Linter.Config[] {
       rules: {
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/explicit-member-accessibility': 'error',
+        // The rule's own `property` default, spelled as a bare severity so it stays the rule's default rather than a copy of it.
+        // Do NOT pass `'method'` for tidiness: the method form keeps parameters bivariant, drops `readonly` (the rule's own fixer
+        // message says so), and makes `@typescript-eslint/unbound-method` fire on every forwarded bag member, which is what the
+        // `this: void` boilerplate used to pay for. Do NOT delete the line either - the rule is in no preset, so that turns it off.
+        '@typescript-eslint/method-signature-style': 'error',
+        '@typescript-eslint/no-floating-promises': ['error', {
+          checkThenables: true
+        }],
         '@typescript-eslint/no-invalid-void-type': ['error', {
           allowAsThisParameter: true
         }],

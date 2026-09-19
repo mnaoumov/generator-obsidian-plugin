@@ -1,0 +1,35 @@
+{
+  "comment": [
+    "Every place this package's ESLint config deliberately differs from obsidian-dev-utils' shared config, and why.",
+    "This package resolves no dependency on obsidian-dev-utils, so `scripts/eslint-config.ts` is a HAND COPY of that",
+    "package's shared config - and a hand copy drifts silently. update-npm-deps.ps1 compares the two configs on every",
+    "dependency sweep and fails on anything not recorded here.",
+    "The comparison is DIRECTIONAL: only 'obsidian-dev-utils refined something and this copy never took it' is a",
+    "finding. A rule this package enables that obsidian-dev-utils turns off is printed as information and never fails,",
+    "because this copy is then the stricter one and obsidian-dev-utils' reasons for its own relaxations are",
+    "measurements about its own tree.",
+    "A key is the finding's identity exactly as the check prints it: <role>|<rule>|<kind>[|<detail>]. The",
+    "correspondence runs BOTH ways - an entry describing a divergence that no longer exists fails the sweep too, which",
+    "is what stops this file going stale the way a comment at a call site does. Add `task` when the entry is an",
+    "adoption intended for later rather than a settled decision; it is then re-reported on every run.",
+    "`roles` names the file compared at each end. Only the `script` role is compared by default, because it is the one",
+    "role that plays the same part in both packages."
+  ],
+  "roles": {
+    "script": {
+      "here": "scripts/commit.ts",
+      "odu": "scripts/commit.ts"
+    }
+  },
+  "divergences": {
+    "script|plugin:obsidian-dev-utils": {
+      "why": "This package vendors two of obsidian-dev-utils' custom rules into `scripts/helpers/eslint-rules/` and registers them under the `custom/` prefix rather than `obsidian-dev-utils/`, through `custom-eslint-plugin.ts`. The rules are here; the prefix is not, so the whole plugin reads as absent."
+    },
+    "script|plugin:unicorn": {
+      "why": "`eslint-plugin-unicorn` is not installed here. This generator is a small package carrying the tseslint / stylistic / import-x / perfectionist stack and nothing else. Adding the plugin would be a dependency decision, not a config fix."
+    },
+    "script|no-console|level": {
+      "why": "The build, lint and version scripts are CLI entry points whose output IS their interface, so printing to stdout is what they are for. obsidian-dev-utils leaves the rule on everywhere because nothing in that package prints."
+    }
+  }
+}
