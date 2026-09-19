@@ -12,8 +12,18 @@ import type { Rule } from 'eslint';
 
 import { assertNonNullable } from '../type-guards.ts';
 
+interface NodeWithBody {
+  body?: Rule.Node;
+}
+
+/**
+Message ID reported when a variable carries a `_` prefix (signalling unused) but is actually used.
+ */
 export const MESSAGE_ID = 'noUsedUnderscoreVariables';
 
+/**
+ * ESLint rule disallowing `_`-prefixed parameters and local variables that are actually used, since the prefix advertises them as unused.
+ */
 export const noUsedUnderscoreVariables: Rule.RuleModule = {
   create(context) {
     return {
@@ -25,31 +35,29 @@ export const noUsedUnderscoreVariables: Rule.RuleModule = {
             continue;
           }
 
-          const defNode = variable.defs[0];
-          assertNonNullable(defNode, 'User-declared _-prefixed variables always have at least one definition');
+          const definitionNode = variable.defs[0];
+          assertNonNullable(definitionNode, 'User-declared _-prefixed variables always have at least one definition');
 
           // For parameters, only count references inside the function body
           // (not in type annotations like `asserts _obj is T`).
           // For local variables, any read reference counts.
-          const funcBody = (node as { body?: Rule.Node }).body;
-          const bodyRange = funcBody?.range;
-          const isParam = defNode.type === 'Parameter';
-          const hasBodyReferences = variable.references.some((ref) => {
-            if (!ref.isRead()) {
+          const functionBody = (node as NodeWithBody).body;
+          const bodyRange = functionBody?.range;
+          const isParameter = definitionNode.type === 'Parameter';
+          const hasBodyReferences = variable.references.some((reference) => {
+            if (!reference.isRead()) {
               return false;
             }
-            if (isParam && bodyRange && ref.identifier.range) {
-              return ref.identifier.range[0] >= bodyRange[0]
-                && ref.identifier.range[1] <= bodyRange[1];
-            }
             // Local variables or fallback: count all reads
-            return true;
+            return isParameter && bodyRange && reference.identifier.range
+              ? reference.identifier.range[0] >= bodyRange[0] && reference.identifier.range[1] <= bodyRange[1]
+              : true;
           });
           if (hasBodyReferences) {
             context.report({
               data: { name: variable.name },
               messageId: MESSAGE_ID,
-              node: defNode.name
+              node: definitionNode.name
             });
           }
         }
