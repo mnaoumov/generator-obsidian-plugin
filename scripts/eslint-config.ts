@@ -84,7 +84,20 @@ function getEslintConfigs(): Linter.Config[] {
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
         'camelcase': 'error',
-        'capitalized-comments': ['error', 'always', { block: { ignorePattern: 'v8' } }],
+        /*
+         * The `line` half and the camelCase `ignorePattern` are what the siblings carry, and without them
+         * this rule damages the vendored rule sources rather than checking them: it treats the continuation
+         * line of a wrapped `//` comment as its own comment and `lint:fix` capitalizes a word mid-sentence,
+         * rewriting a file that is supposed to be byte-identical to upstream's.
+         */
+        'capitalized-comments': [
+          'error',
+          'always',
+          {
+            block: { ignorePattern: 'v8|[a-z][a-zA-Z0-9]*[A-Z]' },
+            line: { ignoreConsecutiveComments: true, ignorePattern: '[a-z][a-zA-Z0-9]*[A-Z]' }
+          }
+        ],
         'complexity': 'error',
         'consistent-this': 'error',
         'curly': 'error',
