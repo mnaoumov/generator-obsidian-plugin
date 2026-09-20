@@ -20,7 +20,7 @@ function main(): void {
   const tag = isBeta ? 'beta' : 'latest';
 
   execSync(`npm version ${versionUpdateType} --no-git-tag-version`, { stdio: 'inherit' });
-  execSync('git add package.json npm-shrinkwrap.json', { stdio: 'inherit' });
+  execSync('git add package.json package-lock.json', { stdio: 'inherit' });
 
   const packageJson = JSON.parse(readFileSync('package.json', 'utf-8')) as VersionedPackageJson;
   const newVersion = packageJson.version;

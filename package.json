@@ -26,7 +26,6 @@
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
-    "npm-shrinkwrap.json",
     "package.json"
   ],
   "scripts": {
