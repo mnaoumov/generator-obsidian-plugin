@@ -53,6 +53,6 @@ npm run spellcheck
 
 ## Pull Requests
 
-- Base your PR on the `master` branch.
+- Base your PR on the `main` branch.
 - Ensure all checks pass (`lint`, `format:check`, `spellcheck`).
 - Use [Conventional Commits](https://www.conventionalcommits.org/) for your commit messages.
