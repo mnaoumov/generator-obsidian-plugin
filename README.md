@@ -1,6 +1,13 @@
 # generator-obsidian-plugin
 
-> Obsidian Plugin Yeoman Generator
+> [!WARNING]
+> **This generator is deprecated and no longer maintained.** It is superseded by [create-obsidian-plugin](https://github.com/mnaoumov/create-obsidian-plugin), which needs no Yeoman:
+>
+> ```bash
+> npm create @mnaoumov/obsidian-plugin
+> ```
+
+Obsidian Plugin Yeoman Generator
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/mnaoumov)
 [![NPM package](https://badge.fury.io/js/generator-obsidian-plugin.svg)](https://npmjs.org/package/generator-obsidian-plugin)

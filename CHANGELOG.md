@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.10.1
+
+- docs: deprecate in favor of create-obsidian-plugin
+
 ## 11.10.0
 
 - chore: cleanup template
